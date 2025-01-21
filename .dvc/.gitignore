@@ -13,3 +13,5 @@ rwlock.lock
 
 # Empêcher le suivi des fichiers temporaires de gestion de cache
 .tmp
+/tmp
+/cache
