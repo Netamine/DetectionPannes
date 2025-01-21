@@ -1,0 +1,46 @@
+# Ignorer l'environnement virtuel et fichiers de configuration sensibles
+venv/
+.env
+*.env
+
+# Ignorer les fichiers temporaires et de cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Ignorer les logs et fichiers temporaires
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignorer les données sensibles
+keys/
+keys/CleDVCJason.json
+
+# Ignorer les données brutes et traitées
+data/raw/
+data/processed/
+data/models/
+
+# Ignorer les résultats des notebooks
+notebooks/**/.ipynb_checkpoints/
+
+# Ignorer les fichiers générés par pytest
+.pytest_cache/
+htmlcov/
+
+# Ignorer les fichiers spécifiques à des outils de développement
+.idea/
+.vscode/
+
+# Ignorer les fichiers de DVC générés automatiquement
+.dvc/cache/
+.dvc/tmp/
+
+# Ignorer les fichiers Docker générés
+docker/*.log
+docker/*.pid
