@@ -44,3 +44,4 @@ htmlcov/
 # Ignorer les fichiers Docker générés
 docker/*.log
 docker/*.pid
+/data
