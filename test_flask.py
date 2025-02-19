@@ -14,4 +14,7 @@ if __name__ == "__main__":
     print(f"🔄 Attente avant le lancement du serveur...")
     time.sleep(5)  # Attendre 5 secondes pour laisser Render scanner les ports
     print(f"🚀 Lancement du serveur Flask avec Waitress sur le port {port}...")
-    serve(app, host="0.0.0.0", port=port)
+    try:
+        serve(app, host="0.0.0.0", port=port)
+    except Exception as e:
+        print(f"❌ Erreur lors du lancement : {e}")
