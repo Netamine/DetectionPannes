@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/afb5e52d8dec4d70806f8ba7b761e41a/artifacts
+end_time: 1739647198909
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: afb5e52d8dec4d70806f8ba7b761e41a
+run_name: gentle-mare-865
+run_uuid: afb5e52d8dec4d70806f8ba7b761e41a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739646893144
+status: 3
+tags: []
+user_id: usermine

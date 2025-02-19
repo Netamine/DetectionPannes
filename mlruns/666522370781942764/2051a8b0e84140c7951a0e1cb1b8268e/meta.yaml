@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/2051a8b0e84140c7951a0e1cb1b8268e/artifacts
+end_time: 1739761076154
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 2051a8b0e84140c7951a0e1cb1b8268e
+run_name: luminous-robin-525
+run_uuid: 2051a8b0e84140c7951a0e1cb1b8268e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739760971242
+status: 3
+tags: []
+user_id: usermine

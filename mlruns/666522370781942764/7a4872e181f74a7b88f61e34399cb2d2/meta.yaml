@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/7a4872e181f74a7b88f61e34399cb2d2/artifacts
+end_time: 1739404723241
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 7a4872e181f74a7b88f61e34399cb2d2
+run_name: blushing-crow-797
+run_uuid: 7a4872e181f74a7b88f61e34399cb2d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739403411648
+status: 3
+tags: []
+user_id: usermine

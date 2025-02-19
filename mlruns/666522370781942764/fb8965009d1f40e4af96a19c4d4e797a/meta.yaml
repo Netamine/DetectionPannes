@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/fb8965009d1f40e4af96a19c4d4e797a/artifacts
+end_time: 1739722542090
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: fb8965009d1f40e4af96a19c4d4e797a
+run_name: marvelous-flea-380
+run_uuid: fb8965009d1f40e4af96a19c4d4e797a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739722359587
+status: 3
+tags: []
+user_id: usermine

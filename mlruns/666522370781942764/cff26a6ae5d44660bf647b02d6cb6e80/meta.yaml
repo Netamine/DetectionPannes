@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/cff26a6ae5d44660bf647b02d6cb6e80/artifacts
+end_time: 1739315418636
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: cff26a6ae5d44660bf647b02d6cb6e80
+run_name: brawny-jay-124
+run_uuid: cff26a6ae5d44660bf647b02d6cb6e80
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739314884970
+status: 3
+tags: []
+user_id: usermine

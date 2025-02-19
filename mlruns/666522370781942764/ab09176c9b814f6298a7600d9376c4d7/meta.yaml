@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/ab09176c9b814f6298a7600d9376c4d7/artifacts
+end_time: 1739647579684
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: ab09176c9b814f6298a7600d9376c4d7
+run_name: marvelous-calf-554
+run_uuid: ab09176c9b814f6298a7600d9376c4d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739647255754
+status: 3
+tags: []
+user_id: usermine

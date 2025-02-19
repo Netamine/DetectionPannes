@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/7f959af22f174978987851a762933995/artifacts
+end_time: 1739659386919
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 7f959af22f174978987851a762933995
+run_name: illustrious-ram-604
+run_uuid: 7f959af22f174978987851a762933995
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739659349880
+status: 3
+tags: []
+user_id: usermine

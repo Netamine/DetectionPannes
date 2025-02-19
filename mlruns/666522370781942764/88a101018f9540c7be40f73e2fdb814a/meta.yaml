@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/88a101018f9540c7be40f73e2fdb814a/artifacts
+end_time: 1739649563701
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 88a101018f9540c7be40f73e2fdb814a
+run_name: marvelous-elk-407
+run_uuid: 88a101018f9540c7be40f73e2fdb814a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739649326535
+status: 3
+tags: []
+user_id: usermine

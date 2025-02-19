@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/5876c3eefff04754b3be9d8880fcef58/artifacts
+end_time: 1739316725285
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 5876c3eefff04754b3be9d8880fcef58
+run_name: colorful-hog-486
+run_uuid: 5876c3eefff04754b3be9d8880fcef58
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739315831650
+status: 3
+tags: []
+user_id: usermine

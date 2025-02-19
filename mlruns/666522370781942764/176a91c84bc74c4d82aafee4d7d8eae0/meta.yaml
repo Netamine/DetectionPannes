@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/176a91c84bc74c4d82aafee4d7d8eae0/artifacts
+end_time: 1739760954357
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 176a91c84bc74c4d82aafee4d7d8eae0
+run_name: adaptable-frog-990
+run_uuid: 176a91c84bc74c4d82aafee4d7d8eae0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739760897092
+status: 3
+tags: []
+user_id: usermine

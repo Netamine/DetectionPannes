@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/6d11a6dd3d024d81afa25fffe2012cfe/artifacts
+end_time: 1739321430942
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 6d11a6dd3d024d81afa25fffe2012cfe
+run_name: trusting-zebra-995
+run_uuid: 6d11a6dd3d024d81afa25fffe2012cfe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739321052886
+status: 3
+tags: []
+user_id: usermine

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/5fbd512208a04f2d9826063d53265e7d/artifacts
+end_time: 1739407262709
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 5fbd512208a04f2d9826063d53265e7d
+run_name: rogue-ox-551
+run_uuid: 5fbd512208a04f2d9826063d53265e7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739407192669
+status: 3
+tags: []
+user_id: usermine

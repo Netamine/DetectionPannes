@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/926509ea640348db9552e63b8f3cceb0/artifacts
+end_time: 1739403254345
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 926509ea640348db9552e63b8f3cceb0
+run_name: peaceful-smelt-281
+run_uuid: 926509ea640348db9552e63b8f3cceb0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739403207121
+status: 3
+tags: []
+user_id: usermine

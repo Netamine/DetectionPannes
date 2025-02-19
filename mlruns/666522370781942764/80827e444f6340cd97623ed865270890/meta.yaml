@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/80827e444f6340cd97623ed865270890/artifacts
+end_time: 1739321044285
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 80827e444f6340cd97623ed865270890
+run_name: melodic-eel-337
+run_uuid: 80827e444f6340cd97623ed865270890
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739320222438
+status: 3
+tags: []
+user_id: usermine

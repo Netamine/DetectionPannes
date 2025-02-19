@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/807348ce78e44a93b9c4fc0e51528afe/artifacts
+end_time: 1739647944141
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 807348ce78e44a93b9c4fc0e51528afe
+run_name: abundant-pug-409
+run_uuid: 807348ce78e44a93b9c4fc0e51528afe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739647784708
+status: 3
+tags: []
+user_id: usermine

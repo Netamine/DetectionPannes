@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/ca4feccc86ce4b4ead263e08f5d6d58b/artifacts
+end_time: 1739930395919
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: ca4feccc86ce4b4ead263e08f5d6d58b
+run_name: luminous-bug-784
+run_uuid: ca4feccc86ce4b4ead263e08f5d6d58b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739930310093
+status: 3
+tags: []
+user_id: usermine

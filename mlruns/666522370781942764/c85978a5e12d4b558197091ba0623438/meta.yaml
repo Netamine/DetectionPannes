@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/c85978a5e12d4b558197091ba0623438/artifacts
+end_time: 1739407483664
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: c85978a5e12d4b558197091ba0623438
+run_name: delicate-auk-717
+run_uuid: c85978a5e12d4b558197091ba0623438
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739407318114
+status: 3
+tags: []
+user_id: usermine

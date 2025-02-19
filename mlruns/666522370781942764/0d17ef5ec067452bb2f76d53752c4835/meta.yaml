@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/0d17ef5ec067452bb2f76d53752c4835/artifacts
+end_time: 1739655825276
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 0d17ef5ec067452bb2f76d53752c4835
+run_name: intelligent-mink-692
+run_uuid: 0d17ef5ec067452bb2f76d53752c4835
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739655697662
+status: 3
+tags: []
+user_id: usermine

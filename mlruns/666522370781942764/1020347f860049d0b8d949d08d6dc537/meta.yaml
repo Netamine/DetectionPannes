@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/1020347f860049d0b8d949d08d6dc537/artifacts
+end_time: 1739319263206
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 1020347f860049d0b8d949d08d6dc537
+run_name: nervous-foal-457
+run_uuid: 1020347f860049d0b8d949d08d6dc537
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739318945762
+status: 3
+tags: []
+user_id: usermine
