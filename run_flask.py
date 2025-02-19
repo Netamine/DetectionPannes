@@ -7,6 +7,10 @@ import os
 from backend.models_loader import load_models
 from waitress import serve
 
+print("Variables d'environnement :")
+print(os.environ)
+
+
 # 🌍 **Initialisation de l'API Flask**
 app = Flask(__name__)
 

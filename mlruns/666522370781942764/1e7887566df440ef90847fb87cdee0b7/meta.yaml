@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/1e7887566df440ef90847fb87cdee0b7/artifacts
+end_time: 1739946350168
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 1e7887566df440ef90847fb87cdee0b7
+run_name: delightful-fowl-372
+run_uuid: 1e7887566df440ef90847fb87cdee0b7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739946020312
+status: 3
+tags: []
+user_id: usermine
