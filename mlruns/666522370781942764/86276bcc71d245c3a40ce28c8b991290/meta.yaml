@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/86276bcc71d245c3a40ce28c8b991290/artifacts
+end_time: 1739405204115
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 86276bcc71d245c3a40ce28c8b991290
+run_name: righteous-steed-347
+run_uuid: 86276bcc71d245c3a40ce28c8b991290
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739404871942
+status: 3
+tags: []
+user_id: usermine

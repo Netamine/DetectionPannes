@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/cba1422a40994d1fa47a82f541104ca0/artifacts
+end_time: 1739315585712
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: cba1422a40994d1fa47a82f541104ca0
+run_name: welcoming-yak-904
+run_uuid: cba1422a40994d1fa47a82f541104ca0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739315459126
+status: 3
+tags: []
+user_id: usermine

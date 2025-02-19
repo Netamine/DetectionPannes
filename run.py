@@ -1,40 +1,36 @@
 import subprocess
 import sys
 import mlflow
+import os
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 # Configurer MLflow pour utiliser le répertoire local 'mlruns'
 mlflow.set_tracking_uri("mlruns")
 mlflow.set_experiment("web_app_experiment")
 
-
-
 def run_flask():
     """Lancer l'API Flask."""
-    subprocess.Popen([sys.executable, "run_flask.py"])
-
+    return subprocess.Popen([sys.executable, "run_flask.py"])
 
 def run_streamlit():
     """Lancer l'application Streamlit."""
-    subprocess.Popen([sys.executable, "-m", "streamlit", "run", "frontend/app.py"])
-
+    return subprocess.Popen([sys.executable, "-m", "streamlit", "run", "frontend/app.py"])
 
 if __name__ == '__main__':
-    # Début de la session MLflow
     with mlflow.start_run():
-        # Enregistrer les paramètres de l'application (exemple)
         mlflow.log_param("service", "Flask + Streamlit")
 
-        # Lancer Flask
-        run_flask()
+        # Lancer Flask et Streamlit en arrière-plan
+        flask_process = run_flask()
+        streamlit_process = run_streamlit()
 
-        # Lancer Streamlit
-        run_streamlit()
-
-        # Garder le script actif
         print("✅ Flask et Streamlit sont lancés. Appuyez sur CTRL+C pour quitter.")
+
         try:
             while True:
-                pass  # Garder le processus principal actif pour les sous-processus
+                pass  # Maintenir le processus principal actif
         except KeyboardInterrupt:
             print("\n❌ Arrêt des applications.")
-            mlflow.end_run()  # Assurer la fin propre de la session MLflow
+            flask_process.terminate()  # Arrêter Flask proprement
+            streamlit_process.terminate()  # Arrêter Streamlit proprement
+            mlflow.end_run()

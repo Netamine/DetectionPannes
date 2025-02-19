@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/aced05ada16e4b79935f7e31f09a2062/artifacts
+end_time: 1739930001984
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: aced05ada16e4b79935f7e31f09a2062
+run_name: monumental-auk-607
+run_uuid: aced05ada16e4b79935f7e31f09a2062
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739929563688
+status: 3
+tags: []
+user_id: usermine

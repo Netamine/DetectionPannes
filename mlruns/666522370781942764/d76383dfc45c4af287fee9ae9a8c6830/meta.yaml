@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/d76383dfc45c4af287fee9ae9a8c6830/artifacts
+end_time: 1739314733854
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: d76383dfc45c4af287fee9ae9a8c6830
+run_name: unique-tern-1
+run_uuid: d76383dfc45c4af287fee9ae9a8c6830
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739314707651
+status: 3
+tags: []
+user_id: usermine

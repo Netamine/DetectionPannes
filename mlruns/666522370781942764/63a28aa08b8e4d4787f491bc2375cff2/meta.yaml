@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/63a28aa08b8e4d4787f491bc2375cff2/artifacts
+end_time: 1739654359834
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 63a28aa08b8e4d4787f491bc2375cff2
+run_name: delicate-colt-627
+run_uuid: 63a28aa08b8e4d4787f491bc2375cff2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739652703237
+status: 3
+tags: []
+user_id: usermine

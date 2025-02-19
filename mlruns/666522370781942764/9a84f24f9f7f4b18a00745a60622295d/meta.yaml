@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/9a84f24f9f7f4b18a00745a60622295d/artifacts
+end_time: 1739928046344
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 9a84f24f9f7f4b18a00745a60622295d
+run_name: nimble-eel-928
+run_uuid: 9a84f24f9f7f4b18a00745a60622295d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739927718282
+status: 3
+tags: []
+user_id: usermine

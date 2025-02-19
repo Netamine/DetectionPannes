@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/d0694cd2d0c048aba85ab4064e54443b/artifacts
+end_time: 1739406547251
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: d0694cd2d0c048aba85ab4064e54443b
+run_name: intelligent-cub-562
+run_uuid: d0694cd2d0c048aba85ab4064e54443b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739405902480
+status: 3
+tags: []
+user_id: usermine

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/ddb881be09b94059a6832dd059a849a7/artifacts
+end_time: 1739656174790
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: ddb881be09b94059a6832dd059a849a7
+run_name: gentle-mole-423
+run_uuid: ddb881be09b94059a6832dd059a849a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739655832786
+status: 3
+tags: []
+user_id: usermine

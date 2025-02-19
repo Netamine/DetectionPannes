@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/d5eb460256574279a4ba4d4bae4fc5e3/artifacts
+end_time: 1739404864567
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: d5eb460256574279a4ba4d4bae4fc5e3
+run_name: thundering-roo-90
+run_uuid: d5eb460256574279a4ba4d4bae4fc5e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739404800397
+status: 3
+tags: []
+user_id: usermine

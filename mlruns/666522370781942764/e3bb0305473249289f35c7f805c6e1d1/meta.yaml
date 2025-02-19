@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/e3bb0305473249289f35c7f805c6e1d1/artifacts
+end_time: 1739320055659
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: e3bb0305473249289f35c7f805c6e1d1
+run_name: traveling-snake-343
+run_uuid: e3bb0305473249289f35c7f805c6e1d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739319334368
+status: 3
+tags: []
+user_id: usermine
