@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Dev-IA/DetectionPannes/mlruns/666522370781942764/2019924893694ca4a395e7c309e6e555/artifacts
+end_time: 1739941105673
+entry_point_name: ''
+experiment_id: '666522370781942764'
+lifecycle_stage: active
+run_id: 2019924893694ca4a395e7c309e6e555
+run_name: sedate-sow-513
+run_uuid: 2019924893694ca4a395e7c309e6e555
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739940979260
+status: 3
+tags: []
+user_id: usermine
