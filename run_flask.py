@@ -13,9 +13,18 @@ DVC_HOME = "/opt/render/project/.dvc"
 DVC_TMP_DIR = os.path.join(DVC_HOME, "tmp")
 DVC_CACHE_DIR = os.path.join(DVC_HOME, "cache")
 
-os.environ["DVC_HOME"] = DVC_HOME
-os.environ["DVC_TMP_DIR"] = DVC_TMP_DIR
-os.environ["DVC_CACHE_DIR"] = DVC_CACHE_DIR
+# ✅ Configuration des variables d'environnement pour DVC
+os.environ["DVC_HOME"] = "/opt/render/project/.dvc"
+os.environ["DVC_TMP_DIR"] = "/opt/render/project/.dvc/tmp"
+os.environ["DVC_CACHE_DIR"] = "/opt/render/project/.dvc/cache"
+
+# ✅ Création des répertoires si inexistants
+for path in [os.environ["DVC_HOME"], os.environ["DVC_TMP_DIR"], os.environ["DVC_CACHE_DIR"]]:
+    os.makedirs(path, exist_ok=True)
+
+# ✅ Forcer DVC à utiliser ce dossier en écriture
+subprocess.run(["dvc", "config", "cache.dir", os.environ["DVC_CACHE_DIR"]], check=True)
+
 
 # ✅ Création des répertoires DVC si inexistants
 for path in [DVC_HOME, DVC_TMP_DIR, DVC_CACHE_DIR]:
