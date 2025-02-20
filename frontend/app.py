@@ -10,6 +10,12 @@ from components.validation import validate_data
 from components.imputation import impute_missing_values, REQUIRED_COLUMNS
 from backend.models_loader import load_models
 
+# Définir le port pour Streamlit (Render définit $PORT dans l'environnement)
+PORT = int(os.getenv("PORT", 8501))  # Par défaut, Streamlit tourne sur 8501
+
+# Afficher l'info dans les logs
+print(f"✅ Lancement de Streamlit sur le port {PORT}...")
+
 # 🌟 Configuration de la page
 st.set_page_config(page_title="Système de Prédiction des Pannes", layout="wide")
 # 🌟 Ajout de styles CSS personnalisés
