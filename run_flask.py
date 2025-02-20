@@ -8,6 +8,11 @@ import subprocess
 from backend.models_loader import load_models
 from waitress import serve
 
+# 🔄 Forcer la récupération des modèles avec DVC
+if not os.path.exists("data/models"):
+    print("⚠️ Dossier 'data/models' manquant, tentative de récupération avec DVC...")
+    subprocess.run(["dvc", "pull"], check=True)
+
 # ✅ Configuration des variables d'environnement pour DVC
 DVC_HOME = "/opt/render/project/.dvc"
 DVC_TMP_DIR = os.path.join(DVC_HOME, "tmp")
