@@ -4,22 +4,25 @@ import numpy as np
 import tensorflow as tf
 import joblib
 import os
+import subprocess
 from backend.models_loader import load_models
 from waitress import serve
 
-print("Variables d'environnement :")
-print(os.environ)
-
-# ✅ Redirection du cache de DVC vers un dossier accessible en écriture
+# ✅ Configuration des variables d'environnement pour DVC
 os.environ["DVC_HOME"] = "/opt/render/project/.dvc"
 os.environ["DVC_TMP_DIR"] = "/opt/render/project/.dvc/tmp"
 os.environ["DVC_CACHE_DIR"] = "/opt/render/project/.dvc/cache"
 
-# Assure-toi que le dossier existe
-os.makedirs(os.environ["DVC_HOME"], exist_ok=True)
-os.makedirs(os.environ["DVC_TMP_DIR"], exist_ok=True)
-os.makedirs(os.environ["DVC_CACHE_DIR"], exist_ok=True)
+# ✅ Création des répertoires si inexistants
+for path in [os.environ["DVC_HOME"], os.environ["DVC_TMP_DIR"], os.environ["DVC_CACHE_DIR"]]:
+    os.makedirs(path, exist_ok=True)
 
+# ✅ Vérification et exécution de `dvc pull` uniquement si nécessaire
+if not os.path.exists(os.path.join(os.environ["DVC_CACHE_DIR"], "index")):
+    print("🔄 DVC cache non trouvé, téléchargement des fichiers...")
+    subprocess.run(["dvc", "pull"], check=True)
+else:
+    print("✅ DVC cache trouvé, pas besoin de retélécharger.")
 
 # 🌍 **Initialisation de l'API Flask**
 app = Flask(__name__)
@@ -28,19 +31,26 @@ app = Flask(__name__)
 MODEL_DIR = "data/models"
 
 # ✅ **Chargement des modèles UNE SEULE FOIS**
-models = load_models(MODEL_DIR)
+try:
+    if "models" not in globals():
+        print("🔄 Chargement des modèles...")
+        models = load_models(MODEL_DIR)
+        globals()["models"] = models
+    else:
+        print("✅ Modèles déjà chargés.")
+except Exception as e:
+    print(f"❌ Erreur lors du chargement des modèles : {e}")
+    models = {}
 
 # **Récupération des modèles nécessaires**
 sae = models.get("sae")
 scaler = models.get("scaler")
 threshold = models.get("threshold", 0.0045)  # Valeur par défaut si non chargée
 
-
 # ✅ **Vérifier que l'API est en ligne**
 @app.route('/', methods=['GET'])
 def home():
-    return jsonify({"message": " API de prediction en ligne !"}), 200
-
+    return jsonify({"message": "API de prédiction en ligne !"}), 200
 
 # ✅ **Définition de l'endpoint pour charger un fichier CSV**
 @app.route('/predict_csv', methods=['POST'])
@@ -105,10 +115,8 @@ def predict_from_csv():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
 # ✅ **Lancement de l'API Flask**
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"Lancement de l'API Flask avec Waitress sur le port {port}...")
     serve(app, host="0.0.0.0", port=port)
-
