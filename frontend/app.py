@@ -1,4 +1,5 @@
 import streamlit as st
+import sys
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
@@ -8,8 +9,11 @@ from components.imputation import correct_timestamp_intervals
 from components import upload_file
 from components.validation import validate_data
 from components.imputation import impute_missing_values, REQUIRED_COLUMNS
-from backend.models_loader import load_models
 
+
+# Ajouter le répertoire parent au sys.path pour que Python trouve backend/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from backend.models_loader import load_models
 # Définir le port pour Streamlit (Render définit $PORT dans l'environnement)
 PORT = int(os.getenv("PORT", 8501))  # Par défaut, Streamlit tourne sur 8501
 
