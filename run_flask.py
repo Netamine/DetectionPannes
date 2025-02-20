@@ -9,18 +9,29 @@ from backend.models_loader import load_models
 from waitress import serve
 
 # ✅ Configuration des variables d'environnement pour DVC
-os.environ["DVC_HOME"] = "/opt/render/project/.dvc"
-os.environ["DVC_TMP_DIR"] = "/opt/render/project/.dvc/tmp"
-os.environ["DVC_CACHE_DIR"] = "/opt/render/project/.dvc/cache"
+DVC_HOME = "/opt/render/project/.dvc"
+DVC_TMP_DIR = os.path.join(DVC_HOME, "tmp")
+DVC_CACHE_DIR = os.path.join(DVC_HOME, "cache")
 
-# ✅ Création des répertoires si inexistants
-for path in [os.environ["DVC_HOME"], os.environ["DVC_TMP_DIR"], os.environ["DVC_CACHE_DIR"]]:
-    os.makedirs(path, exist_ok=True)
+os.environ["DVC_HOME"] = DVC_HOME
+os.environ["DVC_TMP_DIR"] = DVC_TMP_DIR
+os.environ["DVC_CACHE_DIR"] = DVC_CACHE_DIR
+
+# ✅ Création des répertoires DVC si inexistants
+for path in [DVC_HOME, DVC_TMP_DIR, DVC_CACHE_DIR]:
+    try:
+        os.makedirs(path, exist_ok=True)
+    except Exception as e:
+        print(f"⚠️ Erreur lors de la création du répertoire {path} : {e}")
 
 # ✅ Vérification et exécution de `dvc pull` uniquement si nécessaire
-if not os.path.exists(os.path.join(os.environ["DVC_CACHE_DIR"], "index")):
+dvc_cache_index = os.path.join(DVC_CACHE_DIR, "index")
+if not os.path.exists(dvc_cache_index):
     print("🔄 DVC cache non trouvé, téléchargement des fichiers...")
-    subprocess.run(["dvc", "pull"], check=True)
+    try:
+        subprocess.run(["dvc", "pull"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erreur lors de l'exécution de DVC pull : {e}")
 else:
     print("✅ DVC cache trouvé, pas besoin de retélécharger.")
 
@@ -31,16 +42,13 @@ app = Flask(__name__)
 MODEL_DIR = "data/models"
 
 # ✅ **Chargement des modèles UNE SEULE FOIS**
+models = {}
 try:
-    if "models" not in globals():
-        print("🔄 Chargement des modèles...")
-        models = load_models(MODEL_DIR)
-        globals()["models"] = models
-    else:
-        print("✅ Modèles déjà chargés.")
+    print("🔄 Chargement des modèles...")
+    models = load_models(MODEL_DIR)
+    print("✅ Modèles chargés avec succès !")
 except Exception as e:
     print(f"❌ Erreur lors du chargement des modèles : {e}")
-    models = {}
 
 # **Récupération des modèles nécessaires**
 sae = models.get("sae")
