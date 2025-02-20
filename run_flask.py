@@ -10,6 +10,16 @@ from waitress import serve
 print("Variables d'environnement :")
 print(os.environ)
 
+# ✅ Redirection du cache de DVC vers un dossier accessible en écriture
+os.environ["DVC_HOME"] = "/opt/render/project/.dvc"
+os.environ["DVC_TMP_DIR"] = "/opt/render/project/.dvc/tmp"
+os.environ["DVC_CACHE_DIR"] = "/opt/render/project/.dvc/cache"
+
+# Assure-toi que le dossier existe
+os.makedirs(os.environ["DVC_HOME"], exist_ok=True)
+os.makedirs(os.environ["DVC_TMP_DIR"], exist_ok=True)
+os.makedirs(os.environ["DVC_CACHE_DIR"], exist_ok=True)
+
 
 # 🌍 **Initialisation de l'API Flask**
 app = Flask(__name__)
