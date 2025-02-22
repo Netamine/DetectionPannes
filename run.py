@@ -1,8 +1,9 @@
 import subprocess
 import sys
 import mlflow
-import os
 from run_flask import app  # Importation de l'application Flask
+import os
+
 
 # Désactive certaines optimisations TensorFlow pour éviter des warnings
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"

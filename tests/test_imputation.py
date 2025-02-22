@@ -12,7 +12,11 @@ def client():
 def test_home(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"L'API fonctionne et les mod\xc3\xa8les sont charg\xc3\xa9s !" in response.data
+
+    # ✅ Correction : Extraire proprement le JSON et vérifier le message
+    response_json = response.get_json()
+    assert response_json["message"] == "L'API fonctionne et les modèles sont chargés !"
+
 
 def test_impute_no_file(client):
     response = client.post('/impute')

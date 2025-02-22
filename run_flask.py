@@ -1,144 +1,98 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 import numpy as np
-import tensorflow as tf
-import joblib
 import os
+import logging
 import subprocess
-from backend.models_loader import load_models
+from backend.utils.models_loader import load_models
 from waitress import serve
 
-# 🔄 Forcer la récupération des modèles avec DVC
-if not os.path.exists("data/models"):
-    print("⚠️ Dossier 'data/models' manquant, tentative de récupération avec DVC...")
+# 📌 Configuration du logger
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+# 📌 Vérifier si les modèles existent, sinon, les récupérer via DVC
+model_dir = "data/models"
+if not os.path.exists(model_dir) or not os.listdir(model_dir):
+    logging.info("📥 Modèles absents, tentative de récupération via DVC...")
     subprocess.run(["dvc", "pull"], check=True)
+    logging.info("✅ Modèles récupérés avec succès !")
 
-# ✅ Configuration des variables d'environnement pour DVC
-DVC_HOME = "/opt/render/project/.dvc"
-DVC_TMP_DIR = os.path.join(DVC_HOME, "tmp")
-DVC_CACHE_DIR = os.path.join(DVC_HOME, "cache")
-
-# ✅ Configuration des variables d'environnement pour DVC
-os.environ["DVC_HOME"] = "/opt/render/project/.dvc"
-os.environ["DVC_TMP_DIR"] = "/opt/render/project/.dvc/tmp"
-os.environ["DVC_CACHE_DIR"] = "/opt/render/project/.dvc/cache"
-
-# ✅ Création des répertoires si inexistants
-for path in [os.environ["DVC_HOME"], os.environ["DVC_TMP_DIR"], os.environ["DVC_CACHE_DIR"]]:
-    os.makedirs(path, exist_ok=True)
-
-# ✅ Forcer DVC à utiliser ce dossier en écriture
-subprocess.run(["dvc", "config", "cache.dir", os.environ["DVC_CACHE_DIR"]], check=True)
-
-
-# ✅ Création des répertoires DVC si inexistants
-for path in [DVC_HOME, DVC_TMP_DIR, DVC_CACHE_DIR]:
-    try:
-        os.makedirs(path, exist_ok=True)
-    except Exception as e:
-        print(f"⚠️ Erreur lors de la création du répertoire {path} : {e}")
-
-# ✅ Vérification et exécution de `dvc pull` uniquement si nécessaire
-dvc_cache_index = os.path.join(DVC_CACHE_DIR, "index")
-if not os.path.exists(dvc_cache_index):
-    print("🔄 DVC cache non trouvé, téléchargement des fichiers...")
-    try:
-        subprocess.run(["dvc", "pull"], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Erreur lors de l'exécution de DVC pull : {e}")
-else:
-    print("✅ DVC cache trouvé, pas besoin de retélécharger.")
-
-# 🌍 **Initialisation de l'API Flask**
+# 📌 Initialisation de l'application Flask
 app = Flask(__name__)
 
-# 📌 **Chemin du dossier des modèles**
-MODEL_DIR = "data/models"
+# 📌 Chargement des modèles
+models = load_models(model_dir)
 
-# ✅ **Chargement des modèles UNE SEULE FOIS**
-models = {}
-try:
-    print("🔄 Chargement des modèles...")
-    models = load_models(MODEL_DIR)
-    print("✅ Modèles chargés avec succès !")
-except Exception as e:
-    print(f"❌ Erreur lors du chargement des modèles : {e}")
-
-# **Récupération des modèles nécessaires**
+# 📌 Vérification des modèles chargés
 sae = models.get("sae")
 scaler = models.get("scaler")
-threshold = models.get("threshold", 0.0045)  # Valeur par défaut si non chargée
+threshold = models.get("threshold", 0.0045)  # Valeur par défaut
+seuil_anomalies = 10  # 🔹 Seuil à partir duquel une panne est imminente
 
-# ✅ **Vérifier que l'API est en ligne**
+if sae is None or scaler is None:
+    logging.error("❌ Le modèle SAE ou le scaler n'a pas été chargé. Vérifiez `models_loader.py` et `data/models/`.")
+    raise ValueError("Modèle SAE ou scaler manquant. Vérifiez que `sae_trained.keras` et `scaler.pkl` existent.")
+
+# 📌 API Key pour sécuriser les endpoints
+API_KEY = os.getenv("API_KEY", "sqfXkiRRxFXaso4dT9GzJL5nST4VjBHUzvVip4EGBa0y/lWrIA3doxiYHEgoaS+y")  # Remplace en prod
+
+def api_key_required(f):
+    """ Middleware pour vérifier l'API Key dans les requêtes. """
+    def decorated(*args, **kwargs):
+        api_key = request.headers.get("x-api-key")
+        if not api_key or api_key != API_KEY:
+            return jsonify({"message": "❌ Accès refusé ! API Key invalide."}), 403
+        return f(*args, **kwargs)
+    return decorated
+
+# ✅ Vérifier que l'API est en ligne
 @app.route('/', methods=['GET'])
 def home():
     return jsonify({"message": "API de prédiction en ligne !"}), 200
 
-# ✅ **Définition de l'endpoint pour charger un fichier CSV**
+# ✅ Endpoint sécurisé avec API Key pour la prédiction
 @app.route('/predict_csv', methods=['POST'])
+@api_key_required  # Sécurisation avec API Key
 def predict_from_csv():
     try:
-        # 📌 **1️⃣ Vérifier si un fichier a été envoyé**
         if 'file' not in request.files:
             return jsonify({"error": "Aucun fichier envoyé"}), 400
 
         file = request.files['file']
-
-        # 📌 **2️⃣ Vérifier que le fichier est un CSV**
-        if file.filename == '':
-            return jsonify({"error": "Nom de fichier invalide"}), 400
-
-        if not file.filename.endswith('.csv'):
-            return jsonify({"error": "Le fichier doit être au format CSV"}), 400
-
-        # 📌 **3️⃣ Charger les données**
         df = pd.read_csv(file)
 
-        if df.empty:
-            return jsonify({"error": "Le fichier CSV est vide"}), 400
-
-        # 📌 **4️⃣ Vérification des colonnes requises**
+        # Vérification des colonnes requises
         required_columns = [
             "timestamp", "TP2", "TP3", "H1", "DV_pressure", "Reservoirs",
             "Oil_temperature", "Motor_current", "COMP", "DV_eletric",
             "Towers", "MPG", "LPS", "Pressure_switch", "Oil_level", "Caudal_impulses"
         ]
 
-        missing_cols = [col for col in required_columns if col not in df.columns]
-        if missing_cols:
-            return jsonify({"error": f"Colonnes manquantes : {', '.join(missing_cols)}"}), 400
+        if not set(required_columns).issubset(df.columns):
+            return jsonify({"error": "Colonnes manquantes"}), 400
 
-        # 📌 **5️⃣ Normalisation des données**
-        features_scaler = scaler.feature_names_in_
-        df[features_scaler] = scaler.transform(df[features_scaler])
+        # Normalisation
+        df[scaler.feature_names_in_] = scaler.transform(df[scaler.feature_names_in_])
 
-        # 📌 **6️⃣ Prédiction avec le modèle SAE**
-        reconstructed_values = sae.predict(df[features_scaler])
-
-        # **Calcul de l'erreur de reconstruction (MSE)**
-        df["error"] = np.mean(np.square(df[features_scaler] - reconstructed_values), axis=1)
-
-        # 📌 **7️⃣ Détection des anomalies**
+        # Prédiction
+        reconstructed_values = sae.predict(df[scaler.feature_names_in_])
+        df["error"] = np.mean(np.square(df[scaler.feature_names_in_] - reconstructed_values), axis=1)
         df["anomaly"] = df["error"] > threshold
 
-        # 📌 **8️⃣ Détection de panne imminente**
-        total_anomalies = df["anomaly"].sum()
-        seuil_anomalies = 10  # Nombre d'anomalies avant d'alerter une panne
-        panne_imminente = total_anomalies >= seuil_anomalies
+        # Détection de panne imminente
+        total_anomalies = int(df["anomaly"].sum())
+        panne_imminente = "OUI" if total_anomalies >= seuil_anomalies else "NON"
 
-        # 📌 **9️⃣ Retourner le résultat**
-        result = {
-            "total_anomalies_detectées": int(total_anomalies),
-            "panne_imminente": "OUI" if panne_imminente else "NON"
-        }
-
-        return jsonify(result)
+        return jsonify({
+            "total_anomalies_detectées": total_anomalies,
+            "panne_imminente": panne_imminente
+        }), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ✅ **Lancement de l'API Flask**
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    print(f"Lancement de l'API Flask avec Waitress sur le port {port}...")
-    serve(app, host="0.0.0.0", port=port)
+    serve(app, host="0.0.0.0", port=5000)

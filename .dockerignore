@@ -1,0 +1,21 @@
+# Exclure les dossiers et fichiers inutiles
+.vscode/
+.idea/
+__pycache__/
+venv/
+mlruns/
+.dvc/
+.github/
+
+# Exclure les fichiers spécifiques
+*.log
+*.yaml
+*.yml
+*.ini
+
+# Exclure les fichiers de contrôle de version
+.git/
+.gitignore
+
+# Exclure les modèles stockés avec DVC (ils seront récupérés au runtime)
+data/models/

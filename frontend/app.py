@@ -10,10 +10,14 @@ from components import upload_file
 from components.validation import validate_data
 from components.imputation import impute_missing_values, REQUIRED_COLUMNS
 
+import matplotlib
+
+matplotlib.rcParams["font.family"] = "DejaVu Sans"
+
 
 # Ajouter le répertoire parent au sys.path pour que Python trouve backend/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from backend.models_loader import load_models
+from backend.utils.models_loader import load_models
 # Définir le port pour Streamlit (Render définit $PORT dans l'environnement)
 PORT = int(os.getenv("PORT", 8501))  # Par défaut, Streamlit tourne sur 8501
 
@@ -187,7 +191,7 @@ if uploaded_file is not None:
                 background-color: #f9f9f9;
             }
             </style>
-            """, 
+            """,
             unsafe_allow_html=True
         )
         st.markdown('<div class="dataframe-container">', unsafe_allow_html=True)
@@ -310,9 +314,10 @@ if uploaded_file is not None:
             color="red", marker="o", label="Anomalies détectées", s=10)  # Marqueurs plus petits
 
     # Ajustement des ticks pour éviter la surcharge
-    ax.set_xticks(df_filtered["timestamp"][::50])  
+    ax.set_xticks(df_filtered["timestamp"][::50])
     ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
     ax.set_yticklabels(ax.get_yticks(), fontsize=5)
+
 
     # Labels et titre réduits
     ax.set_xlabel("Temps", fontsize=6)
@@ -327,9 +332,6 @@ if uploaded_file is not None:
 
     # 🔥 Cette fois, on empêche complètement l’agrandissement par Streamlit
     st.pyplot(fig, use_container_width=False)
-
-
-
 
     # ================================================================
     #  📌 VISUALISATION DES ANOMALIES
@@ -353,7 +355,7 @@ if uploaded_file is not None:
             color="red", marker="o", label="Anomalies détectées", s=10)
 
     # Ajustement des ticks pour éviter trop d’encombrement
-    ax.set_xticks(df_filtered["timestamp"][::50])  
+    ax.set_xticks(df_filtered["timestamp"][::50])
     ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
     ax.set_yticklabels(ax.get_yticks(), fontsize=5)
 
@@ -370,4 +372,3 @@ if uploaded_file is not None:
 
     # 🔥 Désactivation du redimensionnement automatique par Streamlit
     st.pyplot(fig, use_container_width=False)
-

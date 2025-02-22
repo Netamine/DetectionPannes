@@ -1,24 +1,37 @@
-from flask import Flask
-from flasgger import Swagger
-from backend.models_loader import load_models
-from backend.routes import register_routes
 import os
-from backend.models_loader import load_models
+import logging
+from flask import Flask
+from backend.routes import routes_bp
+from backend.utils.models_loader import load_models
+
+# Configuration du logger
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
 
 def create_app():
+    """Création et configuration de l'application Flask."""
     app = Flask(__name__)
 
-    # 📍 Correction du chemin pour `model_dir`
-    model_dir = os.path.join(os.path.dirname(__file__), '..', 'data', 'models')
+    # 📌 Définition du répertoire des modèles
+    model_dir = os.path.join(os.path.dirname(__file__), "..", "data", "models")
 
+    # 📌 Chargement des modèles UNE SEULE FOIS
+    if os.path.exists(model_dir):
+        app.config["IMPUTATION_MODELS"] = load_models(model_dir)
+        logging.info("✅ Modèles d'imputation chargés et stockés dans la config Flask.")
+    else:
+        app.config["IMPUTATION_MODELS"] = {}
+        logging.warning("⚠️ Aucun modèle trouvé, l'API fonctionnera sans imputation.")
 
-    # Charger les modèles une seule fois
-    app.config['IMPUTATION_MODELS'] = load_models(model_dir)
+    # 📌 Enregistrement des routes
+    app.register_blueprint(routes_bp)
 
-    # Initialisation de Swagger
-    swagger = Swagger(app)
+    # Vérifier que tous les modèles sont bien chargés
+    logging.info(f"📌 Modèles disponibles dans Flask : {list(app.config['IMPUTATION_MODELS'].keys())}")
 
-    # Enregistrer les routes
-    register_routes(app)
+    logging.info("🚀 Application Flask créée avec succès !")
 
     return app
