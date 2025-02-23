@@ -298,40 +298,41 @@ if uploaded_file is not None:
 
     st.markdown("### 📊 Visualisation des Anomalies")
 
-    fig, ax = plt.subplots(figsize=(5, 2))  # Taille plus réduite
-    sns.set_style("whitegrid")
+    with st.expander("🔍 Afficher le graphique des anomalies détectées"):
+	    fig, ax = plt.subplots(figsize=(5, 2))  # Taille plus réduite
+	    sns.set_style("whitegrid")
 
-    # Courbe d'erreur
-    ax.plot(df_filtered["timestamp"], df_filtered["error"], label="Erreur de reconstruction",
-            color='#1f77b4', linewidth=0.8)
+	    # Courbe d'erreur
+	    ax.plot(df_filtered["timestamp"], df_filtered["error"], label="Erreur de reconstruction",
+	            color='#1f77b4', linewidth=0.8)
 
-    # Seuil d'anomalie
-    ax.axhline(threshold, color="r", linestyle="--", label="Seuil d'anomalie", linewidth=0.8)
+	    # Seuil d'anomalie
+	    ax.axhline(threshold, color="r", linestyle="--", label="Seuil d'anomalie", linewidth=0.8)
 
-    # Anomalies détectées
-    ax.scatter(df_filtered.loc[df_filtered["anomaly"], "timestamp"],
-            df_filtered.loc[df_filtered["anomaly"], "error"],
-            color="red", marker="o", label="Anomalies détectées", s=10)  # Marqueurs plus petits
+	    # Anomalies détectées
+	    ax.scatter(df_filtered.loc[df_filtered["anomaly"], "timestamp"],
+	            df_filtered.loc[df_filtered["anomaly"], "error"],
+	            color="red", marker="o", label="Anomalies détectées", s=10)  # Marqueurs plus petits
 
-    # Ajustement des ticks pour éviter la surcharge
-    ax.set_xticks(df_filtered["timestamp"][::50])
-    ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
-    ax.set_yticklabels(ax.get_yticks(), fontsize=5)
+	    # Ajustement des ticks pour éviter la surcharge
+	    ax.set_xticks(df_filtered["timestamp"][::50])
+	    ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
+	    ax.set_yticklabels(ax.get_yticks(), fontsize=5)
 
 
-    # Labels et titre réduits
-    ax.set_xlabel("Temps", fontsize=6)
-    ax.set_ylabel("Erreur", fontsize=6)
-    ax.set_title("📊 Anomalies détectées", fontsize=7, fontweight='bold')
+	    # Labels et titre réduits
+	    ax.set_xlabel("Temps", fontsize=6)
+	    ax.set_ylabel("Erreur", fontsize=6)
+	    ax.set_title("📊 Anomalies détectées", fontsize=7, fontweight='bold')
 
-    # Légende plus compacte
-    ax.legend(loc="upper right", fontsize=5, frameon=True)
+	    # Légende plus compacte
+	    ax.legend(loc="upper right", fontsize=5, frameon=True)
 
-    # 🔥 Réduction des marges pour que Streamlit ne l'agrandisse pas
-    plt.subplots_adjust(left=0.1, right=0.95, top=0.85, bottom=0.2)
+	    # 🔥 Réduction des marges pour que Streamlit ne l'agrandisse pas
+	    plt.subplots_adjust(left=0.1, right=0.95, top=0.85, bottom=0.2)
 
-    # 🔥 Cette fois, on empêche complètement l’agrandissement par Streamlit
-    st.pyplot(fig, use_container_width=False)
+	    # 🔥 Cette fois, on empêche complètement l’agrandissement par Streamlit
+	    st.pyplot(fig, use_container_width=False)
 
     # ================================================================
     #  📌 VISUALISATION DES ANOMALIES
@@ -342,33 +343,34 @@ if uploaded_file is not None:
     # Filtrer uniquement les anomalies
     df_anomalies = df_filtered[df_filtered["anomaly"]]
 
-    fig, ax = plt.subplots(figsize=(5, 2))  # Taille compacte
-    sns.set_style("whitegrid")
-    colors = ['#ff7f0e', '#2ca02c', '#d62728', '#9467bd']
+    with st.expander("📊 Afficher l'évolution des variables autour des anomalies"):
+	    fig, ax = plt.subplots(figsize=(5, 2))  # Taille compacte
+	    sns.set_style("whitegrid")
+	    colors = ['#ff7f0e', '#2ca02c', '#d62728', '#9467bd']
 
-    # Tracer les variables importantes avec des lignes fines
-    for col, color in zip(["TP2", "DV_pressure", "Oil_temperature", "Motor_current"], colors):
-        ax.plot(df_filtered["timestamp"], df_filtered[col], label=col, color=color, linewidth=0.8)
+	    # Tracer les variables importantes avec des lignes fines
+	    for col, color in zip(["TP2", "DV_pressure", "Oil_temperature", "Motor_current"], colors):
+	        ax.plot(df_filtered["timestamp"], df_filtered[col], label=col, color=color, linewidth=0.8)
 
-    # Marquer les anomalies avec des points rouges plus petits
-    ax.scatter(df_anomalies["timestamp"], df_anomalies["TP2"],
-            color="red", marker="o", label="Anomalies détectées", s=10)
+	    # Marquer les anomalies avec des points rouges plus petits
+	    ax.scatter(df_anomalies["timestamp"], df_anomalies["TP2"],
+	            color="red", marker="o", label="Anomalies détectées", s=10)
 
-    # Ajustement des ticks pour éviter trop d’encombrement
-    ax.set_xticks(df_filtered["timestamp"][::50])
-    ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
-    ax.set_yticklabels(ax.get_yticks(), fontsize=5)
+	    # Ajustement des ticks pour éviter trop d’encombrement
+	    ax.set_xticks(df_filtered["timestamp"][::50])
+	    ax.set_xticklabels(df_filtered["timestamp"][::50], rotation=25, ha="right", fontsize=5)
+	    ax.set_yticklabels(ax.get_yticks(), fontsize=5)
 
-    # Labels et titre réduits
-    ax.set_xlabel("Temps", fontsize=6)
-    ax.set_ylabel("Valeurs", fontsize=6)
-    ax.set_title("🔍 Variables & Anomalies", fontsize=7, fontweight='bold')
+	    # Labels et titre réduits
+	    ax.set_xlabel("Temps", fontsize=6)
+	    ax.set_ylabel("Valeurs", fontsize=6)
+	    ax.set_title("🔍 Variables & Anomalies", fontsize=7, fontweight='bold')
 
-    # Légende plus compacte
-    ax.legend(loc="upper left", fontsize=5, frameon=True)
+	    # Légende plus compacte
+	    ax.legend(loc="upper left", fontsize=5, frameon=True)
 
-    # 🔥 Réduction des marges pour que Streamlit ne l'agrandisse pas
-    plt.subplots_adjust(left=0.1, right=0.95, top=0.85, bottom=0.2)
+	    # 🔥 Réduction des marges pour que Streamlit ne l'agrandisse pas
+	    plt.subplots_adjust(left=0.1, right=0.95, top=0.85, bottom=0.2)
 
-    # 🔥 Désactivation du redimensionnement automatique par Streamlit
-    st.pyplot(fig, use_container_width=False)
+	    # 🔥 Désactivation du redimensionnement automatique par Streamlit
+	    st.pyplot(fig, use_container_width=False)

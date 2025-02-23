@@ -9,9 +9,6 @@ mlruns/
 
 # Exclure les fichiers spécifiques
 *.log
-*.yaml
-*.yml
-*.ini
 
 # Exclure les fichiers de contrôle de version
 .git/
