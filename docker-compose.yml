@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5000:5000"
+      - "8501:8501"
+    environment:
+      - API_KEY=sqfXkiRRxFXaso4dT9GzJL5nST4VjBHUzvVip4EGBa0y/lWrIA3doxiYHEgoaS+y
+    volumes:
+      - .:/app  # Assurez-vous que tout est bien monté dans /app
+    depends_on:
+      - monitoring
+
+  monitoring:
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana:/grafana/data
+      - ./monitoring/prometheus.yml:/prometheus/prometheus.yml
+      - ./monitoring/grafana.ini:/grafana/conf/grafana.ini

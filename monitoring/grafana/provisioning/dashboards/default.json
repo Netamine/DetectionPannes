@@ -1,0 +1,55 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "api-dashboard",
+    "title": "API Flask Monitoring",
+    "description": "Dashboard pour surveiller les performances de l'API Flask",
+    "tags": ["flask", "api", "monitoring"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "title": "Nombre de requêtes à /predict_csv",
+        "type": "stat",
+        "id": 1,
+        "targets": [
+          {
+            "expr": "sum(increase(flask_http_request_total{handler=\"/predict_csv\"}[5m]))",
+            "legendFormat": "Requêtes sur /predict_csv",
+            "interval": "5s"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 6, "h": 3 }
+      },
+      {
+        "title": "Temps de réponse moyen de /predict_csv",
+        "type": "graph",
+        "id": 2,
+        "targets": [
+          {
+            "expr": "rate(flask_http_request_duration_seconds_sum{handler=\"/predict_csv\"}[5m]) / rate(flask_http_request_duration_seconds_count{handler=\"/predict_csv\"}[5m])",
+            "legendFormat": "Temps moyen (s)",
+            "interval": "5s"
+          }
+        ],
+        "gridPos": { "x": 6, "y": 0, "w": 6, "h": 3 }
+      },
+      {
+        "title": "Codes de réponse HTTP",
+        "type": "piechart",
+        "id": 3,
+        "targets": [
+          {
+            "expr": "sum by (status) (rate(flask_http_request_total{handler=\"/predict_csv\"}[5m]))",
+            "legendFormat": "{{status}}",
+            "interval": "5s"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 3, "w": 6, "h": 3 }
+      }
+    ],
+    "schemaVersion": 18,
+    "version": 1,
+    "refresh": "5s"
+  },
+  "overwrite": true
+}
