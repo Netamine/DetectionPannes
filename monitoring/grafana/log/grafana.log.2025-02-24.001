@@ -1,0 +1,1418 @@
+logger=settings t=2025-02-23T16:32:58.483804876Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T16:32:58.486164231Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T16:32:58.486668842Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T16:32:58.487075552Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T16:32:58.487477861Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T16:32:58.488076275Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T16:32:58.488392082Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T16:32:58.48873339Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T16:32:58.489059598Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T16:32:58.489420506Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T16:32:58.489666812Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T16:32:58.490385229Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2025-02-23T16:32:58.490932341Z level=info msg="Creating SQLite database file" path=/grafana/data/grafana.db
+logger=migrator t=2025-02-23T16:32:58.53779943Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T16:32:58.540042682Z level=info msg="Executing migration" id="create migration_log table"
+logger=migrator t=2025-02-23T16:32:58.622276491Z level=info msg="Executing migration" id="create user table"
+logger=migrator t=2025-02-23T16:32:58.707822978Z level=info msg="Executing migration" id="add unique index user.login"
+logger=migrator t=2025-02-23T16:32:58.809932749Z level=info msg="Executing migration" id="add unique index user.email"
+logger=migrator t=2025-02-23T16:32:58.91161671Z level=info msg="Executing migration" id="drop index UQE_user_login - v1"
+logger=migrator t=2025-02-23T16:32:58.973410444Z level=info msg="Executing migration" id="drop index UQE_user_email - v1"
+logger=migrator t=2025-02-23T16:32:59.054137719Z level=info msg="Executing migration" id="Rename table user to user_v1 - v1"
+logger=migrator t=2025-02-23T16:32:59.141817055Z level=info msg="Executing migration" id="create user table v2"
+logger=migrator t=2025-02-23T16:32:59.204369307Z level=info msg="Executing migration" id="create index UQE_user_login - v2"
+logger=migrator t=2025-02-23T16:32:59.314695669Z level=info msg="Executing migration" id="create index UQE_user_email - v2"
+logger=migrator t=2025-02-23T16:32:59.436034386Z level=info msg="Executing migration" id="copy data_source v1 to v2"
+logger=migrator t=2025-02-23T16:32:59.557855915Z level=info msg="Executing migration" id="Drop old table user_v1"
+logger=migrator t=2025-02-23T16:32:59.730058614Z level=info msg="Executing migration" id="Add column help_flags1 to user table"
+logger=migrator t=2025-02-23T16:32:59.903970552Z level=info msg="Executing migration" id="Update user table charset"
+logger=migrator t=2025-02-23T16:32:59.99691321Z level=info msg="Executing migration" id="Add last_seen_at column to user"
+logger=migrator t=2025-02-23T16:33:00.191177721Z level=info msg="Executing migration" id="Add missing user data"
+logger=migrator t=2025-02-23T16:33:00.334706153Z level=info msg="Executing migration" id="Add is_disabled column to user"
+logger=migrator t=2025-02-23T16:33:00.407299639Z level=info msg="Executing migration" id="Add index user.login/user.email"
+logger=migrator t=2025-02-23T16:33:00.548831725Z level=info msg="Executing migration" id="Add is_service_account column to user"
+logger=migrator t=2025-02-23T16:33:00.607361884Z level=info msg="Executing migration" id="Update is_service_account column to nullable"
+logger=migrator t=2025-02-23T16:33:00.689249686Z level=info msg="Executing migration" id="create temp user table v1-7"
+logger=migrator t=2025-02-23T16:33:00.769333645Z level=info msg="Executing migration" id="create index IDX_temp_user_email - v1-7"
+logger=migrator t=2025-02-23T16:33:00.855741952Z level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v1-7"
+logger=migrator t=2025-02-23T16:33:00.952705803Z level=info msg="Executing migration" id="create index IDX_temp_user_code - v1-7"
+logger=migrator t=2025-02-23T16:33:01.106706579Z level=info msg="Executing migration" id="create index IDX_temp_user_status - v1-7"
+logger=migrator t=2025-02-23T16:33:01.196410062Z level=info msg="Executing migration" id="Update temp_user table charset"
+logger=migrator t=2025-02-23T16:33:01.25231056Z level=info msg="Executing migration" id="drop index IDX_temp_user_email - v1"
+logger=migrator t=2025-02-23T16:33:01.32551166Z level=info msg="Executing migration" id="drop index IDX_temp_user_org_id - v1"
+logger=migrator t=2025-02-23T16:33:01.407410061Z level=info msg="Executing migration" id="drop index IDX_temp_user_code - v1"
+logger=migrator t=2025-02-23T16:33:01.490322687Z level=info msg="Executing migration" id="drop index IDX_temp_user_status - v1"
+logger=migrator t=2025-02-23T16:33:01.56369499Z level=info msg="Executing migration" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+logger=migrator t=2025-02-23T16:33:01.625885534Z level=info msg="Executing migration" id="create temp_user v2"
+logger=migrator t=2025-02-23T16:33:01.706110997Z level=info msg="Executing migration" id="create index IDX_temp_user_email - v2"
+logger=migrator t=2025-02-23T16:33:01.800019978Z level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v2"
+logger=migrator t=2025-02-23T16:33:01.87676226Z level=info msg="Executing migration" id="create index IDX_temp_user_code - v2"
+logger=migrator t=2025-02-23T16:33:01.93792088Z level=info msg="Executing migration" id="create index IDX_temp_user_status - v2"
+logger=migrator t=2025-02-23T16:33:02.061278244Z level=info msg="Executing migration" id="copy temp_user v1 to v2"
+logger=migrator t=2025-02-23T16:33:02.123773495Z level=info msg="Executing migration" id="drop temp_user_tmp_qwerty"
+logger=migrator t=2025-02-23T16:33:02.20237522Z level=info msg="Executing migration" id="Set created for temp users that will otherwise prematurely expire"
+logger=migrator t=2025-02-23T16:33:02.287947907Z level=info msg="Executing migration" id="create star table"
+logger=migrator t=2025-02-23T16:33:02.630371958Z level=info msg="Executing migration" id="add unique index star.user_id_dashboard_id"
+logger=migrator t=2025-02-23T16:33:02.733150645Z level=info msg="Executing migration" id="create org table v1"
+logger=migrator t=2025-02-23T16:33:02.806027237Z level=info msg="Executing migration" id="create index UQE_org_name - v1"
+logger=migrator t=2025-02-23T16:33:02.907629196Z level=info msg="Executing migration" id="create org_user table v1"
+logger=migrator t=2025-02-23T16:33:02.976014584Z level=info msg="Executing migration" id="create index IDX_org_user_org_id - v1"
+logger=migrator t=2025-02-23T16:33:03.063115706Z level=info msg="Executing migration" id="create index UQE_org_user_org_id_user_id - v1"
+logger=migrator t=2025-02-23T16:33:03.153427403Z level=info msg="Executing migration" id="create index IDX_org_user_user_id - v1"
+logger=migrator t=2025-02-23T16:33:03.225088467Z level=info msg="Executing migration" id="Update org table charset"
+logger=migrator t=2025-02-23T16:33:03.296481725Z level=info msg="Executing migration" id="Update org_user table charset"
+logger=migrator t=2025-02-23T16:33:03.367020363Z level=info msg="Executing migration" id="Migrate all Read Only Viewers to Viewers"
+logger=migrator t=2025-02-23T16:33:03.438121514Z level=info msg="Executing migration" id="create dashboard table"
+logger=migrator t=2025-02-23T16:33:03.510015483Z level=info msg="Executing migration" id="add index dashboard.account_id"
+logger=migrator t=2025-02-23T16:33:03.590190045Z level=info msg="Executing migration" id="add unique index dashboard_account_id_slug"
+logger=migrator t=2025-02-23T16:33:03.645184922Z level=info msg="Executing migration" id="create dashboard_tag table"
+logger=migrator t=2025-02-23T16:33:03.698607262Z level=info msg="Executing migration" id="add unique index dashboard_tag.dasboard_id_term"
+logger=migrator t=2025-02-23T16:33:03.803432896Z level=info msg="Executing migration" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+logger=migrator t=2025-02-23T16:33:03.876582995Z level=info msg="Executing migration" id="Rename table dashboard to dashboard_v1 - v1"
+logger=migrator t=2025-02-23T16:33:03.951949645Z level=info msg="Executing migration" id="create dashboard v2"
+logger=migrator t=2025-02-23T16:33:04.009190374Z level=info msg="Executing migration" id="create index IDX_dashboard_org_id - v2"
+logger=migrator t=2025-02-23T16:33:04.143284088Z level=info msg="Executing migration" id="create index UQE_dashboard_org_id_slug - v2"
+logger=migrator t=2025-02-23T16:33:04.299548871Z level=info msg="Executing migration" id="copy dashboard v1 to v2"
+logger=migrator t=2025-02-23T16:33:04.570011571Z level=info msg="Executing migration" id="drop table dashboard_v1"
+logger=migrator t=2025-02-23T16:33:04.81656032Z level=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
+logger=migrator t=2025-02-23T16:33:04.928972859Z level=info msg="Executing migration" id="Add column updated_by in dashboard - v2"
+logger=migrator t=2025-02-23T16:33:05.772065901Z level=info msg="Executing migration" id="Add column created_by in dashboard - v2"
+logger=migrator t=2025-02-23T16:33:06.029740169Z level=info msg="Executing migration" id="Add column gnetId in dashboard"
+logger=migrator t=2025-02-23T16:33:06.137920468Z level=info msg="Executing migration" id="Add index for gnetId in dashboard"
+logger=migrator t=2025-02-23T16:33:06.24180722Z level=info msg="Executing migration" id="Add column plugin_id in dashboard"
+logger=migrator t=2025-02-23T16:33:06.381072284Z level=info msg="Executing migration" id="Add index for plugin_id in dashboard"
+logger=migrator t=2025-02-23T16:33:06.5677821Z level=info msg="Executing migration" id="Add index for dashboard_id in dashboard_tag"
+logger=migrator t=2025-02-23T16:33:06.715369826Z level=info msg="Executing migration" id="Update dashboard table charset"
+logger=migrator t=2025-02-23T16:33:06.814172029Z level=info msg="Executing migration" id="Update dashboard_tag table charset"
+logger=migrator t=2025-02-23T16:33:06.960597007Z level=info msg="Executing migration" id="Add column folder_id in dashboard"
+logger=migrator t=2025-02-23T16:33:07.033510507Z level=info msg="Executing migration" id="Add column isFolder in dashboard"
+logger=migrator t=2025-02-23T16:33:07.184903718Z level=info msg="Executing migration" id="Add column has_acl in dashboard"
+logger=migrator t=2025-02-23T16:33:07.283450389Z level=info msg="Executing migration" id="Add column uid in dashboard"
+logger=migrator t=2025-02-23T16:33:07.821916174Z level=info msg="Executing migration" id="Update uid column values in dashboard"
+logger=migrator t=2025-02-23T16:33:08.828690195Z level=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
+logger=migrator t=2025-02-23T16:33:09.244462529Z level=info msg="Executing migration" id="Remove unique index org_id_slug"
+logger=migrator t=2025-02-23T16:33:10.279474552Z level=info msg="Executing migration" id="Update dashboard title length"
+logger=migrator t=2025-02-23T16:33:11.072921962Z level=info msg="Executing migration" id="Add unique index for dashboard_org_id_title_folder_id"
+logger=migrator t=2025-02-23T16:33:11.844033022Z level=info msg="Executing migration" id="create dashboard_provisioning"
+logger=migrator t=2025-02-23T16:33:12.374380669Z level=info msg="Executing migration" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+logger=migrator t=2025-02-23T16:33:13.86264383Z level=info msg="Executing migration" id="create dashboard_provisioning v2"
+logger=migrator t=2025-02-23T16:33:14.352169593Z level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+logger=migrator t=2025-02-23T16:33:16.564636036Z level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+logger=migrator t=2025-02-23T16:33:17.058602767Z level=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
+logger=migrator t=2025-02-23T16:33:19.111905045Z level=info msg="Executing migration" id="drop dashboard_provisioning_tmp_qwerty"
+logger=migrator t=2025-02-23T16:33:22.086843634Z level=info msg="Executing migration" id="Add check_sum column"
+logger=migrator t=2025-02-23T16:33:24.438177526Z level=info msg="Executing migration" id="Add index for dashboard_title"
+logger=migrator t=2025-02-23T16:33:26.074849193Z level=info msg="Executing migration" id="delete tags for deleted dashboards"
+logger=migrator t=2025-02-23T16:33:28.008347334Z level=info msg="Executing migration" id="delete stars for deleted dashboards"
+logger=migrator t=2025-02-23T16:33:30.178802289Z level=info msg="Executing migration" id="Add index for dashboard_is_folder"
+logger=migrator t=2025-02-23T16:33:32.97533429Z level=info msg="Executing migration" id="Add isPublic for dashboard"
+logger=migrator t=2025-02-23T16:33:33.191977979Z level=info msg="Executing migration" id="create data_source table"
+logger=migrator t=2025-02-23T16:33:33.225802047Z level=info msg="Executing migration" id="add index data_source.account_id"
+logger=migrator t=2025-02-23T16:33:33.252940488Z level=info msg="Executing migration" id="add unique index data_source.account_id_name"
+logger=migrator t=2025-02-23T16:33:33.285215134Z level=info msg="Executing migration" id="drop index IDX_data_source_account_id - v1"
+logger=migrator t=2025-02-23T16:33:33.306538116Z level=info msg="Executing migration" id="drop index UQE_data_source_account_id_name - v1"
+logger=migrator t=2025-02-23T16:33:33.332167438Z level=info msg="Executing migration" id="Rename table data_source to data_source_v1 - v1"
+logger=migrator t=2025-02-23T16:33:33.364458885Z level=info msg="Executing migration" id="create data_source table v2"
+logger=migrator t=2025-02-23T16:33:33.385926378Z level=info msg="Executing migration" id="create index IDX_data_source_org_id - v2"
+logger=migrator t=2025-02-23T16:33:33.407289764Z level=info msg="Executing migration" id="create index UQE_data_source_org_id_name - v2"
+logger=migrator t=2025-02-23T16:33:33.431683988Z level=info msg="Executing migration" id="Drop old table data_source_v1 #2"
+logger=migrator t=2025-02-23T16:33:33.45858691Z level=info msg="Executing migration" id="Add column with_credentials"
+logger=migrator t=2025-02-23T16:33:33.495720139Z level=info msg="Executing migration" id="Add secure json data column"
+logger=migrator t=2025-02-23T16:33:33.513422436Z level=info msg="Executing migration" id="Update data_source table charset"
+logger=migrator t=2025-02-23T16:33:33.529161677Z level=info msg="Executing migration" id="Update initial version to 1"
+logger=migrator t=2025-02-23T16:33:33.545104635Z level=info msg="Executing migration" id="Add read_only data column"
+logger=migrator t=2025-02-23T16:33:33.561503029Z level=info msg="Executing migration" id="Migrate logging ds to loki ds"
+logger=migrator t=2025-02-23T16:33:33.579453545Z level=info msg="Executing migration" id="Update json_data with nulls"
+logger=migrator t=2025-02-23T16:33:33.595907943Z level=info msg="Executing migration" id="Add uid column"
+logger=migrator t=2025-02-23T16:33:33.615579294Z level=info msg="Executing migration" id="Update uid value"
+logger=migrator t=2025-02-23T16:33:33.631198426Z level=info msg="Executing migration" id="Add unique index datasource_org_id_uid"
+logger=migrator t=2025-02-23T16:33:33.657714218Z level=info msg="Executing migration" id="add unique index datasource_org_id_is_default"
+logger=migrator t=2025-02-23T16:33:33.684293315Z level=info msg="Executing migration" id="create api_key table"
+logger=migrator t=2025-02-23T16:33:33.719171266Z level=info msg="Executing migration" id="add index api_key.account_id"
+logger=migrator t=2025-02-23T16:33:33.743781307Z level=info msg="Executing migration" id="add index api_key.key"
+logger=migrator t=2025-02-23T16:33:33.773055717Z level=info msg="Executing migration" id="add index api_key.account_id_name"
+logger=migrator t=2025-02-23T16:33:33.798662637Z level=info msg="Executing migration" id="drop index IDX_api_key_account_id - v1"
+logger=migrator t=2025-02-23T16:33:33.817354511Z level=info msg="Executing migration" id="drop index UQE_api_key_key - v1"
+logger=migrator t=2025-02-23T16:33:33.837129671Z level=info msg="Executing migration" id="drop index UQE_api_key_account_id_name - v1"
+logger=migrator t=2025-02-23T16:33:33.85612977Z level=info msg="Executing migration" id="Rename table api_key to api_key_v1 - v1"
+logger=migrator t=2025-02-23T16:33:33.886215143Z level=info msg="Executing migration" id="create api_key table v2"
+logger=migrator t=2025-02-23T16:33:33.90379653Z level=info msg="Executing migration" id="create index IDX_api_key_org_id - v2"
+logger=migrator t=2025-02-23T16:33:33.920299532Z level=info msg="Executing migration" id="create index UQE_api_key_key - v2"
+logger=migrator t=2025-02-23T16:33:33.939725364Z level=info msg="Executing migration" id="create index UQE_api_key_org_id_name - v2"
+logger=migrator t=2025-02-23T16:33:33.95640568Z level=info msg="Executing migration" id="copy api_key v1 to v2"
+logger=migrator t=2025-02-23T16:33:33.974644019Z level=info msg="Executing migration" id="Drop old table api_key_v1"
+logger=migrator t=2025-02-23T16:33:33.995408257Z level=info msg="Executing migration" id="Update api_key table charset"
+logger=migrator t=2025-02-23T16:33:34.013426578Z level=info msg="Executing migration" id="Add expires to api_key table"
+logger=migrator t=2025-02-23T16:33:34.032921616Z level=info msg="Executing migration" id="Add service account foreign key"
+logger=migrator t=2025-02-23T16:33:34.05071812Z level=info msg="Executing migration" id="set service account foreign key to nil if 0"
+logger=migrator t=2025-02-23T16:33:34.06643856Z level=info msg="Executing migration" id="Add last_used_at to api_key table"
+logger=migrator t=2025-02-23T16:33:34.083714622Z level=info msg="Executing migration" id="Add is_revoked column to api_key table"
+logger=migrator t=2025-02-23T16:33:34.100767868Z level=info msg="Executing migration" id="create dashboard_snapshot table v4"
+logger=migrator t=2025-02-23T16:33:34.118023429Z level=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
+logger=migrator t=2025-02-23T16:33:34.141735699Z level=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
+logger=migrator t=2025-02-23T16:33:34.160910012Z level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_key - v5"
+logger=migrator t=2025-02-23T16:33:34.178987938Z level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_delete_key - v5"
+logger=migrator t=2025-02-23T16:33:34.199524958Z level=info msg="Executing migration" id="create index IDX_dashboard_snapshot_user_id - v5"
+logger=migrator t=2025-02-23T16:33:34.217497576Z level=info msg="Executing migration" id="alter dashboard_snapshot to mediumtext v2"
+logger=migrator t=2025-02-23T16:33:34.234782839Z level=info msg="Executing migration" id="Update dashboard_snapshot table charset"
+logger=migrator t=2025-02-23T16:33:34.268467596Z level=info msg="Executing migration" id="Add column external_delete_url to dashboard_snapshots table"
+logger=migrator t=2025-02-23T16:33:34.286191995Z level=info msg="Executing migration" id="Add encrypted dashboard json column"
+logger=migrator t=2025-02-23T16:33:34.30540831Z level=info msg="Executing migration" id="Change dashboard_encrypted column to MEDIUMBLOB"
+logger=migrator t=2025-02-23T16:33:34.322078225Z level=info msg="Executing migration" id="create quota table v1"
+logger=migrator t=2025-02-23T16:33:34.343921448Z level=info msg="Executing migration" id="create index UQE_quota_org_id_user_id_target - v1"
+logger=migrator t=2025-02-23T16:33:34.370350133Z level=info msg="Executing migration" id="Update quota table charset"
+logger=migrator t=2025-02-23T16:33:34.391632412Z level=info msg="Executing migration" id="create plugin_setting table"
+logger=migrator t=2025-02-23T16:33:34.409793145Z level=info msg="Executing migration" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+logger=migrator t=2025-02-23T16:33:34.427421835Z level=info msg="Executing migration" id="Add column plugin_version to plugin_settings"
+logger=migrator t=2025-02-23T16:33:34.44788525Z level=info msg="Executing migration" id="Update plugin_setting table charset"
+logger=migrator t=2025-02-23T16:33:34.463181256Z level=info msg="Executing migration" id="create session table"
+logger=migrator t=2025-02-23T16:33:34.482216958Z level=info msg="Executing migration" id="Drop old table playlist table"
+logger=migrator t=2025-02-23T16:33:34.497443859Z level=info msg="Executing migration" id="Drop old table playlist_item table"
+logger=migrator t=2025-02-23T16:33:34.51279587Z level=info msg="Executing migration" id="create playlist table v2"
+logger=migrator t=2025-02-23T16:33:34.536495339Z level=info msg="Executing migration" id="create playlist item table v2"
+logger=migrator t=2025-02-23T16:33:34.554303444Z level=info msg="Executing migration" id="Update playlist table charset"
+logger=migrator t=2025-02-23T16:33:34.570391013Z level=info msg="Executing migration" id="Update playlist_item table charset"
+logger=migrator t=2025-02-23T16:33:34.591829704Z level=info msg="Executing migration" id="drop preferences table v2"
+logger=migrator t=2025-02-23T16:33:34.614934027Z level=info msg="Executing migration" id="drop preferences table v3"
+logger=migrator t=2025-02-23T16:33:34.638266667Z level=info msg="Executing migration" id="create preferences table v3"
+logger=migrator t=2025-02-23T16:33:34.680491198Z level=info msg="Executing migration" id="Update preferences table charset"
+logger=migrator t=2025-02-23T16:33:34.697531442Z level=info msg="Executing migration" id="Add column team_id in preferences"
+logger=migrator t=2025-02-23T16:33:34.713878532Z level=info msg="Executing migration" id="Update team_id column values in preferences"
+logger=migrator t=2025-02-23T16:33:34.730241923Z level=info msg="Executing migration" id="Add column week_start in preferences"
+logger=migrator t=2025-02-23T16:33:34.74833355Z level=info msg="Executing migration" id="Add column preferences.json_data"
+logger=migrator t=2025-02-23T16:33:34.768288824Z level=info msg="Executing migration" id="alter preferences.json_data to mediumtext v1"
+logger=migrator t=2025-02-23T16:33:34.786463758Z level=info msg="Executing migration" id="Add preferences index org_id"
+logger=migrator t=2025-02-23T16:33:34.817958342Z level=info msg="Executing migration" id="Add preferences index user_id"
+logger=migrator t=2025-02-23T16:33:34.840072187Z level=info msg="Executing migration" id="create alert table v1"
+logger=migrator t=2025-02-23T16:33:34.860058663Z level=info msg="Executing migration" id="add index alert org_id & id "
+logger=migrator t=2025-02-23T16:33:34.878958554Z level=info msg="Executing migration" id="add index alert state"
+logger=migrator t=2025-02-23T16:33:34.895276641Z level=info msg="Executing migration" id="add index alert dashboard_id"
+logger=migrator t=2025-02-23T16:33:34.912601308Z level=info msg="Executing migration" id="Create alert_rule_tag table v1"
+logger=migrator t=2025-02-23T16:33:34.928450858Z level=info msg="Executing migration" id="Add unique index alert_rule_tag.alert_id_tag_id"
+logger=migrator t=2025-02-23T16:33:34.946305467Z level=info msg="Executing migration" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+logger=migrator t=2025-02-23T16:33:34.965880111Z level=info msg="Executing migration" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+logger=migrator t=2025-02-23T16:33:34.984843307Z level=info msg="Executing migration" id="Create alert_rule_tag table v2"
+logger=migrator t=2025-02-23T16:33:35.00263831Z level=info msg="Executing migration" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+logger=migrator t=2025-02-23T16:33:35.020519821Z level=info msg="Executing migration" id="copy alert_rule_tag v1 to v2"
+logger=migrator t=2025-02-23T16:33:35.036211359Z level=info msg="Executing migration" id="drop table alert_rule_tag_v1"
+logger=migrator t=2025-02-23T16:33:35.053937357Z level=info msg="Executing migration" id="create alert_notification table v1"
+logger=migrator t=2025-02-23T16:33:35.072069287Z level=info msg="Executing migration" id="Add column is_default"
+logger=migrator t=2025-02-23T16:33:35.090492641Z level=info msg="Executing migration" id="Add column frequency"
+logger=migrator t=2025-02-23T16:33:35.109096808Z level=info msg="Executing migration" id="Add column send_reminder"
+logger=migrator t=2025-02-23T16:33:35.20596805Z level=info msg="Executing migration" id="Add column disable_resolve_message"
+logger=migrator t=2025-02-23T16:33:35.223821758Z level=info msg="Executing migration" id="add index alert_notification org_id & name"
+logger=migrator t=2025-02-23T16:33:35.239535998Z level=info msg="Executing migration" id="Update alert table charset"
+logger=migrator t=2025-02-23T16:33:35.255076124Z level=info msg="Executing migration" id="Update alert_notification table charset"
+logger=migrator t=2025-02-23T16:33:35.27100638Z level=info msg="Executing migration" id="create notification_journal table v1"
+logger=migrator t=2025-02-23T16:33:35.288806684Z level=info msg="Executing migration" id="add index notification_journal org_id & alert_id & notifier_id"
+logger=migrator t=2025-02-23T16:33:35.305180676Z level=info msg="Executing migration" id="drop alert_notification_journal"
+logger=migrator t=2025-02-23T16:33:35.325930613Z level=info msg="Executing migration" id="create alert_notification_state table v1"
+logger=migrator t=2025-02-23T16:33:35.349411265Z level=info msg="Executing migration" id="add index alert_notification_state org_id & alert_id & notifier_id"
+logger=migrator t=2025-02-23T16:33:35.370230607Z level=info msg="Executing migration" id="Add for to alert table"
+logger=migrator t=2025-02-23T16:33:35.390594214Z level=info msg="Executing migration" id="Add column uid in alert_notification"
+logger=migrator t=2025-02-23T16:33:35.408894857Z level=info msg="Executing migration" id="Update uid column values in alert_notification"
+logger=migrator t=2025-02-23T16:33:35.425775389Z level=info msg="Executing migration" id="Add unique index alert_notification_org_id_uid"
+logger=migrator t=2025-02-23T16:33:35.443950323Z level=info msg="Executing migration" id="Remove unique index org_id_name"
+logger=migrator t=2025-02-23T16:33:35.462503286Z level=info msg="Executing migration" id="Add column secure_settings in alert_notification"
+logger=migrator t=2025-02-23T16:33:35.479227805Z level=info msg="Executing migration" id="alter alert.settings to mediumtext"
+logger=migrator t=2025-02-23T16:33:35.494559215Z level=info msg="Executing migration" id="Add non-unique index alert_notification_state_alert_id"
+logger=migrator t=2025-02-23T16:33:35.516278928Z level=info msg="Executing migration" id="Add non-unique index alert_rule_tag_alert_id"
+logger=migrator t=2025-02-23T16:33:35.538313966Z level=info msg="Executing migration" id="Drop old annotation table v4"
+logger=migrator t=2025-02-23T16:33:35.556176175Z level=info msg="Executing migration" id="create annotation table v5"
+logger=migrator t=2025-02-23T16:33:35.575365289Z level=info msg="Executing migration" id="add index annotation 0 v3"
+logger=migrator t=2025-02-23T16:33:35.594408391Z level=info msg="Executing migration" id="add index annotation 1 v3"
+logger=migrator t=2025-02-23T16:33:35.614278559Z level=info msg="Executing migration" id="add index annotation 2 v3"
+logger=migrator t=2025-02-23T16:33:35.632787219Z level=info msg="Executing migration" id="add index annotation 3 v3"
+logger=migrator t=2025-02-23T16:33:35.652297358Z level=info msg="Executing migration" id="add index annotation 4 v3"
+logger=migrator t=2025-02-23T16:33:35.672084619Z level=info msg="Executing migration" id="Update annotation table charset"
+logger=migrator t=2025-02-23T16:33:35.693036471Z level=info msg="Executing migration" id="Add column region_id to annotation table"
+logger=migrator t=2025-02-23T16:33:35.71153263Z level=info msg="Executing migration" id="Drop category_id index"
+logger=migrator t=2025-02-23T16:33:35.727134861Z level=info msg="Executing migration" id="Add column tags to annotation table"
+logger=migrator t=2025-02-23T16:33:35.743320838Z level=info msg="Executing migration" id="Create annotation_tag table v2"
+logger=migrator t=2025-02-23T16:33:35.759396706Z level=info msg="Executing migration" id="Add unique index annotation_tag.annotation_id_tag_id"
+logger=migrator t=2025-02-23T16:33:35.779385583Z level=info msg="Executing migration" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+logger=migrator t=2025-02-23T16:33:35.795615963Z level=info msg="Executing migration" id="Rename table annotation_tag to annotation_tag_v2 - v2"
+logger=migrator t=2025-02-23T16:33:35.818706785Z level=info msg="Executing migration" id="Create annotation_tag table v3"
+logger=migrator t=2025-02-23T16:33:35.837819892Z level=info msg="Executing migration" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+logger=migrator t=2025-02-23T16:33:35.855855615Z level=info msg="Executing migration" id="copy annotation_tag v2 to v3"
+logger=migrator t=2025-02-23T16:33:35.880079026Z level=info msg="Executing migration" id="drop table annotation_tag_v2"
+logger=migrator t=2025-02-23T16:33:35.897269282Z level=info msg="Executing migration" id="Update alert annotations and set TEXT to empty"
+logger=migrator t=2025-02-23T16:33:35.9165133Z level=info msg="Executing migration" id="Add created time to annotation table"
+logger=migrator t=2025-02-23T16:33:35.933548144Z level=info msg="Executing migration" id="Add updated time to annotation table"
+logger=migrator t=2025-02-23T16:33:35.951860588Z level=info msg="Executing migration" id="Add index for created in annotation table"
+logger=migrator t=2025-02-23T16:33:35.971106507Z level=info msg="Executing migration" id="Add index for updated in annotation table"
+logger=migrator t=2025-02-23T16:33:35.992869523Z level=info msg="Executing migration" id="Convert existing annotations from seconds to milliseconds"
+logger=migrator t=2025-02-23T16:33:36.005158593Z level=info msg="Executing migration" id="Add epoch_end column"
+logger=migrator t=2025-02-23T16:33:36.020406595Z level=info msg="Executing migration" id="Add index for epoch_end"
+logger=migrator t=2025-02-23T16:33:36.036369655Z level=info msg="Executing migration" id="Make epoch_end the same as epoch"
+logger=migrator t=2025-02-23T16:33:36.054789508Z level=info msg="Executing migration" id="Move region to single row"
+logger=migrator t=2025-02-23T16:33:36.068841016Z level=info msg="Executing migration" id="Remove index org_id_epoch from annotation table"
+logger=migrator t=2025-02-23T16:33:36.084424145Z level=info msg="Executing migration" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+logger=migrator t=2025-02-23T16:33:36.100134385Z level=info msg="Executing migration" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+logger=migrator t=2025-02-23T16:33:36.122946384Z level=info msg="Executing migration" id="Add index for org_id_epoch_end_epoch on annotation table"
+logger=migrator t=2025-02-23T16:33:36.143669819Z level=info msg="Executing migration" id="Remove index org_id_epoch_epoch_end from annotation table"
+logger=migrator t=2025-02-23T16:33:36.161920159Z level=info msg="Executing migration" id="Add index for alert_id on annotation table"
+logger=migrator t=2025-02-23T16:33:36.178785989Z level=info msg="Executing migration" id="Increase tags column to length 4096"
+logger=migrator t=2025-02-23T16:33:36.196990825Z level=info msg="Executing migration" id="create test_data table"
+logger=migrator t=2025-02-23T16:33:36.213678141Z level=info msg="Executing migration" id="create dashboard_version table v1"
+logger=migrator t=2025-02-23T16:33:36.230151345Z level=info msg="Executing migration" id="add index dashboard_version.dashboard_id"
+logger=migrator t=2025-02-23T16:33:36.249571282Z level=info msg="Executing migration" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+logger=migrator t=2025-02-23T16:33:36.267959438Z level=info msg="Executing migration" id="Set dashboard version to 1 where 0"
+logger=migrator t=2025-02-23T16:33:36.286568511Z level=info msg="Executing migration" id="save existing dashboard data in dashboard_version table v1"
+logger=migrator t=2025-02-23T16:33:36.311077252Z level=info msg="Executing migration" id="alter dashboard_version.data to mediumtext v1"
+logger=migrator t=2025-02-23T16:33:36.328473029Z level=info msg="Executing migration" id="create team table"
+logger=migrator t=2025-02-23T16:33:36.348254195Z level=info msg="Executing migration" id="add index team.org_id"
+logger=migrator t=2025-02-23T16:33:36.37181236Z level=info msg="Executing migration" id="add unique index team_org_id_name"
+logger=migrator t=2025-02-23T16:33:36.915326991Z level=info msg="Executing migration" id="create team member table"
+logger=migrator t=2025-02-23T16:33:36.947470236Z level=info msg="Executing migration" id="add index team_member.org_id"
+logger=migrator t=2025-02-23T16:33:36.968924934Z level=info msg="Executing migration" id="add unique index team_member_org_id_team_id_user_id"
+logger=migrator t=2025-02-23T16:33:36.986746045Z level=info msg="Executing migration" id="add index team_member.team_id"
+logger=migrator t=2025-02-23T16:33:37.00435974Z level=info msg="Executing migration" id="Add column email to team table"
+logger=migrator t=2025-02-23T16:33:37.021773218Z level=info msg="Executing migration" id="Add column external to team_member table"
+logger=migrator t=2025-02-23T16:33:37.038821768Z level=info msg="Executing migration" id="Add column permission to team_member table"
+logger=migrator t=2025-02-23T16:33:37.055697104Z level=info msg="Executing migration" id="create dashboard acl table"
+logger=migrator t=2025-02-23T16:33:37.071977493Z level=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
+logger=migrator t=2025-02-23T16:33:37.095382846Z level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_user_id"
+logger=migrator t=2025-02-23T16:33:37.11286263Z level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_team_id"
+logger=migrator t=2025-02-23T16:33:37.129469845Z level=info msg="Executing migration" id="add index dashboard_acl_user_id"
+logger=migrator t=2025-02-23T16:33:37.149463728Z level=info msg="Executing migration" id="add index dashboard_acl_team_id"
+logger=migrator t=2025-02-23T16:33:37.167416649Z level=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
+logger=migrator t=2025-02-23T16:33:37.184277684Z level=info msg="Executing migration" id="add index dashboard_permission"
+logger=migrator t=2025-02-23T16:33:37.202464324Z level=info msg="Executing migration" id="save default acl rules in dashboard_acl table"
+logger=migrator t=2025-02-23T16:33:37.231112492Z level=info msg="Executing migration" id="delete acl rules for deleted dashboards and folders"
+logger=migrator t=2025-02-23T16:33:37.245593138Z level=info msg="Executing migration" id="create tag table"
+logger=migrator t=2025-02-23T16:33:37.261862026Z level=info msg="Executing migration" id="add index tag.key_value"
+logger=migrator t=2025-02-23T16:33:37.278777365Z level=info msg="Executing migration" id="create login attempt table"
+logger=migrator t=2025-02-23T16:33:37.295068255Z level=info msg="Executing migration" id="add index login_attempt.username"
+logger=migrator t=2025-02-23T16:33:37.312285718Z level=info msg="Executing migration" id="drop index IDX_login_attempt_username - v1"
+logger=migrator t=2025-02-23T16:33:37.329405774Z level=info msg="Executing migration" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+logger=migrator t=2025-02-23T16:33:37.347857635Z level=info msg="Executing migration" id="create login_attempt v2"
+logger=migrator t=2025-02-23T16:33:37.365511332Z level=info msg="Executing migration" id="create index IDX_login_attempt_username - v2"
+logger=migrator t=2025-02-23T16:33:37.384797059Z level=info msg="Executing migration" id="copy login_attempt v1 to v2"
+logger=migrator t=2025-02-23T16:33:37.408654648Z level=info msg="Executing migration" id="drop login_attempt_tmp_qwerty"
+logger=migrator t=2025-02-23T16:33:37.437469629Z level=info msg="Executing migration" id="create user auth table"
+logger=migrator t=2025-02-23T16:33:37.549793722Z level=info msg="Executing migration" id="create index IDX_user_auth_auth_module_auth_id - v1"
+logger=migrator t=2025-02-23T16:33:37.619326227Z level=info msg="Executing migration" id="alter user_auth.auth_id to length 190"
+logger=migrator t=2025-02-23T16:33:37.650617704Z level=info msg="Executing migration" id="Add OAuth access token to user_auth"
+logger=migrator t=2025-02-23T16:33:37.679600599Z level=info msg="Executing migration" id="Add OAuth refresh token to user_auth"
+logger=migrator t=2025-02-23T16:33:37.702405404Z level=info msg="Executing migration" id="Add OAuth token type to user_auth"
+logger=migrator t=2025-02-23T16:33:37.719309743Z level=info msg="Executing migration" id="Add OAuth expiry to user_auth"
+logger=migrator t=2025-02-23T16:33:37.740925254Z level=info msg="Executing migration" id="Add index to user_id column in user_auth"
+logger=migrator t=2025-02-23T16:33:37.759557929Z level=info msg="Executing migration" id="Add OAuth ID token to user_auth"
+logger=migrator t=2025-02-23T16:33:37.77661938Z level=info msg="Executing migration" id="create server_lock table"
+logger=migrator t=2025-02-23T16:33:37.79342281Z level=info msg="Executing migration" id="add index server_lock.operation_uid"
+logger=migrator t=2025-02-23T16:33:37.81009023Z level=info msg="Executing migration" id="create user auth token table"
+logger=migrator t=2025-02-23T16:33:37.829069333Z level=info msg="Executing migration" id="add unique index user_auth_token.auth_token"
+logger=migrator t=2025-02-23T16:33:37.852559892Z level=info msg="Executing migration" id="add unique index user_auth_token.prev_auth_token"
+logger=migrator t=2025-02-23T16:33:37.875034972Z level=info msg="Executing migration" id="add index user_auth_token.user_id"
+logger=migrator t=2025-02-23T16:33:37.913549921Z level=info msg="Executing migration" id="Add revoked_at to the user auth token"
+logger=migrator t=2025-02-23T16:33:37.930534566Z level=info msg="Executing migration" id="create cache_data table"
+logger=migrator t=2025-02-23T16:33:37.950009808Z level=info msg="Executing migration" id="add unique index cache_data.cache_key"
+logger=migrator t=2025-02-23T16:33:38.06927935Z level=info msg="Executing migration" id="create short_url table v1"
+logger=migrator t=2025-02-23T16:33:38.091467707Z level=info msg="Executing migration" id="add index short_url.org_id-uid"
+logger=migrator t=2025-02-23T16:33:38.107635187Z level=info msg="Executing migration" id="alter table short_url alter column created_by type to bigint"
+logger=migrator t=2025-02-23T16:33:38.12068322Z level=info msg="Executing migration" id="delete alert_definition table"
+logger=migrator t=2025-02-23T16:33:38.134103182Z level=info msg="Executing migration" id="recreate alert_definition table"
+logger=migrator t=2025-02-23T16:33:38.153226796Z level=info msg="Executing migration" id="add index in alert_definition on org_id and title columns"
+logger=migrator t=2025-02-23T16:33:38.170334451Z level=info msg="Executing migration" id="add index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-02-23T16:33:38.185129322Z level=info msg="Executing migration" id="alter alert_definition table data column to mediumtext in mysql"
+logger=migrator t=2025-02-23T16:33:38.199234839Z level=info msg="Executing migration" id="drop index in alert_definition on org_id and title columns"
+logger=migrator t=2025-02-23T16:33:38.214267329Z level=info msg="Executing migration" id="drop index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-02-23T16:33:38.233377042Z level=info msg="Executing migration" id="add unique index in alert_definition on org_id and title columns"
+logger=migrator t=2025-02-23T16:33:38.250929532Z level=info msg="Executing migration" id="add unique index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-02-23T16:33:38.267870473Z level=info msg="Executing migration" id="Add column paused in alert_definition"
+logger=migrator t=2025-02-23T16:33:38.285032032Z level=info msg="Executing migration" id="drop alert_definition table"
+logger=migrator t=2025-02-23T16:33:38.303499094Z level=info msg="Executing migration" id="delete alert_definition_version table"
+logger=migrator t=2025-02-23T16:33:38.317551306Z level=info msg="Executing migration" id="recreate alert_definition_version table"
+logger=migrator t=2025-02-23T16:33:38.337530188Z level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_id and version columns"
+logger=migrator t=2025-02-23T16:33:38.35511328Z level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_uid and version columns"
+logger=migrator t=2025-02-23T16:33:38.373412529Z level=info msg="Executing migration" id="alter alert_definition_version table data column to mediumtext in mysql"
+logger=migrator t=2025-02-23T16:33:38.389433197Z level=info msg="Executing migration" id="drop alert_definition_version table"
+logger=migrator t=2025-02-23T16:33:38.407547731Z level=info msg="Executing migration" id="create alert_instance table"
+logger=migrator t=2025-02-23T16:33:38.425857381Z level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
+logger=migrator t=2025-02-23T16:33:38.443991517Z level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, current_state columns"
+logger=migrator t=2025-02-23T16:33:38.466589106Z level=info msg="Executing migration" id="add column current_state_end to alert_instance"
+logger=migrator t=2025-02-23T16:33:38.48533749Z level=info msg="Executing migration" id="remove index def_org_id, def_uid, current_state on alert_instance"
+logger=migrator t=2025-02-23T16:33:38.503991667Z level=info msg="Executing migration" id="remove index def_org_id, current_state on alert_instance"
+logger=migrator t=2025-02-23T16:33:38.524643902Z level=info msg="Executing migration" id="rename def_org_id to rule_org_id in alert_instance"
+logger=migrator t=2025-02-23T16:33:38.552757028Z level=info msg="Executing migration" id="rename def_uid to rule_uid in alert_instance"
+logger=migrator t=2025-02-23T16:33:38.573154242Z level=info msg="Executing migration" id="add index rule_org_id, rule_uid, current_state on alert_instance"
+logger=migrator t=2025-02-23T16:33:38.5915666Z level=info msg="Executing migration" id="add index rule_org_id, current_state on alert_instance"
+logger=migrator t=2025-02-23T16:33:38.609892451Z level=info msg="Executing migration" id="add current_reason column related to current_state"
+logger=migrator t=2025-02-23T16:33:38.631991601Z level=info msg="Executing migration" id="create alert_rule table"
+logger=migrator t=2025-02-23T16:33:38.651857373Z level=info msg="Executing migration" id="add index in alert_rule on org_id and title columns"
+logger=migrator t=2025-02-23T16:33:38.670579756Z level=info msg="Executing migration" id="add index in alert_rule on org_id and uid columns"
+logger=migrator t=2025-02-23T16:33:38.688230553Z level=info msg="Executing migration" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
+logger=migrator t=2025-02-23T16:33:38.706274482Z level=info msg="Executing migration" id="alter alert_rule table data column to mediumtext in mysql"
+logger=migrator t=2025-02-23T16:33:38.718822275Z level=info msg="Executing migration" id="add column for to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.735841223Z level=info msg="Executing migration" id="add column annotations to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.75424658Z level=info msg="Executing migration" id="add column labels to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.772922358Z level=info msg="Executing migration" id="remove unique index from alert_rule on org_id, title columns"
+logger=migrator t=2025-02-23T16:33:38.794560871Z level=info msg="Executing migration" id="add index in alert_rule on org_id, namespase_uid and title columns"
+logger=migrator t=2025-02-23T16:33:38.81336016Z level=info msg="Executing migration" id="add dashboard_uid column to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.830144189Z level=info msg="Executing migration" id="add panel_id column to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.854014878Z level=info msg="Executing migration" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
+logger=migrator t=2025-02-23T16:33:38.873563026Z level=info msg="Executing migration" id="add rule_group_idx column to alert_rule"
+logger=migrator t=2025-02-23T16:33:38.890314752Z level=info msg="Executing migration" id="add is_paused column to alert_rule table"
+logger=migrator t=2025-02-23T16:33:38.913333375Z level=info msg="Executing migration" id="fix is_paused column for alert_rule table"
+logger=migrator t=2025-02-23T16:33:38.928698191Z level=info msg="Executing migration" id="create alert_rule_version table"
+logger=migrator t=2025-02-23T16:33:38.946299385Z level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
+logger=migrator t=2025-02-23T16:33:38.964231104Z level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
+logger=migrator t=2025-02-23T16:33:38.983089697Z level=info msg="Executing migration" id="alter alert_rule_version table data column to mediumtext in mysql"
+logger=migrator t=2025-02-23T16:33:38.997869768Z level=info msg="Executing migration" id="add column for to alert_rule_version"
+logger=migrator t=2025-02-23T16:33:39.016493842Z level=info msg="Executing migration" id="add column annotations to alert_rule_version"
+logger=migrator t=2025-02-23T16:33:39.033562793Z level=info msg="Executing migration" id="add column labels to alert_rule_version"
+logger=migrator t=2025-02-23T16:33:39.051298698Z level=info msg="Executing migration" id="add rule_group_idx column to alert_rule_version"
+logger=migrator t=2025-02-23T16:33:39.076480191Z level=info msg="Executing migration" id="add is_paused column to alert_rule_versions table"
+logger=migrator t=2025-02-23T16:33:39.094427512Z level=info msg="Executing migration" id="fix is_paused column for alert_rule_version table"
+logger=migrator t=2025-02-23T16:33:39.109895037Z level=info msg="Executing migration" id=create_alert_configuration_table
+logger=migrator t=2025-02-23T16:33:39.126258532Z level=info msg="Executing migration" id="Add column default in alert_configuration"
+logger=migrator t=2025-02-23T16:33:39.144939911Z level=info msg="Executing migration" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
+logger=migrator t=2025-02-23T16:33:39.16184505Z level=info msg="Executing migration" id="add column org_id in alert_configuration"
+logger=migrator t=2025-02-23T16:33:39.180607735Z level=info msg="Executing migration" id="add index in alert_configuration table on org_id column"
+logger=migrator t=2025-02-23T16:33:39.198045216Z level=info msg="Executing migration" id="add configuration_hash column to alert_configuration"
+logger=migrator t=2025-02-23T16:33:39.214573524Z level=info msg="Executing migration" id=create_ngalert_configuration_table
+logger=migrator t=2025-02-23T16:33:39.231613273Z level=info msg="Executing migration" id="add index in ngalert_configuration on org_id column"
+logger=migrator t=2025-02-23T16:33:39.247632442Z level=info msg="Executing migration" id="add column send_alerts_to in ngalert_configuration"
+logger=migrator t=2025-02-23T16:33:39.264111446Z level=info msg="Executing migration" id="create provenance_type table"
+logger=migrator t=2025-02-23T16:33:39.281563428Z level=info msg="Executing migration" id="add index to uniquify (record_key, record_type, org_id) columns"
+logger=migrator t=2025-02-23T16:33:39.30028181Z level=info msg="Executing migration" id="create alert_image table"
+logger=migrator t=2025-02-23T16:33:39.316408587Z level=info msg="Executing migration" id="add unique index on token to alert_image table"
+logger=migrator t=2025-02-23T16:33:39.334253799Z level=info msg="Executing migration" id="support longer URLs in alert_image table"
+logger=migrator t=2025-02-23T16:33:39.350110555Z level=info msg="Executing migration" id=create_alert_configuration_history_table
+logger=migrator t=2025-02-23T16:33:39.368207988Z level=info msg="Executing migration" id="drop non-unique orgID index on alert_configuration"
+logger=migrator t=2025-02-23T16:33:39.38566917Z level=info msg="Executing migration" id="drop unique orgID index on alert_configuration if exists"
+logger=migrator t=2025-02-23T16:33:39.387798339Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop unique orgID index on alert_configuration if exists"
+logger=migrator t=2025-02-23T16:33:39.399446961Z level=info msg="Executing migration" id="extract alertmanager configuration history to separate table"
+logger=migrator t=2025-02-23T16:33:39.413163347Z level=info msg="Executing migration" id="add unique index on orgID to alert_configuration"
+logger=migrator t=2025-02-23T16:33:39.428494861Z level=info msg="Executing migration" id="add last_applied column to alert_configuration_history"
+logger=migrator t=2025-02-23T16:33:39.443488048Z level=info msg="Executing migration" id="clear migration entry \"remove unified alerting data\""
+logger=migrator t=2025-02-23T16:33:39.446979124Z level=info msg="Executing migration" id="move dashboard alerts to unified alerting"
+logger=migrator t=2025-02-23T16:33:39.449362313Z level=info msg="alerts found to migrate" alerts=0
+logger=migrator t=2025-02-23T16:33:39.461979212Z level=info msg="Executing migration" id="create library_element table v1"
+logger=migrator t=2025-02-23T16:33:39.477518642Z level=info msg="Executing migration" id="add index library_element org_id-folder_id-name-kind"
+logger=migrator t=2025-02-23T16:33:39.493954743Z level=info msg="Executing migration" id="create library_element_connection table v1"
+logger=migrator t=2025-02-23T16:33:39.507879246Z level=info msg="Executing migration" id="add index library_element_connection element_id-kind-connection_id"
+logger=migrator t=2025-02-23T16:33:39.524746481Z level=info msg="Executing migration" id="add unique index library_element org_id_uid"
+logger=migrator t=2025-02-23T16:33:39.54026591Z level=info msg="Executing migration" id="increase max description length to 2048"
+logger=migrator t=2025-02-23T16:33:39.553806382Z level=info msg="Executing migration" id="alter library_element model to mediumtext"
+logger=migrator t=2025-02-23T16:33:39.566613796Z level=info msg="Executing migration" id="clone move dashboard alerts to unified alerting"
+logger=migrator t=2025-02-23T16:33:39.581560079Z level=info msg="Executing migration" id="create data_keys table"
+logger=migrator t=2025-02-23T16:33:39.604389386Z level=info msg="Executing migration" id="create secrets table"
+logger=migrator t=2025-02-23T16:33:39.622268302Z level=info msg="Executing migration" id="rename data_keys name column to id"
+logger=migrator t=2025-02-23T16:33:39.645269123Z level=info msg="Executing migration" id="add name column into data_keys"
+logger=migrator t=2025-02-23T16:33:39.660115798Z level=info msg="Executing migration" id="copy data_keys id column values into name"
+logger=migrator t=2025-02-23T16:33:39.675120886Z level=info msg="Executing migration" id="rename data_keys name column to label"
+logger=migrator t=2025-02-23T16:33:39.698234716Z level=info msg="Executing migration" id="rename data_keys id column back to name"
+logger=migrator t=2025-02-23T16:33:39.72265535Z level=info msg="Executing migration" id="create kv_store table v1"
+logger=migrator t=2025-02-23T16:33:39.738680018Z level=info msg="Executing migration" id="add index kv_store.org_id-namespace-key"
+logger=migrator t=2025-02-23T16:33:39.755265731Z level=info msg="Executing migration" id="update dashboard_uid and panel_id from existing annotations"
+logger=migrator t=2025-02-23T16:33:39.771535619Z level=info msg="Executing migration" id="create permission table"
+logger=migrator t=2025-02-23T16:33:39.789299726Z level=info msg="Executing migration" id="add unique index permission.role_id"
+logger=migrator t=2025-02-23T16:33:39.807388358Z level=info msg="Executing migration" id="add unique index role_id_action_scope"
+logger=migrator t=2025-02-23T16:33:39.826242951Z level=info msg="Executing migration" id="create role table"
+logger=migrator t=2025-02-23T16:33:39.843084284Z level=info msg="Executing migration" id="add column display_name"
+logger=migrator t=2025-02-23T16:33:39.861246622Z level=info msg="Executing migration" id="add column group_name"
+logger=migrator t=2025-02-23T16:33:39.879820693Z level=info msg="Executing migration" id="add index role.org_id"
+logger=migrator t=2025-02-23T16:33:39.897356981Z level=info msg="Executing migration" id="add unique index role_org_id_name"
+logger=migrator t=2025-02-23T16:33:39.915078184Z level=info msg="Executing migration" id="add index role_org_id_uid"
+logger=migrator t=2025-02-23T16:33:39.932032226Z level=info msg="Executing migration" id="create team role table"
+logger=migrator t=2025-02-23T16:33:39.948779452Z level=info msg="Executing migration" id="add index team_role.org_id"
+logger=migrator t=2025-02-23T16:33:39.96732442Z level=info msg="Executing migration" id="add unique index team_role_org_id_team_id_role_id"
+logger=migrator t=2025-02-23T16:33:39.984113449Z level=info msg="Executing migration" id="add index team_role.team_id"
+logger=migrator t=2025-02-23T16:33:40.000239626Z level=info msg="Executing migration" id="create user role table"
+logger=migrator t=2025-02-23T16:33:40.017427587Z level=info msg="Executing migration" id="add index user_role.org_id"
+logger=migrator t=2025-02-23T16:33:40.036365586Z level=info msg="Executing migration" id="add unique index user_role_org_id_user_id_role_id"
+logger=migrator t=2025-02-23T16:33:40.054591829Z level=info msg="Executing migration" id="add index user_role.user_id"
+logger=migrator t=2025-02-23T16:33:40.073307811Z level=info msg="Executing migration" id="create builtin role table"
+logger=migrator t=2025-02-23T16:33:40.095751188Z level=info msg="Executing migration" id="add index builtin_role.role_id"
+logger=migrator t=2025-02-23T16:33:40.11447537Z level=info msg="Executing migration" id="add index builtin_role.name"
+logger=migrator t=2025-02-23T16:33:40.150425117Z level=info msg="Executing migration" id="Add column org_id to builtin_role table"
+logger=migrator t=2025-02-23T16:33:40.177722178Z level=info msg="Executing migration" id="add index builtin_role.org_id"
+logger=migrator t=2025-02-23T16:33:40.209403386Z level=info msg="Executing migration" id="add unique index builtin_role_org_id_role_id_role"
+logger=migrator t=2025-02-23T16:33:40.227707935Z level=info msg="Executing migration" id="Remove unique index role_org_id_uid"
+logger=migrator t=2025-02-23T16:33:40.248122251Z level=info msg="Executing migration" id="add unique index role.uid"
+logger=migrator t=2025-02-23T16:33:40.265460724Z level=info msg="Executing migration" id="create seed assignment table"
+logger=migrator t=2025-02-23T16:33:40.281992733Z level=info msg="Executing migration" id="add unique index builtin_role_role_name"
+logger=migrator t=2025-02-23T16:33:40.302475655Z level=info msg="Executing migration" id="add column hidden to role table"
+logger=migrator t=2025-02-23T16:33:40.3232562Z level=info msg="Executing migration" id="create query_history table v1"
+logger=migrator t=2025-02-23T16:33:40.339949021Z level=info msg="Executing migration" id="add index query_history.org_id-created_by-datasource_uid"
+logger=migrator t=2025-02-23T16:33:40.357705727Z level=info msg="Executing migration" id="alter table query_history alter column created_by type to bigint"
+logger=migrator t=2025-02-23T16:33:40.381703227Z level=info msg="Executing migration" id="rbac disabled migrator"
+logger=migrator t=2025-02-23T16:33:40.398323743Z level=info msg="Executing migration" id="teams permissions migration"
+logger=migrator t=2025-02-23T16:33:40.414853652Z level=info msg="Executing migration" id="dashboard permissions"
+logger=migrator t=2025-02-23T16:33:40.43163278Z level=info msg="Executing migration" id="dashboard permissions uid scopes"
+logger=migrator t=2025-02-23T16:33:40.447319922Z level=info msg="Executing migration" id="drop managed folder create actions"
+logger=migrator t=2025-02-23T16:33:40.462804548Z level=info msg="Executing migration" id="alerting notification permissions"
+logger=migrator t=2025-02-23T16:33:40.478522692Z level=info msg="Executing migration" id="create query_history_star table v1"
+logger=migrator t=2025-02-23T16:33:40.494931691Z level=info msg="Executing migration" id="add index query_history.user_id-query_uid"
+logger=migrator t=2025-02-23T16:33:40.511756823Z level=info msg="Executing migration" id="add column org_id in query_history_star"
+logger=migrator t=2025-02-23T16:33:40.530329594Z level=info msg="Executing migration" id="alter table query_history_star_mig column user_id type to bigint"
+logger=migrator t=2025-02-23T16:33:40.545734914Z level=info msg="Executing migration" id="create correlation table v1"
+logger=migrator t=2025-02-23T16:33:40.56413297Z level=info msg="Executing migration" id="add index correlations.uid"
+logger=migrator t=2025-02-23T16:33:40.580448362Z level=info msg="Executing migration" id="add index correlations.source_uid"
+logger=migrator t=2025-02-23T16:33:40.597815537Z level=info msg="Executing migration" id="add correlation config column"
+logger=migrator t=2025-02-23T16:33:40.614497858Z level=info msg="Executing migration" id="create entity_events table"
+logger=migrator t=2025-02-23T16:33:40.633935396Z level=info msg="Executing migration" id="create dashboard public config v1"
+logger=migrator t=2025-02-23T16:33:40.6516658Z level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.653752065Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.673759349Z level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.675679701Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.689203372Z level=info msg="Executing migration" id="Drop old dashboard public config table"
+logger=migrator t=2025-02-23T16:33:40.824796307Z level=info msg="Executing migration" id="recreate dashboard public config v1"
+logger=migrator t=2025-02-23T16:33:40.861538216Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.880350005Z level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2025-02-23T16:33:40.901654392Z level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v2"
+logger=migrator t=2025-02-23T16:33:40.920246264Z level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+logger=migrator t=2025-02-23T16:33:40.940192243Z level=info msg="Executing migration" id="Drop public config table"
+logger=migrator t=2025-02-23T16:33:40.958610901Z level=info msg="Executing migration" id="Recreate dashboard public config v2"
+logger=migrator t=2025-02-23T16:33:40.975705655Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v2"
+logger=migrator t=2025-02-23T16:33:40.993689279Z level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+logger=migrator t=2025-02-23T16:33:41.010650121Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_access_token - v2"
+logger=migrator t=2025-02-23T16:33:41.028092702Z level=info msg="Executing migration" id="Rename table dashboard_public_config to dashboard_public - v2"
+logger=migrator t=2025-02-23T16:33:41.050382367Z level=info msg="Executing migration" id="add annotations_enabled column"
+logger=migrator t=2025-02-23T16:33:41.067205099Z level=info msg="Executing migration" id="add time_selection_enabled column"
+logger=migrator t=2025-02-23T16:33:41.084442664Z level=info msg="Executing migration" id="delete orphaned public dashboards"
+logger=migrator t=2025-02-23T16:33:41.099099624Z level=info msg="Executing migration" id="add share column"
+logger=migrator t=2025-02-23T16:33:41.119721657Z level=info msg="Executing migration" id="backfill empty share column fields with default of public"
+logger=migrator t=2025-02-23T16:33:41.136829411Z level=info msg="Executing migration" id="create default alerting folders"
+logger=migrator t=2025-02-23T16:33:41.15576021Z level=info msg="Executing migration" id="create file table"
+logger=migrator t=2025-02-23T16:33:41.172960272Z level=info msg="Executing migration" id="file table idx: path natural pk"
+logger=migrator t=2025-02-23T16:33:41.193812222Z level=info msg="Executing migration" id="file table idx: parent_folder_path_hash fast folder retrieval"
+logger=migrator t=2025-02-23T16:33:41.21765231Z level=info msg="Executing migration" id="create file_meta table"
+logger=migrator t=2025-02-23T16:33:41.233116934Z level=info msg="Executing migration" id="file table idx: path key"
+logger=migrator t=2025-02-23T16:33:41.249474029Z level=info msg="Executing migration" id="set path collation in file table"
+logger=migrator t=2025-02-23T16:33:41.263664953Z level=info msg="Executing migration" id="managed permissions migration"
+logger=migrator t=2025-02-23T16:33:41.277794571Z level=info msg="Executing migration" id="managed folder permissions alert actions migration"
+logger=migrator t=2025-02-23T16:33:41.29533516Z level=info msg="Executing migration" id="RBAC action name migrator"
+logger=migrator t=2025-02-23T16:33:41.310145733Z level=info msg="Executing migration" id="Add UID column to playlist"
+logger=migrator t=2025-02-23T16:33:41.326519829Z level=info msg="Executing migration" id="Update uid column values in playlist"
+logger=migrator t=2025-02-23T16:33:41.340248416Z level=info msg="Executing migration" id="Add index for uid in playlist"
+logger=migrator t=2025-02-23T16:33:41.358496461Z level=info msg="Executing migration" id="update group index for alert rules"
+logger=migrator t=2025-02-23T16:33:41.373982087Z level=info msg="Executing migration" id="managed folder permissions alert actions repeated migration"
+logger=migrator t=2025-02-23T16:33:41.390335181Z level=info msg="Executing migration" id="admin only folder/dashboard permission"
+logger=migrator t=2025-02-23T16:33:41.404072269Z level=info msg="Executing migration" id="add action column to seed_assignment"
+logger=migrator t=2025-02-23T16:33:41.422217606Z level=info msg="Executing migration" id="add scope column to seed_assignment"
+logger=migrator t=2025-02-23T16:33:41.438235574Z level=info msg="Executing migration" id="remove unique index builtin_role_role_name before nullable update"
+logger=migrator t=2025-02-23T16:33:41.454019323Z level=info msg="Executing migration" id="update seed_assignment role_name column to nullable"
+logger=migrator t=2025-02-23T16:33:41.487711391Z level=info msg="Executing migration" id="add unique index builtin_role_name back"
+logger=migrator t=2025-02-23T16:33:41.503339528Z level=info msg="Executing migration" id="add unique index builtin_role_action_scope"
+logger=migrator t=2025-02-23T16:33:41.520835713Z level=info msg="Executing migration" id="add primary key to seed_assigment"
+logger=migrator t=2025-02-23T16:33:41.548194579Z level=info msg="Executing migration" id="managed folder permissions alert actions repeated fixed migration"
+logger=migrator t=2025-02-23T16:33:41.57081847Z level=info msg="Executing migration" id="migrate external alertmanagers to datsourcse"
+logger=migrator t=2025-02-23T16:33:41.586397704Z level=info msg="Executing migration" id="create folder table"
+logger=migrator t=2025-02-23T16:33:41.603252638Z level=info msg="Executing migration" id="Add index for parent_uid"
+logger=migrator t=2025-02-23T16:33:41.621434178Z level=info msg="Executing migration" id="Add unique index for folder.uid and folder.org_id"
+logger=migrator t=2025-02-23T16:33:41.640380878Z level=info msg="Executing migration" id="Update folder title length"
+logger=migrator t=2025-02-23T16:33:41.659092359Z level=info msg="Executing migration" id="Add unique index for folder.title and folder.parent_uid"
+logger=migrator t=2025-02-23T16:33:41.676425231Z level=info msg="Executing migration" id="create data_source_usage_by_day table"
+logger=migrator t=2025-02-23T16:33:41.693238262Z level=info msg="Executing migration" id="create data_source_usage_by_day(data_source_id) index"
+logger=migrator t=2025-02-23T16:33:41.71241038Z level=info msg="Executing migration" id="create data_source_usage_by_day(data_source_id, day) unique index"
+logger=migrator t=2025-02-23T16:33:41.736940522Z level=info msg="Executing migration" id="create dashboard_usage_by_day table"
+logger=migrator t=2025-02-23T16:33:41.754548616Z level=info msg="Executing migration" id="create dashboard_usage_sums table"
+logger=migrator t=2025-02-23T16:33:41.787023888Z level=info msg="Executing migration" id="create dashboard_usage_by_day(dashboard_id) index"
+logger=migrator t=2025-02-23T16:33:41.831356997Z level=info msg="Executing migration" id="create dashboard_usage_by_day(dashboard_id, day) index"
+logger=migrator t=2025-02-23T16:33:41.866673694Z level=info msg="Executing migration" id="add column errors_last_1_days to dashboard_usage_sums"
+logger=migrator t=2025-02-23T16:33:41.897130705Z level=info msg="Executing migration" id="add column errors_last_7_days to dashboard_usage_sums"
+logger=migrator t=2025-02-23T16:33:41.931529128Z level=info msg="Executing migration" id="add column errors_last_30_days to dashboard_usage_sums"
+logger=migrator t=2025-02-23T16:33:41.954772168Z level=info msg="Executing migration" id="add column errors_total to dashboard_usage_sums"
+logger=migrator t=2025-02-23T16:33:41.97690292Z level=info msg="Executing migration" id="create dashboard_public_usage_by_day table"
+logger=migrator t=2025-02-23T16:33:41.994096082Z level=info msg="Executing migration" id="add column cached_queries to dashboard_usage_by_day table"
+logger=migrator t=2025-02-23T16:33:42.014722215Z level=info msg="Executing migration" id="add column cached_queries to dashboard_public_usage_by_day table"
+logger=migrator t=2025-02-23T16:33:42.031678257Z level=info msg="Executing migration" id="create user_dashboard_views table"
+logger=migrator t=2025-02-23T16:33:42.048321575Z level=info msg="Executing migration" id="add index user_dashboard_views.user_id"
+logger=migrator t=2025-02-23T16:33:42.064422149Z level=info msg="Executing migration" id="add index user_dashboard_views.dashboard_id"
+logger=migrator t=2025-02-23T16:33:42.079278726Z level=info msg="Executing migration" id="add unique index user_dashboard_views_user_id_dashboard_id"
+logger=migrator t=2025-02-23T16:33:42.095847037Z level=info msg="Executing migration" id="create user_stats table"
+logger=migrator t=2025-02-23T16:33:42.125196261Z level=info msg="Executing migration" id="add unique index user_stats(user_id)"
+logger=migrator t=2025-02-23T16:33:42.14426137Z level=info msg="Executing migration" id="create data_source_cache table"
+logger=migrator t=2025-02-23T16:33:42.16509862Z level=info msg="Executing migration" id="add index data_source_cache.data_source_id"
+logger=migrator t=2025-02-23T16:33:42.180809264Z level=info msg="Executing migration" id="add use_default_ttl column"
+logger=migrator t=2025-02-23T16:33:42.198913197Z level=info msg="Executing migration" id="add data_source_cache.data_source_uid column"
+logger=migrator t=2025-02-23T16:33:42.216892921Z level=info msg="Executing migration" id="remove abandoned data_source_cache records"
+logger=migrator t=2025-02-23T16:33:42.233074902Z level=info msg="Executing migration" id="update data_source_cache.data_source_uid value"
+logger=migrator t=2025-02-23T16:33:42.248428317Z level=info msg="Executing migration" id="add index data_source_cache.data_source_uid"
+logger=migrator t=2025-02-23T16:33:42.271915477Z level=info msg="Executing migration" id="add data_source_cache.ttl_resources_ms column"
+logger=migrator t=2025-02-23T16:33:42.288829716Z level=info msg="Executing migration" id="update data_source_cache.ttl_resources_ms to have the same value as ttl_ms"
+logger=migrator t=2025-02-23T16:33:42.303237257Z level=info msg="Executing migration" id="create data_source_acl table"
+logger=migrator t=2025-02-23T16:33:42.319103013Z level=info msg="Executing migration" id="add index data_source_acl.data_source_id"
+logger=migrator t=2025-02-23T16:33:42.335531913Z level=info msg="Executing migration" id="add unique index datasource_acl.unique"
+logger=migrator t=2025-02-23T16:33:42.355376485Z level=info msg="Executing migration" id="create license_token table"
+logger=migrator t=2025-02-23T16:33:42.374317784Z level=info msg="Executing migration" id="drop recorded_queries table v14"
+logger=migrator t=2025-02-23T16:33:42.389062652Z level=info msg="Executing migration" id="drop recording_rules table v14"
+logger=migrator t=2025-02-23T16:33:42.405436048Z level=info msg="Executing migration" id="create recording_rules table v14"
+logger=migrator t=2025-02-23T16:33:42.420559845Z level=info msg="Executing migration" id="create remote_write_targets table v1"
+logger=migrator t=2025-02-23T16:33:42.436632318Z level=info msg="Executing migration" id="Add prom_name to recording_rules table"
+logger=migrator t=2025-02-23T16:33:42.454242112Z level=info msg="Executing migration" id="ensure remote_write_targets table"
+logger=migrator t=2025-02-23T16:33:42.469046384Z level=info msg="Executing migration" id="create report config table v1"
+logger=migrator t=2025-02-23T16:33:42.484711924Z level=info msg="Executing migration" id="Add index report.user_id"
+logger=migrator t=2025-02-23T16:33:42.500655086Z level=info msg="Executing migration" id="add index to dashboard_id"
+logger=migrator t=2025-02-23T16:33:42.516261022Z level=info msg="Executing migration" id="add index to org_id"
+logger=migrator t=2025-02-23T16:33:42.533973624Z level=info msg="Executing migration" id="Add timezone to the report"
+logger=migrator t=2025-02-23T16:33:42.55185604Z level=info msg="Executing migration" id="Add time_from to the report"
+logger=migrator t=2025-02-23T16:33:42.569025599Z level=info msg="Executing migration" id="Add time_to to the report"
+logger=migrator t=2025-02-23T16:33:42.586228661Z level=info msg="Executing migration" id="Add PDF landscape option to the report"
+logger=migrator t=2025-02-23T16:33:42.603035292Z level=info msg="Executing migration" id="Add monthly day scheduling option to the report"
+logger=migrator t=2025-02-23T16:33:42.622544737Z level=info msg="Executing migration" id="Add PDF layout option to the report"
+logger=migrator t=2025-02-23T16:33:42.644734293Z level=info msg="Executing migration" id="Add PDF orientation option to the report"
+logger=migrator t=2025-02-23T16:33:42.680622435Z level=info msg="Executing migration" id="Update report pdf_orientation from pdf_landscape"
+logger=migrator t=2025-02-23T16:33:42.695082279Z level=info msg="Executing migration" id="create report settings table"
+logger=migrator t=2025-02-23T16:33:42.715327082Z level=info msg="Executing migration" id="Add dashboard_uid field to the report"
+logger=migrator t=2025-02-23T16:33:42.733007282Z level=info msg="Executing migration" id="Add template_vars field to the report"
+logger=migrator t=2025-02-23T16:33:42.750216544Z level=info msg="Executing migration" id="Add option to include dashboard url in the report"
+logger=migrator t=2025-02-23T16:33:42.767349801Z level=info msg="Executing migration" id="Add state field to the report"
+logger=migrator t=2025-02-23T16:33:42.786492116Z level=info msg="Executing migration" id="Add option to add CSV files to the report"
+logger=migrator t=2025-02-23T16:33:42.814779156Z level=info msg="Executing migration" id="Add scheduling start date"
+logger=migrator t=2025-02-23T16:33:42.833717155Z level=info msg="Executing migration" id="Add missing schedule_start date for old reports"
+logger=migrator t=2025-02-23T16:33:42.848994365Z level=info msg="Executing migration" id="Add scheduling end date"
+logger=migrator t=2025-02-23T16:33:42.865461869Z level=info msg="Executing migration" id="Add schedulinng custom interval frequency"
+logger=migrator t=2025-02-23T16:33:42.882011079Z level=info msg="Executing migration" id="Add scheduling custom interval amount"
+logger=migrator t=2025-02-23T16:33:42.899645875Z level=info msg="Executing migration" id="Add workdays only flag to report"
+logger=migrator t=2025-02-23T16:33:42.918933002Z level=info msg="Executing migration" id="create report dashboards table"
+logger=migrator t=2025-02-23T16:33:42.940161983Z level=info msg="Executing migration" id="Add index report_dashboards.report_id"
+logger=migrator t=2025-02-23T16:33:42.958233413Z level=info msg="Executing migration" id="Migrate report fields into report_dashboards"
+logger=migrator t=2025-02-23T16:33:42.976867089Z level=info msg="Executing migration" id="Add formats option to the report"
+logger=migrator t=2025-02-23T16:33:43.105870902Z level=info msg="Executing migration" id="Migrate reports with csv enabled"
+logger=migrator t=2025-02-23T16:33:43.123480296Z level=info msg="Executing migration" id="Migrate ancient reports"
+logger=migrator t=2025-02-23T16:33:43.141290906Z level=info msg="Executing migration" id="Add created column in report_dashboards"
+logger=migrator t=2025-02-23T16:33:43.163786587Z level=info msg="Executing migration" id="Add scale_factor to the report"
+logger=migrator t=2025-02-23T16:33:43.184562932Z level=info msg="Executing migration" id="create team group table"
+logger=migrator t=2025-02-23T16:33:43.202408445Z level=info msg="Executing migration" id="add index team_group.org_id"
+logger=migrator t=2025-02-23T16:33:43.2195182Z level=info msg="Executing migration" id="add unique index team_group.org_id_team_id_group_id"
+logger=migrator t=2025-02-23T16:33:43.238100171Z level=info msg="Executing migration" id="add index team_group.group_id"
+logger=migrator t=2025-02-23T16:33:43.25892992Z level=info msg="Executing migration" id="create settings table"
+logger=migrator t=2025-02-23T16:33:43.278438364Z level=info msg="Executing migration" id="add unique index settings.section_key"
+logger=migrator t=2025-02-23T16:33:43.295906147Z level=info msg="Executing migration" id="migrate role names"
+logger=migrator t=2025-02-23T16:33:43.31374756Z level=info msg="Executing migration" id="rename orgs roles"
+logger=migrator t=2025-02-23T16:33:43.330022648Z level=info msg="Executing migration" id="remove duplicated org role"
+logger=migrator t=2025-02-23T16:33:43.352859556Z level=info msg="Executing migration" id="migrate alerting role names"
+logger=migrator t=2025-02-23T16:33:43.368484693Z level=info msg="Executing migration" id="data source permissions"
+logger=migrator t=2025-02-23T16:33:43.382989342Z level=info msg="Executing migration" id="data source uid permissions"
+logger=migrator t=2025-02-23T16:33:43.396173686Z level=info msg="Executing migration" id="rename permissions:delegate scope"
+logger=migrator t=2025-02-23T16:33:43.412265159Z level=info msg="Executing migration" id="builtin role migration"
+logger="builtin-role migrator" t=2025-02-23T16:33:43.421332977Z level=info msg="no permission to create"
+logger=migrator t=2025-02-23T16:33:43.440792218Z level=info msg="Executing migration" id="seed permissions migration"
+logger=migrator t=2025-02-23T16:33:43.455398574Z level=info msg="Executing migration" id="managed permissions migration enterprise"
+logger=migrator t=2025-02-23T16:33:43.470130141Z level=info msg="Executing migration" id="create table dashboard_public_email_share"
+logger=migrator t=2025-02-23T16:33:43.485792781Z level=info msg="Executing migration" id="create table dashboard_public_magic_link"
+logger=migrator t=2025-02-23T16:33:43.501208401Z level=info msg="Executing migration" id="create table dashboard_public_session"
+logger=migrator t=2025-02-23T16:33:43.516873541Z level=info msg="migrations completed" performed=579 skipped=0 duration=44.978714197s
+logger=sqlstore t=2025-02-23T16:33:43.551694898Z level=info msg="Created default admin" user=admin
+logger=sqlstore t=2025-02-23T16:33:43.553220119Z level=info msg="Created default organization"
+logger=licensing t=2025-02-23T16:33:43.565211468Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T16:33:43.5706663Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T16:33:43.702969675Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T16:33:43.703815642Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T16:33:43.722577127Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T16:33:43.737528911Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T16:33:46.915438158Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T16:33:46.920342645Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T16:33:46.920747076Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T16:33:46.922049179Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-23T16:33:46.925390542Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-23T16:33:46.925863379Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T16:33:46.933019943Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T16:33:46.933076547Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T16:33:46.972537355Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T16:33:47.039633338Z level=info msg="State cache has been initialized" states=0 duration=113.765158ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T16:33:47.040371996Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T16:33:47.043423736Z level=info msg=starting first_tick=2025-02-23T16:33:50Z
+logger=sqlstore.transactions t=2025-02-23T16:33:47.075134333Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=sqlstore.transactions t=2025-02-23T16:33:47.097789217Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=sqlstore.transactions t=2025-02-23T16:33:47.114866662Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=1 code="database is locked"
+logger=grafana.update.checker t=2025-02-23T16:33:47.216952501Z level=info msg="Update check succeeded" duration=295.794992ms
+logger=plugins.update.checker t=2025-02-23T16:33:47.255968073Z level=info msg="Update check succeeded" duration=330.852552ms
+logger=cleanup t=2025-02-23T16:43:47.022891032Z level=info msg="Completed cleanup jobs" duration=115.294534ms
+logger=grafana.update.checker t=2025-02-23T16:43:47.210228661Z level=info msg="Update check succeeded" duration=37.571214ms
+logger=plugins.update.checker t=2025-02-23T16:43:47.271972885Z level=info msg="Update check succeeded" duration=60.742849ms
+logger=sqlstore.transactions t=2025-02-23T16:48:43.695559565Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=settings t=2025-02-23T17:43:34.061845002Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T17:43:34.063623422Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T17:43:34.064015748Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T17:43:34.06434887Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T17:43:34.064581886Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T17:43:34.065025316Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T17:43:34.065350837Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T17:43:34.065640457Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T17:43:34.065905375Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T17:43:34.066159892Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T17:43:34.066366306Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T17:43:34.06717716Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T17:43:34.161746405Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T17:43:34.17582125Z level=info msg="migrations completed" performed=0 skipped=575 duration=697.646µs
+logger=licensing t=2025-02-23T17:43:34.182518099Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T17:43:34.190235817Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T17:43:34.342509934Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T17:43:34.34320518Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T17:43:34.364837132Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T17:43:34.380648693Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T17:43:36.398619377Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T17:43:36.402921109Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T17:43:36.403505654Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T17:43:36.412313634Z level=warn msg="No modules registered..."
+logger=caching.service t=2025-02-23T17:43:36.415883809Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T17:43:36.416165431Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-23T17:43:36.416199033Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-23T17:43:36.426848355Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T17:43:36.436624909Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T17:43:36.475016271Z level=info msg="State cache has been initialized" states=0 duration=58.812437ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T17:43:36.475669221Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T17:43:36.478318226Z level=info msg=starting first_tick=2025-02-23T17:43:40Z
+logger=grafana.update.checker t=2025-02-23T17:43:36.594348177Z level=info msg="Update check succeeded" duration=178.601278ms
+logger=plugins.update.checker t=2025-02-23T17:43:36.629412182Z level=info msg="Update check succeeded" duration=207.01007ms
+logger=context t=2025-02-23T17:44:34.775997207Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2025-02-23T17:44:34.779010211Z level=info msg="Request Completed" method=GET path=/alerting status=302 remote_addr=172.18.0.1 time_ms=11 duration=11.048149ms size=29 referer= handler=/alerting/
+logger=context t=2025-02-23T17:44:34.786103092Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context t=2025-02-23T17:45:17.082818453Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2025-02-23T17:45:17.085847261Z level=info msg="Request Completed" method=GET path=/alerting status=302 remote_addr=172.18.0.1 time_ms=15 duration=15.218544ms size=29 referer= handler=/alerting/
+logger=context t=2025-02-23T17:45:17.092734333Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context t=2025-02-23T17:45:21.433799241Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2025-02-23T17:45:21.43714727Z level=info msg="Request Completed" method=GET path=/alerting status=302 remote_addr=172.18.0.1 time_ms=17 duration=17.191074ms size=29 referer= handler=/alerting/
+logger=context t=2025-02-23T17:45:21.444272956Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context t=2025-02-23T17:45:31.773032494Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2025-02-23T17:45:31.818681735Z level=error msg="Invalid username or password" error="invalid username or password" remote_addr=172.18.0.1 traceID=
+logger=context userId=0 orgId=0 uname= t=2025-02-23T17:45:31.819210969Z level=info msg="Request Completed" method=POST path=/login status=401 remote_addr=172.18.0.1 time_ms=49 duration=49.578094ms size=55 referer=http://localhost:3000/login handler=/login
+logger=context t=2025-02-23T17:45:35.711211584Z level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=http.server t=2025-02-23T17:45:35.75894607Z level=info msg="Successful Login" User=admin@localhost
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T17:45:47.035858108Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=7 duration=7.30041ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T17:46:02.856766065Z level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=172.18.0.1 time_ms=9 duration=9.233517ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T17:46:03.478785844Z level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=172.18.0.1 time_ms=6 duration=6.506735ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T17:46:03.486957191Z level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=172.18.0.1 time_ms=2 duration=2.645077ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=grafana.update.checker t=2025-02-23T17:53:36.577211727Z level=info msg="Update check succeeded" duration=20.546363ms
+logger=plugins.update.checker t=2025-02-23T17:53:36.66556539Z level=info msg="Update check succeeded" duration=73.376369ms
+logger=cleanup t=2025-02-23T17:53:37.477221443Z level=info msg="Completed cleanup jobs" duration=1.103604824s
+logger=settings t=2025-02-23T18:38:44.825162306Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T18:38:44.826909724Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T18:38:44.82714084Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T18:38:44.827311651Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T18:38:44.827471862Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T18:38:44.827646674Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T18:38:44.828098204Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T18:38:44.828273116Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T18:38:44.828498331Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T18:38:44.828662843Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T18:38:44.828854155Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T18:38:44.829975931Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T18:38:44.959670589Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T18:38:44.976600633Z level=info msg="migrations completed" performed=0 skipped=575 duration=2.602276ms
+logger=licensing t=2025-02-23T18:38:44.986306988Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T18:38:44.997086716Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T18:38:45.210183907Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T18:38:45.210710342Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T18:38:45.241960052Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T18:38:45.261935901Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T18:38:47.50284783Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T18:38:47.506128852Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T18:38:47.506485576Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T18:38:47.507264828Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T18:38:47.523105898Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T18:38:47.525683772Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T18:38:47.526260211Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T18:38:47.527964326Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2025-02-23T18:38:47.528780081Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-23T18:38:47.610846823Z level=info msg="State cache has been initialized" states=0 duration=87.735625ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T18:38:47.61153167Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T18:38:47.61834373Z level=info msg=starting first_tick=2025-02-23T18:38:50Z
+logger=grafana.update.checker t=2025-02-23T18:38:47.83187775Z level=info msg="Update check succeeded" duration=311.109609ms
+logger=plugins.update.checker t=2025-02-23T18:38:47.8637203Z level=info msg="Update check succeeded" duration=326.148724ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T18:38:53.864983665Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=29 duration=29.021799ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T18:40:18.199356509Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=82 duration=82.576741ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T18:41:17.535018628Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=10 duration=10.136087ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T18:48:47.592999434Z level=info msg="Completed cleanup jobs" duration=31.81102ms
+logger=grafana.update.checker t=2025-02-23T18:48:47.997429878Z level=info msg="Update check succeeded" duration=204.318912ms
+logger=plugins.update.checker t=2025-02-23T18:48:48.040423342Z level=info msg="Update check succeeded" duration=214.970322ms
+logger=cleanup t=2025-02-23T18:58:47.549200618Z level=info msg="Completed cleanup jobs" duration=26.3566ms
+logger=grafana.update.checker t=2025-02-23T18:58:47.775548015Z level=info msg="Update check succeeded" duration=21.498886ms
+logger=plugins.update.checker t=2025-02-23T18:58:47.848383812Z level=info msg="Update check succeeded" duration=62.870855ms
+logger=settings t=2025-02-23T19:02:02.983133762Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T19:02:02.984061719Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T19:02:02.984394739Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T19:02:02.984794263Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T19:02:02.985120683Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T19:02:02.985482605Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T19:02:02.985750522Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T19:02:02.985983736Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T19:02:02.986851889Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T19:02:02.987382421Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T19:02:02.98819297Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T19:02:02.989884273Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T19:02:03.10553912Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T19:02:03.121947619Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.015662ms
+logger=licensing t=2025-02-23T19:02:03.128574923Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T19:02:03.132016333Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T19:02:03.497134878Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T19:02:03.497849821Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T19:02:03.520705314Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T19:02:03.528083863Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T19:02:06.354605068Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T19:02:06.381328096Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T19:02:06.382332957Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T19:02:06.383750443Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T19:02:06.38829882Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T19:02:06.388387426Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T19:02:06.388402127Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-23T19:02:06.391194097Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T19:02:06.486092278Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T19:02:06.929462662Z level=info msg="State cache has been initialized" states=0 duration=541.113539ms
+logger=ticker t=2025-02-23T19:02:06.93084705Z level=info msg=starting first_tick=2025-02-23T19:02:10Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T19:02:06.930897554Z level=info msg="starting MultiOrg Alertmanager"
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:02:07.121903594Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=91 duration=91.853238ms size=0 referer= handler=/api/live/ws
+logger=grafana.update.checker t=2025-02-23T19:02:07.46263755Z level=info msg="Update check succeeded" duration=1.078833303s
+logger=plugins.update.checker t=2025-02-23T19:02:07.534010686Z level=info msg="Update check succeeded" duration=1.146037986s
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:09:26.079219381Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=40 duration=40.978636ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T19:12:06.426500141Z level=info msg="Completed cleanup jobs" duration=26.078843ms
+logger=grafana.update.checker t=2025-02-23T19:12:07.447321148Z level=info msg="Update check succeeded" duration=20.347904ms
+logger=plugins.update.checker t=2025-02-23T19:12:07.562563167Z level=info msg="Update check succeeded" duration=64.70973ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:18:52.368949238Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=7 duration=7.308335ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T19:22:06.392680227Z level=info msg="Completed cleanup jobs" duration=28.064939ms
+logger=grafana.update.checker t=2025-02-23T19:22:07.426638127Z level=info msg="Update check succeeded" duration=35.673384ms
+logger=plugins.update.checker t=2025-02-23T19:22:07.546554832Z level=info msg="Update check succeeded" duration=83.53468ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:22:11.145553308Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=39 duration=39.540217ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:24:47.785396184Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=6 duration=6.508584ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T19:32:06.372379094Z level=info msg="Completed cleanup jobs" duration=42.748652ms
+logger=grafana.update.checker t=2025-02-23T19:32:07.385053947Z level=info msg="Update check succeeded" duration=29.611168ms
+logger=plugins.update.checker t=2025-02-23T19:32:07.520413128Z level=info msg="Update check succeeded" duration=93.271668ms
+logger=settings t=2025-02-23T19:38:38.209569824Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T19:38:38.211216224Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T19:38:38.211568046Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T19:38:38.211904366Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T19:38:38.21212358Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T19:38:38.212369395Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T19:38:38.212661412Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T19:38:38.212922728Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T19:38:38.213249248Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T19:38:38.213525765Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T19:38:38.21377388Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T19:38:38.214653234Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T19:38:38.30389538Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T19:38:38.318604477Z level=info msg="migrations completed" performed=0 skipped=575 duration=998.661µs
+logger=licensing t=2025-02-23T19:38:38.325996929Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T19:38:38.331322054Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T19:38:38.675929083Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T19:38:38.676677829Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T19:38:38.703340056Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T19:38:38.719159921Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T19:38:40.971463966Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T19:38:40.982747055Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T19:38:40.98316108Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T19:38:40.991899013Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T19:38:40.993536013Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T19:38:40.996772911Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T19:38:40.999814896Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-23T19:38:41.002294848Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T19:38:41.033656162Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T19:38:41.062939649Z level=info msg="State cache has been initialized" states=0 duration=69.399135ms
+logger=ticker t=2025-02-23T19:38:41.063662293Z level=info msg=starting first_tick=2025-02-23T19:38:50Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T19:38:41.063842904Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T19:38:41.292613664Z level=info msg="Update check succeeded" duration=296.303382ms
+logger=plugins.update.checker t=2025-02-23T19:38:41.327370685Z level=info msg="Update check succeeded" duration=320.495158ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:38:49.837586175Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=26 duration=26.066532ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:39:59.978232096Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=60 duration=60.941333ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T19:46:13.860420365Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T19:46:13.861031201Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T19:46:13.861285716Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T19:46:13.861480727Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T19:46:13.861677939Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T19:46:13.861911153Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T19:46:13.862139366Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T19:46:13.862343878Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T19:46:13.862577492Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T19:46:13.862838207Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T19:46:13.863143725Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T19:46:13.863887868Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T19:46:13.920898107Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T19:46:13.946532109Z level=info msg="migrations completed" performed=0 skipped=575 duration=825.848µs
+logger=licensing t=2025-02-23T19:46:13.954688186Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T19:46:13.95918855Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T19:46:14.122456312Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T19:46:14.123511474Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T19:46:14.129651134Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T19:46:14.142766002Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T19:46:16.469203557Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T19:46:16.470402127Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T19:46:16.470656442Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T19:46:16.47438496Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-23T19:46:16.47813918Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T19:46:16.479952686Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-23T19:46:16.482172416Z level=info msg="State cache has been initialized" states=0 duration=2.21353ms
+logger=ticker t=2025-02-23T19:46:16.482553739Z level=info msg=starting first_tick=2025-02-23T19:46:20Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T19:46:16.482797053Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2025-02-23T19:46:16.485806229Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T19:46:16.488124965Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T19:46:16.489205228Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafana.update.checker t=2025-02-23T19:46:16.54967627Z level=info msg="Update check succeeded" duration=70.764945ms
+logger=plugins.update.checker t=2025-02-23T19:46:16.587312974Z level=info msg="Update check succeeded" duration=102.082479ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:46:16.847983741Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=25 duration=25.809711ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:46:49.967721462Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=7 duration=7.763462ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T19:56:16.502170739Z level=info msg="Completed cleanup jobs" duration=56.236746ms
+logger=grafana.update.checker t=2025-02-23T19:56:16.538370528Z level=info msg="Update check succeeded" duration=22.35339ms
+logger=plugins.update.checker t=2025-02-23T19:56:16.681346979Z level=info msg="Update check succeeded" duration=126.842221ms
+logger=settings t=2025-02-23T19:56:30.237821003Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T19:56:30.238591044Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T19:56:30.238916562Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T19:56:30.239185077Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T19:56:30.239470992Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T19:56:30.239766408Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T19:56:30.240080525Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T19:56:30.240301937Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T19:56:30.240754662Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T19:56:30.240996475Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T19:56:30.241223387Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T19:56:30.242125236Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T19:56:30.309146375Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T19:56:30.324996036Z level=info msg="migrations completed" performed=0 skipped=575 duration=752.041µs
+logger=licensing t=2025-02-23T19:56:30.333562201Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T19:56:30.347856577Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T19:56:30.489420464Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T19:56:30.501484719Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T19:56:30.514080503Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T19:56:30.542720658Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T19:56:34.169577983Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T19:56:34.175811122Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T19:56:34.176319449Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T19:56:34.178397662Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-23T19:56:34.184018167Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T19:56:34.186709013Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-23T19:56:34.18959537Z level=info msg="storage starting"
+logger=report t=2025-02-23T19:56:34.19124176Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=caching.service t=2025-02-23T19:56:34.191297563Z level=warn msg="Caching service is disabled"
+logger=grafana.update.checker t=2025-02-23T19:56:34.354696035Z level=info msg="Update check succeeded" duration=177.615144ms
+logger=ngalert.state.manager t=2025-02-23T19:56:34.361784719Z level=info msg="State cache has been initialized" states=0 duration=175.071106ms
+logger=ticker t=2025-02-23T19:56:34.362515459Z level=info msg=starting first_tick=2025-02-23T19:56:40Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T19:56:34.362548561Z level=info msg="starting MultiOrg Alertmanager"
+logger=plugins.update.checker t=2025-02-23T19:56:34.398664522Z level=info msg="Update check succeeded" duration=220.848492ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T19:56:44.818195852Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=20 duration=20.545084ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:03:32.086330137Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:03:32.086943872Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:03:32.087282091Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:03:32.087540806Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:03:32.087895626Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:03:32.088149541Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:03:32.088439757Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:03:32.088762076Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:03:32.08900979Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:03:32.089262604Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:03:32.089526819Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:03:32.090164055Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:03:32.177881946Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:03:32.202528548Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.018258ms
+logger=licensing t=2025-02-23T20:03:32.220443667Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:03:32.225202238Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:03:32.367143313Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:03:32.367746047Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:03:32.381277517Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:03:32.389479884Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:03:34.652662202Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:03:34.654317997Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:03:34.655894586Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:03:34.656510522Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T20:03:34.65823792Z level=info msg="Warming state cache for startup"
+logger=http.server t=2025-02-23T20:03:34.660490548Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=caching.service t=2025-02-23T20:03:34.666807108Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:03:34.667065823Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-23T20:03:34.677589022Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-23T20:03:34.688969371Z level=info msg="State cache has been initialized" states=0 duration=30.729551ms
+logger=ticker t=2025-02-23T20:03:34.689510802Z level=info msg=starting first_tick=2025-02-23T20:03:40Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:03:34.689619208Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T20:03:34.767383238Z level=info msg="Update check succeeded" duration=99.323359ms
+logger=plugins.update.checker t=2025-02-23T20:03:34.80111606Z level=info msg="Update check succeeded" duration=132.412044ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:03:35.813389233Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=27 duration=27.396961ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:07:17.553044286Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:07:17.553937437Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:07:17.554273357Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:07:17.554631978Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:07:17.554880992Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:07:17.555121706Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:07:17.555375421Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:07:17.555817646Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:07:17.556184767Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:07:17.556457183Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:07:17.556698597Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:07:17.557555847Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:07:17.618147355Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:07:17.630509271Z level=info msg="migrations completed" performed=0 skipped=575 duration=698.141µs
+logger=licensing t=2025-02-23T20:07:17.636647626Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:07:17.640614256Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:07:17.748812321Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:07:17.749634769Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:07:17.757467822Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:07:17.769546922Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:07:20.87165704Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:07:20.873881369Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:07:20.875761477Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-23T20:07:20.88444368Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T20:07:20.897182218Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:07:20.89774535Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=modules t=2025-02-23T20:07:20.89809177Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-23T20:07:20.91035348Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T20:07:20.912716117Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-23T20:07:21.049420933Z level=info msg="Update check succeeded" duration=165.041956ms
+logger=plugins.update.checker t=2025-02-23T20:07:21.089429949Z level=info msg="Update check succeeded" duration=205.010971ms
+logger=ngalert.state.manager t=2025-02-23T20:07:21.132748857Z level=info msg="State cache has been initialized" states=0 duration=248.300177ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:07:21.13452566Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T20:07:21.134546962Z level=info msg=starting first_tick=2025-02-23T20:07:30Z
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:07:30.813489386Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=18 duration=18.989791ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:10:58.294914233Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:10:58.295850087Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:10:58.296119903Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:10:58.296544727Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:10:58.296858545Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:10:58.297055756Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:10:58.297310171Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:10:58.297517283Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:10:58.297748796Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:10:58.298048813Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:10:58.298355031Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:10:58.298923964Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:10:58.356134147Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:10:58.374449598Z level=info msg="migrations completed" performed=0 skipped=575 duration=854.249µs
+logger=licensing t=2025-02-23T20:10:58.382139039Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:10:58.386787517Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:10:58.568606751Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:10:58.573099709Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:10:58.580765049Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:10:58.588500393Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:11:01.121796879Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:11:01.127750121Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:11:01.128108141Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:11:01.134972935Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-23T20:11:01.135311155Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T20:11:01.142586072Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:11:01.145823058Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T20:11:01.167177584Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:11:01.167781418Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafana.update.checker t=2025-02-23T20:11:01.228936928Z level=info msg="Update check succeeded" duration=83.937317ms
+logger=ngalert.state.manager t=2025-02-23T20:11:01.262047828Z level=info msg="State cache has been initialized" states=0 duration=116.22067ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:11:01.26311879Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T20:11:01.263185893Z level=info msg=starting first_tick=2025-02-23T20:11:10Z
+logger=plugins.update.checker t=2025-02-23T20:11:01.266181165Z level=info msg="Update check succeeded" duration=119.781174ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:11:15.855312715Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=37 duration=37.871183ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:13:12.339152598Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:13:12.339897241Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:13:12.34023256Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:13:12.34059608Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:13:12.340857295Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:13:12.34112011Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:13:12.341358724Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:13:12.341606338Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:13:12.341858752Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:13:12.342107067Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:13:12.34234598Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:13:12.342936914Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:13:12.403017942Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:13:12.43523208Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.321376ms
+logger=licensing t=2025-02-23T20:13:12.456867514Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:13:12.461388172Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:13:12.620809667Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:13:12.621466905Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:13:12.628907429Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:13:12.636473961Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:13:15.405744856Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:13:15.407365748Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:13:15.408605419Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:13:15.411509284Z level=warn msg="No modules registered..."
+logger=report t=2025-02-23T20:13:15.426661449Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-23T20:13:15.428279041Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:13:15.429544413Z level=warn msg="Caching service is disabled"
+logger=ngalert.state.manager t=2025-02-23T20:13:15.430437964Z level=info msg="Warming state cache for startup"
+logger=http.server t=2025-02-23T20:13:15.434253982Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:13:15.464091684Z level=info msg="State cache has been initialized" states=0 duration=33.64722ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:13:15.478490406Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T20:13:15.477836469Z level=info msg=starting first_tick=2025-02-23T20:13:20Z
+logger=grafana.update.checker t=2025-02-23T20:13:15.613235093Z level=info msg="Update check succeeded" duration=192.599588ms
+logger=plugins.update.checker t=2025-02-23T20:13:15.660832909Z level=info msg="Update check succeeded" duration=234.286767ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:13:19.816500555Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=12 duration=12.180894ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:13:24.266996875Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=68 duration=68.767618ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:15:19.265865539Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:15:19.266549678Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:15:19.266825194Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:15:19.267055007Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:15:19.267308321Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:15:19.267537534Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:15:19.267794649Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:15:19.268055664Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:15:19.26833778Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:15:19.268597694Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:15:19.268948614Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:15:19.269701957Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:15:19.330688724Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:15:19.343300341Z level=info msg="migrations completed" performed=0 skipped=575 duration=821.946µs
+logger=licensing t=2025-02-23T20:15:19.348875657Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:15:19.353900443Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:15:19.536536524Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:15:19.537509679Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:15:19.545629541Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:15:19.553645696Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:15:22.083931316Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:15:22.086145842Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:15:22.086686673Z level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2025-02-23T20:15:22.087701431Z level=info msg="storage starting"
+logger=modules t=2025-02-23T20:15:22.114882776Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T20:15:22.126208519Z level=info msg="Warming state cache for startup"
+logger=report t=2025-02-23T20:15:22.126264223Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=caching.service t=2025-02-23T20:15:22.126300925Z level=warn msg="Caching service is disabled"
+logger=http.server t=2025-02-23T20:15:22.174011436Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:15:22.371761576Z level=info msg="State cache has been initialized" states=0 duration=245.548657ms
+logger=ticker t=2025-02-23T20:15:22.395868847Z level=info msg=starting first_tick=2025-02-23T20:15:30Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:15:22.395862346Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T20:15:22.432322319Z level=info msg="Update check succeeded" duration=318.97513ms
+logger=plugins.update.checker t=2025-02-23T20:15:22.468502375Z level=info msg="Update check succeeded" duration=354.483949ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:15:22.833048496Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=36 duration=36.984803ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:19:47.518752194Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:19:47.519417333Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:19:47.519676848Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:19:47.519874559Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:19:47.520097372Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:19:47.520432191Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:19:47.520698406Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:19:47.521025025Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:19:47.521411447Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:19:47.521738166Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:19:47.522048784Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:19:47.522766625Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:19:47.586796899Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:19:47.617765876Z level=info msg="migrations completed" performed=0 skipped=575 duration=964.556µs
+logger=licensing t=2025-02-23T20:19:47.642653704Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:19:47.647146362Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:19:47.815659631Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:19:47.818517795Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:19:47.824210922Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:19:47.832389591Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:19:50.31298125Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:19:50.315078668Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:19:50.315494791Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:19:50.316158628Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T20:19:50.31637134Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-23T20:19:50.334474253Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:19:50.338868299Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:19:50.338987805Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T20:19:50.374406687Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:19:50.395157348Z level=info msg="State cache has been initialized" states=0 duration=78.776707ms
+logger=ticker t=2025-02-23T20:19:50.396587328Z level=info msg=starting first_tick=2025-02-23T20:20:00Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:19:50.397083356Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T20:19:50.437296906Z level=info msg="Update check succeeded" duration=119.993713ms
+logger=plugins.update.checker t=2025-02-23T20:19:50.470245849Z level=info msg="Update check succeeded" duration=144.659694ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:19:56.838159428Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=30 duration=30.435003ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:19:58.468715918Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=21 duration=21.49238ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T20:29:50.356470605Z level=info msg="Completed cleanup jobs" duration=21.679854ms
+logger=grafana.update.checker t=2025-02-23T20:29:50.411919233Z level=info msg="Update check succeeded" duration=21.687354ms
+logger=plugins.update.checker t=2025-02-23T20:29:50.491554007Z level=info msg="Update check succeeded" duration=67.610556ms
+logger=settings t=2025-02-23T20:31:11.119158977Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:31:11.119932734Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:31:11.120195953Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:31:11.120459472Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:31:11.120735592Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:31:11.120995411Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:31:11.121273531Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:31:11.121474945Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:31:11.121742365Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:31:11.121989883Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:31:11.122430415Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:31:11.123460189Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:31:11.245246227Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:31:11.259358651Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.077578ms
+logger=licensing t=2025-02-23T20:31:11.266391561Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:31:11.273039944Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:31:11.664402403Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:31:11.665092854Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:31:11.69669108Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:31:11.707755394Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:31:13.917031941Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:31:13.921234151Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:31:13.921555974Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:31:13.922079613Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-23T20:31:13.923726134Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-23T20:31:13.931947539Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:31:13.925380556Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:31:13.925411258Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T20:31:13.973537201Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:31:13.97651342Z level=info msg="State cache has been initialized" states=0 duration=52.776886ms
+logger=ticker t=2025-02-23T20:31:13.977261175Z level=info msg=starting first_tick=2025-02-23T20:31:20Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:31:13.977777513Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T20:31:14.094388598Z level=info msg="Update check succeeded" duration=171.786647ms
+logger=plugins.update.checker t=2025-02-23T20:31:14.131280214Z level=info msg="Update check succeeded" duration=207.663088ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:31:15.80807156Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=22 duration=22.841881ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:31:53.544787245Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=47 duration=47.794821ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:33:36.295306723Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:33:36.296072677Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:33:36.296362598Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:33:36.296600415Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:33:36.296774627Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:33:36.297026645Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:33:36.297312565Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:33:36.297568683Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:33:36.297791199Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:33:36.298051217Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:33:36.298321337Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:33:36.299021986Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:33:36.362090456Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:33:36.378331307Z level=info msg="migrations completed" performed=0 skipped=575 duration=762.354µs
+logger=licensing t=2025-02-23T20:33:36.386236067Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:33:36.389602306Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:33:36.496434977Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:33:36.497529054Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:33:36.504410442Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:33:36.51919509Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:33:39.141753151Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:33:39.143737891Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:33:39.144022812Z level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2025-02-23T20:33:39.162213101Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:33:39.164700177Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:33:39.164983197Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=modules t=2025-02-23T20:33:39.179777345Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-23T20:33:39.187302879Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:33:39.187759111Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-23T20:33:39.189381826Z level=info msg="State cache has been initialized" states=0 duration=1.614214ms
+logger=ticker t=2025-02-23T20:33:39.18985806Z level=info msg=starting first_tick=2025-02-23T20:33:40Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:33:39.201933816Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T20:33:39.242283875Z level=info msg="Update check succeeded" duration=97.339499ms
+logger=plugins.update.checker t=2025-02-23T20:33:39.277823894Z level=info msg="Update check succeeded" duration=130.787469ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:33:48.824192138Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=14 duration=14.149482ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:34:07.846979442Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=10 duration=10.350183ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T20:43:39.187773527Z level=info msg="Completed cleanup jobs" duration=27.198099ms
+logger=grafana.update.checker t=2025-02-23T20:43:39.232081357Z level=info msg="Update check succeeded" duration=28.781304ms
+logger=plugins.update.checker t=2025-02-23T20:43:39.302162992Z level=info msg="Update check succeeded" duration=62.950663ms
+logger=settings t=2025-02-23T20:46:25.32978563Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:46:25.330510078Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:46:25.330896503Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:46:25.331330732Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:46:25.331885568Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:46:25.332481708Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:46:25.332804629Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:46:25.333098848Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:46:25.333419269Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:46:25.333659185Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:46:25.333933303Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:46:25.334722355Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:46:25.398936978Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:46:25.417579304Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.944328ms
+logger=licensing t=2025-02-23T20:46:25.426002358Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:46:25.429417882Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:46:25.877054519Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:46:25.877988381Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:46:25.898527331Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:46:25.906242039Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:46:28.089276297Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:46:28.094830162Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:46:28.095328095Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T20:46:28.099795089Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-23T20:46:28.099864593Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:46:28.100597441Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:46:28.100754852Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-23T20:46:28.100908262Z level=info msg="Warming state cache for startup"
+logger=http.server t=2025-02-23T20:46:28.153292907Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T20:46:29.171811804Z level=info msg="State cache has been initialized" states=0 duration=1.073316382s
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:46:29.177737394Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T20:46:29.177771196Z level=info msg=starting first_tick=2025-02-23T20:46:30Z
+logger=grafana.update.checker t=2025-02-23T20:46:29.931501762Z level=info msg="Update check succeeded" duration=1.830236758s
+logger=plugins.update.checker t=2025-02-23T20:46:29.978653363Z level=info msg="Update check succeeded" duration=1.877149242s
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:46:39.931614009Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=51 duration=51.802104ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:46:44.443831748Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=890 duration=890.89913ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-23T20:51:16.652755024Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T20:51:16.654065314Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T20:51:16.654368735Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T20:51:16.65458865Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T20:51:16.654863169Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T20:51:16.655136388Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T20:51:16.655463811Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T20:51:16.655646723Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T20:51:16.655855738Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T20:51:16.656042551Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T20:51:16.656378474Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T20:51:16.657419446Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T20:51:16.732509631Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T20:51:16.746735713Z level=info msg="migrations completed" performed=0 skipped=575 duration=759.153µs
+logger=licensing t=2025-02-23T20:51:16.753003046Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T20:51:16.756182765Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T20:51:16.900257813Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T20:51:16.901040567Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T20:51:16.907351403Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T20:51:16.916655946Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T20:51:19.196870291Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T20:51:19.19816528Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T20:51:19.198480402Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-23T20:51:19.199002938Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-23T20:51:19.201990844Z level=info msg="State cache has been initialized" states=0 duration=2.986406ms
+logger=ticker t=2025-02-23T20:51:19.203775867Z level=info msg=starting first_tick=2025-02-23T20:51:20Z
+logger=modules t=2025-02-23T20:51:19.20409609Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-23T20:51:19.208207673Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.multiorg.alertmanager t=2025-02-23T20:51:19.209162939Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2025-02-23T20:51:19.21786214Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T20:51:19.227598012Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T20:51:19.229242526Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafana.update.checker t=2025-02-23T20:51:19.304245605Z level=info msg="Update check succeeded" duration=93.464553ms
+logger=plugins.update.checker t=2025-02-23T20:51:19.343390008Z level=info msg="Update check succeeded" duration=130.429806ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:51:32.826387907Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=10 duration=10.579367ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T20:55:31.335655086Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=18 duration=18.02721ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T21:01:19.252142156Z level=info msg="Completed cleanup jobs" duration=83.894787ms
+logger=grafana.update.checker t=2025-02-23T21:01:19.287126928Z level=info msg="Update check succeeded" duration=21.348447ms
+logger=plugins.update.checker t=2025-02-23T21:01:19.369815933Z level=info msg="Update check succeeded" duration=64.712487ms
+logger=settings t=2025-02-23T21:02:57.223045516Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T21:02:57.223842966Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T21:02:57.224397401Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T21:02:57.225224653Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T21:02:57.225710784Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T21:02:57.225992902Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T21:02:57.226242218Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T21:02:57.226462431Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T21:02:57.226770551Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T21:02:57.227007066Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T21:02:57.22723718Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T21:02:57.228309148Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T21:02:57.293213237Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T21:02:57.319402587Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.181075ms
+logger=licensing t=2025-02-23T21:02:57.348072193Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T21:02:57.36516027Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T21:02:57.53610294Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T21:02:57.537891352Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T21:02:57.54594816Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T21:02:57.554031669Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T21:03:00.008721962Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T21:03:00.011100711Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T21:03:00.011792155Z level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2025-02-23T21:03:00.01267121Z level=info msg="storage starting"
+logger=modules t=2025-02-23T21:03:00.012819619Z level=warn msg="No modules registered..."
+logger=report t=2025-02-23T21:03:00.014355816Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T21:03:00.016130327Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T21:03:00.016218832Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-23T21:03:00.016395344Z level=warn msg="Caching service is disabled"
+logger=ngalert.state.manager t=2025-02-23T21:03:00.052178787Z level=info msg="State cache has been initialized" states=0 duration=35.955955ms
+logger=ticker t=2025-02-23T21:03:00.052898233Z level=info msg=starting first_tick=2025-02-23T21:03:10Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T21:03:00.05301354Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T21:03:00.129638745Z level=info msg="Update check succeeded" duration=112.42065ms
+logger=plugins.update.checker t=2025-02-23T21:03:00.160441977Z level=info msg="Update check succeeded" duration=142.24082ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T21:03:10.932511869Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=128 duration=128.724655ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T21:03:38.984780723Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=213 duration=213.254094ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T21:13:00.051795646Z level=info msg="Completed cleanup jobs" duration=31.833307ms
+logger=grafana.update.checker t=2025-02-23T21:13:00.127263544Z level=info msg="Update check succeeded" duration=32.951253ms
+logger=plugins.update.checker t=2025-02-23T21:13:00.196002566Z level=info msg="Update check succeeded" duration=71.091619ms
+logger=settings t=2025-02-23T21:14:41.99090256Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T21:14:41.991925423Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T21:14:41.992294745Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T21:14:41.992630066Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T21:14:41.992978587Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T21:14:41.993582924Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T21:14:41.993994849Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T21:14:41.994302068Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T21:14:41.994538082Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T21:14:41.994797398Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T21:14:41.995046013Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T21:14:41.995768257Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T21:14:42.08605957Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T21:14:42.144536341Z level=info msg="migrations completed" performed=0 skipped=575 duration=744.446µs
+logger=licensing t=2025-02-23T21:14:42.159822174Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T21:14:42.164584565Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T21:14:42.321857568Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T21:14:42.325019361Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T21:14:42.332648327Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T21:14:42.378158606Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T21:14:45.362541257Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T21:14:45.365235523Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T21:14:45.365639448Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T21:14:45.366069074Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-23T21:14:45.384316198Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T21:14:45.385370462Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-23T21:14:45.385597876Z level=info msg="storage starting"
+logger=caching.service t=2025-02-23T21:14:45.386721446Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T21:14:45.387715607Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-23T21:14:45.474867472Z level=info msg="State cache has been initialized" states=0 duration=89.49281ms
+logger=ngalert.multiorg.alertmanager t=2025-02-23T21:14:45.475563415Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-23T21:14:45.475687723Z level=info msg=starting first_tick=2025-02-23T21:14:50Z
+logger=grafana.update.checker t=2025-02-23T21:14:45.488115588Z level=info msg="Update check succeeded" duration=121.33507ms
+logger=plugins.update.checker t=2025-02-23T21:14:45.520116058Z level=info msg="Update check succeeded" duration=152.735203ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T21:14:47.826017918Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=30 duration=30.325467ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T21:17:26.547787187Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=79 duration=79.229866ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T21:24:45.401732698Z level=info msg="Completed cleanup jobs" duration=56.820832ms
+logger=grafana.update.checker t=2025-02-23T21:24:45.47276719Z level=info msg="Update check succeeded" duration=19.748832ms
+logger=plugins.update.checker t=2025-02-23T21:24:45.547591637Z level=info msg="Update check succeeded" duration=62.700029ms
+logger=grafana.update.checker t=2025-02-23T21:34:45.446007059Z level=info msg="Update check succeeded" duration=28.862529ms
+logger=plugins.update.checker t=2025-02-23T21:34:45.511558888Z level=info msg="Update check succeeded" duration=62.378438ms
+logger=cleanup t=2025-02-23T21:34:45.783534189Z level=info msg="Completed cleanup jobs" duration=473.51018ms
+logger=cleanup t=2025-02-23T21:44:45.321663114Z level=info msg="Completed cleanup jobs" duration=51.569222ms
+logger=grafana.update.checker t=2025-02-23T21:44:45.407470207Z level=info msg="Update check succeeded" duration=29.426953ms
+logger=plugins.update.checker t=2025-02-23T21:44:45.476634896Z level=info msg="Update check succeeded" duration=66.046382ms
+logger=settings t=2025-02-23T22:54:19.685114447Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T22:54:19.686746462Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T22:54:19.687253398Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T22:54:19.687598223Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T22:54:19.687947147Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T22:54:19.688292772Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T22:54:19.688749004Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T22:54:19.689061526Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T22:54:19.68926304Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T22:54:19.689607165Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T22:54:19.689994092Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T22:54:19.691024065Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T22:54:19.785499255Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T22:54:19.801631997Z level=info msg="migrations completed" performed=0 skipped=575 duration=908.765µs
+logger=licensing t=2025-02-23T22:54:19.808366074Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T22:54:19.813632047Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T22:54:19.944829436Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T22:54:19.945598491Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T22:54:19.964876556Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T22:54:19.979716307Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T22:54:22.132656766Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T22:54:22.136870771Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T22:54:22.137204295Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-23T22:54:22.143780872Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-23T22:54:22.147541244Z level=info msg="storage starting"
+logger=http.server t=2025-02-23T22:54:22.155273405Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T22:54:22.157733783Z level=info msg="Warming state cache for startup"
+logger=report t=2025-02-23T22:54:22.159968045Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=caching.service t=2025-02-23T22:54:22.163731017Z level=warn msg="Caching service is disabled"
+logger=ngalert.state.manager t=2025-02-23T22:54:22.277809182Z level=info msg="State cache has been initialized" states=0 duration=120.071299ms
+logger=ticker t=2025-02-23T22:54:22.279700719Z level=info msg=starting first_tick=2025-02-23T22:54:30Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T22:54:22.278294717Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T22:54:22.33313279Z level=info msg="Update check succeeded" duration=191.752492ms
+logger=plugins.update.checker t=2025-02-23T22:54:22.378898105Z level=info msg="Update check succeeded" duration=235.032227ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T22:55:22.503662047Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=38 duration=38.172388ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-23T23:04:22.169709828Z level=info msg="Completed cleanup jobs" duration=67.029593ms
+logger=grafana.update.checker t=2025-02-23T23:04:22.319401484Z level=info msg="Update check succeeded" duration=26.366107ms
+logger=plugins.update.checker t=2025-02-23T23:04:22.414754317Z level=info msg="Update check succeeded" duration=76.430037ms
+logger=cleanup t=2025-02-23T23:14:22.200285822Z level=info msg="Completed cleanup jobs" duration=137.923352ms
+logger=grafana.update.checker t=2025-02-23T23:14:22.284150501Z level=info msg="Update check succeeded" duration=32.343712ms
+logger=plugins.update.checker t=2025-02-23T23:14:22.387686082Z level=info msg="Update check succeeded" duration=89.509921ms
+logger=settings t=2025-02-23T23:23:55.058936517Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-23T23:23:55.060492732Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-23T23:23:55.061152881Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-23T23:23:55.061994443Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-23T23:23:55.062704096Z level=info msg=Target target=[all]
+logger=settings t=2025-02-23T23:23:55.063508555Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-23T23:23:55.064284113Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-23T23:23:55.065004966Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-23T23:23:55.065575708Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-23T23:23:55.066232957Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-23T23:23:55.067057318Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-23T23:23:55.069029264Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-23T23:23:55.148260826Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-23T23:23:55.162524482Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.47581ms
+logger=licensing t=2025-02-23T23:23:55.170698587Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-23T23:23:55.173766614Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-23T23:23:55.269655709Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-23T23:23:55.270627981Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-23T23:23:55.278255545Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-23T23:23:55.287476027Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-23T23:23:57.487171487Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-23T23:23:57.48841858Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-23T23:23:57.4886969Z level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2025-02-23T23:23:57.489197337Z level=info msg="storage starting"
+logger=modules t=2025-02-23T23:23:57.489381651Z level=warn msg="No modules registered..."
+logger=caching.service t=2025-02-23T23:23:57.49018561Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-23T23:23:57.490664846Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-23T23:23:57.499550603Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-23T23:23:57.500074442Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-23T23:23:57.503166971Z level=info msg="State cache has been initialized" states=0 duration=3.088629ms
+logger=ticker t=2025-02-23T23:23:57.50369311Z level=info msg=starting first_tick=2025-02-23T23:24:00Z
+logger=ngalert.multiorg.alertmanager t=2025-02-23T23:23:57.505303229Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-23T23:23:57.555140116Z level=info msg="Update check succeeded" duration=58.532831ms
+logger=plugins.update.checker t=2025-02-23T23:23:57.588515986Z level=info msg="Update check succeeded" duration=90.910727ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-23T23:23:59.884274354Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=2297 duration=2.2975464s size=0 referer= handler=/api/live/ws
+logger=grafana.update.checker t=2025-02-23T23:33:57.552637482Z level=info msg="Update check succeeded" duration=37.627962ms
+logger=cleanup t=2025-02-23T23:33:57.561219989Z level=info msg="Completed cleanup jobs" duration=105.098936ms
+logger=plugins.update.checker t=2025-02-23T23:33:57.611389438Z level=info msg="Update check succeeded" duration=63.082063ms
+logger=cleanup t=2025-02-23T23:43:57.501505691Z level=info msg="Completed cleanup jobs" duration=87.087589ms
+logger=grafana.update.checker t=2025-02-23T23:43:57.503889955Z level=info msg="Update check succeeded" duration=29.913157ms
+logger=plugins.update.checker t=2025-02-23T23:43:57.570056605Z level=info msg="Update check succeeded" duration=63.080838ms
+logger=grafana.update.checker t=2025-02-23T23:53:57.453823275Z level=info msg="Update check succeeded" duration=21.488216ms
+logger=cleanup t=2025-02-23T23:53:57.458312392Z level=info msg="Completed cleanup jobs" duration=85.051798ms
+logger=plugins.update.checker t=2025-02-23T23:53:57.531742371Z level=info msg="Update check succeeded" duration=66.881017ms

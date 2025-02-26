@@ -3,7 +3,7 @@ import time
 import streamlit as st
 from tqdm import tqdm
 
-# 📌 **Colonnes requises pour le dataset**
+#  **Colonnes requises pour le dataset**
 REQUIRED_COLUMNS = [
     "timestamp", "TP2", "TP3", "H1", "DV_pressure", "Reservoirs",
     "Oil_temperature", "Motor_current", "COMP", "DV_eletric",
@@ -34,11 +34,11 @@ def correct_timestamp_intervals(df):
     """
     st.markdown("### 🛠️ Correction des Timestamps Manquants...")
 
-    # ✅ Étape 1 : Ajuster les timestamps avec une barre de progression
+    # Étape 1 : Ajuster les timestamps avec une barre de progression
     tqdm.pandas(desc="Ajustement des timestamps")
     df["timestamp"] = df["timestamp"].progress_apply(adjust_last_digit_of_seconds)
 
-    # ✅ Étape 2 : Ajouter les timestamps manquants
+    #  Étape 2 : Ajouter les timestamps manquants
     start_time = time.time()
 
     while True:
@@ -82,12 +82,12 @@ def impute_missing_values(df, models):
         "<h3 style='color:#007BFF; font-weight:bold;'>..Imputation des Données</h3>",
         unsafe_allow_html=True
     )
-    # ✅ **Créer une copie temporaire du dataset avant imputation**
+    # **Créer une copie temporaire du dataset avant imputation**
     df_original = df.copy()
 
     df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce').astype('int64') // 10 ** 9
 
-    # ✅ **Imputation des valeurs manquantes**
+    #  **Imputation des valeurs manquantes**
     for col in filter(lambda c: c != "timestamp", REQUIRED_COLUMNS):
         if col in models and col in df.columns:
             missing_indices = df[df[col].isnull()].index

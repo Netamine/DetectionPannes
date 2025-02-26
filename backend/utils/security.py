@@ -13,16 +13,18 @@ if not API_KEY:
 else:
     logging.info(f"🔑 API_KEY chargée : {API_KEY[:5]}*** (sécurisée)")
 
-def api_key_required(f: object) -> object:
+def api_key_required(f):
     """ Vérifie que l'API Key est valide pour accéder aux endpoints sécurisés. """
     @wraps(f)
     def decorated(*args, **kwargs):
         api_key = request.headers.get("x-api-key")
-        logging.info(f"🔍 Clé API reçue : {api_key}")  # 🔹 Log pour voir la clé reçue
-        logging.info(f"🔐 Clé API stockée : {API_KEY}")  # 🔹 Log pour voir la clé stockée
+        logging.info(f"🔍 Clé API reçue : {api_key}")
+        logging.info(f"🔐 Clé API stockée : {API_KEY}")
+
         if not api_key or api_key != API_KEY:
             logging.warning("❌ Accès refusé : API Key invalide !")
             return jsonify({"error": "❌ Accès refusé ! API Key invalide."}), 403
+
         return f(*args, **kwargs)
     return decorated
 

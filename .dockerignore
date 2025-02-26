@@ -13,6 +13,3 @@ mlruns/
 # Exclure les fichiers de contrôle de version
 .git/
 .gitignore
-
-# Exclure les modèles stockés avec DVC (ils seront récupérés au runtime)
-data/models/

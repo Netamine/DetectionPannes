@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Exécuter sur un environnement Linux
+
+    steps:
+      - name: 📥 Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: 🔧 Installer Python et DVC
+        run: |
+          python -m pip install --upgrade pip
+          pip install dvc[gs] pytest
+
+      - name: 🔑 Configurer Google Drive Credentials
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          echo "$GOOGLE_APPLICATION_CREDENTIALS" > gdrive-creds.json
+          dvc remote modify dvc_data gdrive_service_account_json_file_path gdrive-creds.json
+          dvc remote modify dvc_data gdrive_use_service_account true
+
+      - name: ⬇️ Télécharger les données avec DVC
+        run: dvc pull
+
+      - name: 🏃 Exécuter les tests
+        run: pytest tests/
