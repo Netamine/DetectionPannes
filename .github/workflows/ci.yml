@@ -66,8 +66,14 @@ jobs:
           sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose || true
           sudo ln -s /usr/bin/docker-compose /usr/local/bin/docker-compose || true
 
-      - name: Définir API_KEY dans l'environnement
-        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+      - name: Générer le fichier config.env
+        run: |
+          mkdir -p keys  # Assurer que le dossier existe
+          echo "API_KEY=${{ secrets.API_KEY }}" > keys/config.env
+          cat keys/config.env  # Debug : Vérifier que le fichier est bien créé
+
+      - name: Vérifier la présence de config.env
+        run: ls -l keys/  # Vérifier le contenu du dossier keys avant le build
 
       - name: Se connecter à Docker Hub
         env:
