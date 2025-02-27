@@ -15,16 +15,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout du repo
+      - name:  Checkout du repo
         uses: actions/checkout@v4
 
-      - name: Installer Python et les dépendances
+      - name:  Installer Python et les dépendances
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install dvc[gdrive] pytest
 
-      - name: Configurer Google Drive Credentials
+      - name:  Configurer Google Drive Credentials
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: |
@@ -33,12 +33,12 @@ jobs:
           dvc remote modify dvc_data gdrive_service_account_json_file_path gdrive-creds.json
           dvc remote modify dvc_data gdrive_use_service_account true
 
-      - name: ⬇Télécharger les données avec DVC
+      - name: ⬇ Télécharger les données avec DVC
         run: dvc pull
         env:
           GOOGLE_APPLICATION_CREDENTIALS: $PWD/gdrive-creds.json
 
-      - name: 🏃 Exécuter les tests
+      - name:  Exécuter les tests
         run: pytest tests/
 
   docker:
@@ -46,15 +46,39 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout du repo
+      - name:  Checkout du repo
         uses: actions/checkout@v4
 
-      - name: Se connecter à Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      - name: Build et push de l’image Docker
+      - name:  Installer Docker et Docker Compose
         run: |
-          docker build -t monrepo/monimage:latest .
-          docker tag monrepo/monimage:latest monrepo/monimage:$(date +%Y%m%d%H%M)
-          docker push monrepo/monimage:latest
-          docker push monrepo/monimage:$(date +%Y%m%d%H%M)
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+
+      - name:  Se connecter à Docker Hub
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+      - name:  Build et push des images Docker
+        run: |
+          # Construire les images
+          docker-compose build
+
+          # Ajouter des tags dynamiques basés sur la date
+          TAG=$(date +%Y%m%d%H%M)
+
+          # Tag et push API
+          docker tag detectionpannes-api:latest $DOCKER_USERNAME/detectionpannes-api:latest
+          docker tag detectionpannes-api:latest $DOCKER_USERNAME/detectionpannes-api:$TAG
+          docker push $DOCKER_USERNAME/detectionpannes-api:latest
+          docker push $DOCKER_USERNAME/detectionpannes-api:$TAG
+
+          # Tag et push Monitoring
+          docker tag detectionpannes-monitoring:latest $DOCKER_USERNAME/detectionpannes-monitoring:latest
+          docker tag detectionpannes-monitoring:latest $DOCKER_USERNAME/detectionpannes-monitoring:$TAG
+          docker push $DOCKER_USERNAME/detectionpannes-monitoring:latest
+          docker push $DOCKER_USERNAME/detectionpannes-monitoring:$TAG
+
+      - name:  Vérification des images Docker
+        run: docker images
