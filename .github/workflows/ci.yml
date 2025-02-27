@@ -56,7 +56,7 @@ jobs:
 
           # Installer Docker Compose
           sudo apt-get update
-          sudo apt-get install -y docker-compose-plugin
+          sudo apt-get install -y docker-compose-plugin jq
 
           # Vérifier l'installation
           docker --version
@@ -69,12 +69,14 @@ jobs:
           # Générer config.env pour Docker Compose
           echo "API_KEY=${{ secrets.API_KEY }}" > keys/config.env
           
-          # Générer CleDVCJason.json pour DVC
-          echo "${{ secrets.DVC_CREDENTIALS }}" > keys/CleDVCJason.json
+          # Générer CleDVCJason.json pour DVC en le formatant correctement
+          echo '${{ secrets.DVC_CREDENTIALS }}' | jq '.' > keys/CleDVCJason.json
 
           # Vérification des fichiers créés
           echo "📌 Contenu du dossier keys :"
           ls -l keys/
+          echo "📌 Vérification du contenu de CleDVCJason.json"
+          cat keys/CleDVCJason.json | jq '.'
 
       - name: Se connecter à Docker Hub
         env:
