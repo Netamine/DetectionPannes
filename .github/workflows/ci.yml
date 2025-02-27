@@ -54,13 +54,27 @@ jobs:
           # Installer Docker via le script officiel
           curl -fsSL https://get.docker.com | sh
 
-          # Installer Docker Compose
+          # Installer Docker Compose et jq pour la gestion JSON
           sudo apt-get update
           sudo apt-get install -y docker-compose-plugin jq
 
           # Vérifier l'installation
           docker --version
-          docker compose version || docker-compose version  # Vérifier Docker Compose
+          docker-compose version  # Vérifier Docker Compose
+
+      - name: Vérifier les variables secrètes
+        run: |
+          if [[ -z "${{ secrets.DOCKER_USERNAME }}" ]]; then
+            echo "❌ ERREUR: DOCKER_USERNAME est vide. Vérifiez GitHub Secrets."
+            exit 1
+          fi
+
+          if [[ -z "${{ secrets.DOCKER_PASSWORD }}" ]]; then
+            echo "❌ ERREUR: DOCKER_PASSWORD est vide. Vérifiez GitHub Secrets."
+            exit 1
+          fi
+
+          echo "✅ DOCKER_USERNAME et DOCKER_PASSWORD sont bien définis."
 
       - name: Générer les fichiers secrets
         run: |
@@ -89,12 +103,18 @@ jobs:
           echo "📌 Début du build des images Docker"
 
           # Construire les images en prenant en compte le fichier config.env
-          docker compose --env-file keys/config.env build || { echo "❌ Erreur: échec du build"; exit 1; }
+          docker-compose --env-file keys/config.env build || { echo "❌ Erreur: échec du build"; exit 1; }
 
           # Ajouter des tags dynamiques basés sur la date
           TAG=$(date +%Y%m%d%H%M)
 
           echo "📌 Ajout des tags et push des images..."
+
+          # Vérification avant tagging
+          if [[ -z "$DOCKER_USERNAME" ]]; then
+            echo "❌ ERREUR: DOCKER_USERNAME est vide !"
+            exit 1
+          fi
 
           # Tag et push API
           docker tag detectionpannes-api:latest $DOCKER_USERNAME/detectionpannes-api:latest
