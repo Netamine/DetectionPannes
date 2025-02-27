@@ -52,9 +52,10 @@ jobs:
       - name: Installer Docker et Docker Compose
         run: |
           sudo apt-get update
-          sudo apt-get install -y docker.io docker-compose-plugin
+          sudo apt-get install -y docker.io
+          pip install docker-compose
           docker --version
-          docker compose version  # Vérifier que Docker Compose est bien installé
+          docker-compose --version  # Vérifier que Docker Compose est bien installé
 
       - name: Définir API_KEY dans l'environnement
         run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
@@ -68,7 +69,7 @@ jobs:
       - name: Build et push des images Docker
         run: |
           # Construire les images en prenant en compte le fichier config.env
-          docker compose --env-file keys/config.env build
+          docker-compose --env-file keys/config.env build
 
           # Ajouter des tags dynamiques basés sur la date
           TAG=$(date +%Y%m%d%H%M)
