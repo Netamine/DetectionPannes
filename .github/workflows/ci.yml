@@ -60,20 +60,21 @@ jobs:
 
           # Vérifier l'installation
           docker --version
-          docker compose version  # Vérifier que docker compose fonctionne
+          docker compose version || docker-compose version  # Vérifier Docker Compose
 
-          # Fix possible problème "docker-compose: command not found"
-          sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose || true
-          sudo ln -s /usr/bin/docker-compose /usr/local/bin/docker-compose || true
-
-      - name: Générer le fichier config.env
+      - name: Générer les fichiers secrets
         run: |
           mkdir -p keys  # Assurer que le dossier existe
+          
+          # Générer config.env pour Docker Compose
           echo "API_KEY=${{ secrets.API_KEY }}" > keys/config.env
-          cat keys/config.env  # Debug : Vérifier que le fichier est bien créé
+          
+          # Générer CleDVCJason.json pour DVC
+          echo "${{ secrets.DVC_CREDENTIALS }}" > keys/CleDVCJason.json
 
-      - name: Vérifier la présence de config.env
-        run: ls -l keys/  # Vérifier le contenu du dossier keys avant le build
+          # Vérification des fichiers créés
+          echo "📌 Contenu du dossier keys :"
+          ls -l keys/
 
       - name: Se connecter à Docker Hub
         env:
