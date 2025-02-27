@@ -59,8 +59,15 @@ jobs:
           sudo apt-get install -y docker-compose-plugin jq
 
           # Vérifier l'installation
+          echo "📌 Docker installé :"
           docker --version
-          docker-compose version  # Vérifier Docker Compose
+
+          echo "📌 Vérification Docker Compose..."
+          docker compose version || echo "❌ ERREUR: Docker Compose non trouvé"
+
+          # Ajouter un lien symbolique en cas de besoin
+          sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose || true
+          sudo ln -s /usr/bin/docker-compose /usr/local/bin/docker-compose || true
 
       - name: Vérifier les variables secrètes
         run: |
@@ -103,7 +110,7 @@ jobs:
           echo "📌 Début du build des images Docker"
 
           # Construire les images en prenant en compte le fichier config.env
-          docker-compose --env-file keys/config.env build || { echo "❌ Erreur: échec du build"; exit 1; }
+          docker compose --env-file keys/config.env build || { echo "❌ Erreur: échec du build"; exit 1; }
 
           # Ajouter des tags dynamiques basés sur la date
           TAG=$(date +%Y%m%d%H%M)
