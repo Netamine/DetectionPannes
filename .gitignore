@@ -20,6 +20,7 @@ Thumbs.db
 
 # Ignorer les données sensibles
 keys/
+keys/.env
 keys/CleDVCJason.json
 
 # Ignorer les données brutes et traitées

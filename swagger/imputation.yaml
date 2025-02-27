@@ -14,8 +14,8 @@ description: |
   - **Les cellules vides seront imputées en fonction d'une stratégie prédéfinie.**  
   - **Format accepté :** `.csv`  
 
-  **🛠️ Exemples de requêtes :**  
-  ```bash
+  **🛠Exemples de requêtes :**  
+  ```bsh
   curl -X POST -F "file=@mon_fichier.csv" http://127.0.0.1:5000/imputation/impute
 
 parameters:
