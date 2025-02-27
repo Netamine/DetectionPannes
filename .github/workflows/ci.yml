@@ -51,23 +51,19 @@ jobs:
 
       - name: Installer Docker et Docker Compose
         run: |
-          # Installer Docker via le script officiel
+          # Installer Docker
           curl -fsSL https://get.docker.com | sh
 
           # Installer Docker Compose et jq pour la gestion JSON
           sudo apt-get update
           sudo apt-get install -y docker-compose-plugin jq
 
-          # Vérifier l'installation
+          # Vérification installation
           echo "📌 Docker installé :"
           docker --version
 
           echo "📌 Vérification Docker Compose..."
           docker compose version || echo "❌ ERREUR: Docker Compose non trouvé"
-
-          # Ajouter un lien symbolique en cas de besoin
-          sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose || true
-          sudo ln -s /usr/bin/docker-compose /usr/local/bin/docker-compose || true
 
       - name: Vérifier les variables secrètes
         run: |
@@ -75,29 +71,37 @@ jobs:
             echo "❌ ERREUR: DOCKER_USERNAME est vide. Vérifiez GitHub Secrets."
             exit 1
           fi
-
           if [[ -z "${{ secrets.DOCKER_PASSWORD }}" ]]; then
             echo "❌ ERREUR: DOCKER_PASSWORD est vide. Vérifiez GitHub Secrets."
             exit 1
           fi
-
           echo "✅ DOCKER_USERNAME et DOCKER_PASSWORD sont bien définis."
 
       - name: Générer les fichiers secrets
         run: |
           mkdir -p keys  # Assurer que le dossier existe
-          
+
           # Générer config.env pour Docker Compose
           echo "API_KEY=${{ secrets.API_KEY }}" > keys/config.env
-          
+
           # Générer CleDVCJason.json pour DVC en le formatant correctement
           echo '${{ secrets.DVC_CREDENTIALS }}' | jq '.' > keys/CleDVCJason.json
 
           # Vérification des fichiers créés
           echo "📌 Contenu du dossier keys :"
           ls -l keys/
-          echo "📌 Vérification du contenu de CleDVCJason.json"
-          cat keys/CleDVCJason.json | jq '.'
+
+      - name: Vérifier la présence des fichiers secrets avant exécution
+        run: |
+          if [[ ! -f keys/config.env ]]; then
+            echo "❌ ERREUR: Le fichier keys/config.env est manquant !"
+            exit 1
+          fi
+          if [[ ! -f keys/CleDVCJason.json ]]; then
+            echo "❌ ERREUR: Le fichier keys/CleDVCJason.json est manquant !"
+            exit 1
+          fi
+          echo "✅ Les fichiers secrets sont bien présents."
 
       - name: Se connecter à Docker Hub
         env:
@@ -116,24 +120,24 @@ jobs:
           TAG=$(date +%Y%m%d%H%M)
 
           echo "📌 Ajout des tags et push des images..."
-
+          
           # Vérification avant tagging
-          if [[ -z "$DOCKER_USERNAME" ]]; then
+          if [[ -z "${{ secrets.DOCKER_USERNAME }}" ]]; then
             echo "❌ ERREUR: DOCKER_USERNAME est vide !"
             exit 1
           fi
 
           # Tag et push API
-          docker tag detectionpannes-api:latest $DOCKER_USERNAME/detectionpannes-api:latest
-          docker tag detectionpannes-api:latest $DOCKER_USERNAME/detectionpannes-api:$TAG
-          docker push $DOCKER_USERNAME/detectionpannes-api:latest
-          docker push $DOCKER_USERNAME/detectionpannes-api:$TAG
+          docker tag detectionpannes-api:latest "${{ secrets.DOCKER_USERNAME }}/detectionpannes-api:latest"
+          docker tag detectionpannes-api:latest "${{ secrets.DOCKER_USERNAME }}/detectionpannes-api:$TAG"
+          docker push "${{ secrets.DOCKER_USERNAME }}/detectionpannes-api:latest"
+          docker push "${{ secrets.DOCKER_USERNAME }}/detectionpannes-api:$TAG"
 
           # Tag et push Monitoring
-          docker tag detectionpannes-monitoring:latest $DOCKER_USERNAME/detectionpannes-monitoring:latest
-          docker tag detectionpannes-monitoring:latest $DOCKER_USERNAME/detectionpannes-monitoring:$TAG
-          docker push $DOCKER_USERNAME/detectionpannes-monitoring:latest
-          docker push $DOCKER_USERNAME/detectionpannes-monitoring:$TAG
+          docker tag detectionpannes-monitoring:latest "${{ secrets.DOCKER_USERNAME }}/detectionpannes-monitoring:latest"
+          docker tag detectionpannes-monitoring:latest "${{ secrets.DOCKER_USERNAME }}/detectionpannes-monitoring:$TAG"
+          docker push "${{ secrets.DOCKER_USERNAME }}/detectionpannes-monitoring:latest"
+          docker push "${{ secrets.DOCKER_USERNAME }}/detectionpannes-monitoring:$TAG"
 
           echo "✅ Push terminé avec succès"
 
