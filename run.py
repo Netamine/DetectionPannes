@@ -13,14 +13,14 @@ streamlit_process = None
 
 def run_flask():
     """Lancer l'application Flask."""
-    return subprocess.Popen([sys.executable, "run_flask.py"]) #/app/     #/app/    #/app/
+    return subprocess.Popen([sys.executable, "/app/run_flask.py"]) #/app/     #/app/    #/app/
 
 
 def run_streamlit():
     """Lancer l'application Streamlit."""
     return subprocess.Popen([
         sys.executable, "-m", "streamlit", "run",
-        "frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"   #/app/    #/app/    #/app/  #/app/
+        "/app/frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"   #/app/    #/app/    #/app/  #/app/
     ])
 
 def signal_handler(sig, frame):
