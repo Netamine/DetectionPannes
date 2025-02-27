@@ -1,0 +1,15 @@
+# Exclure les dossiers et fichiers inutiles
+.vscode/
+.idea/
+__pycache__/
+venv/
+mlruns/
+.dvc/
+.github/
+
+# Exclure les fichiers spécifiques
+*.log
+
+# Exclure les fichiers de contrôle de version
+.git/
+.gitignore

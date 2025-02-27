@@ -1,0 +1,50 @@
+tags:
+  - Imputation
+summary: Impute les valeurs manquantes dans un fichier CSV
+description: |
+  **🔍 Description :**  
+  Cet endpoint permet d'envoyer un fichier CSV contenant des valeurs manquantes.  
+  Il applique une imputation pour compléter les données et retourne un fichier CSV corrigé.
+
+  **📌 Format du fichier CSV attendu :**  
+  - **Doit contenir les colonnes suivantes :**  
+      - `timestamp` (str, format "YYYY-MM-DD HH:MM:SS")  
+      - `TP2`, `TP3`, `H1`, `DV_pressure`, `Reservoirs`, `Oil_temperature`, `Motor_current`, `COMP`, `DV_eletric`,  
+        `Towers`, `MPG`, `LPS`, `Pressure_switch`, `Oil_level`, `Caudal_impulses` (tous en `float`)  
+  - **Les cellules vides seront imputées en fonction d'une stratégie prédéfinie.**  
+  - **Format accepté :** `.csv`  
+
+  **🛠Exemples de requêtes :**  
+  ```bsh
+  curl -X POST -F "file=@mon_fichier.csv" http://127.0.0.1:5000/imputation/impute
+
+parameters:
+  - name: file
+    in: formData
+    type: file
+    required: true
+    description: "Le fichier CSV contenant les données à imputer."
+
+responses:
+  200:
+    description: "Fichier CSV avec les valeurs imputées."
+    content:
+      text/csv:
+        schema:
+          type: string
+          format: binary
+
+  400:
+    description: "Erreur : fichier manquant ou vide."
+    content:
+      application/json:
+        example:
+          error: "Le fichier CSV est vide."
+
+  500:
+    description: "Erreur interne du serveur."
+    content:
+      application/json:
+        example:
+          error: "Une erreur interne est survenue."
+

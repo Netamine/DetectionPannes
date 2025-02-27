@@ -1,0 +1,8 @@
+[cache]
+    dir = /opt/render/project/.dvc/cache
+[core]
+    remote = dvc_data
+['remote "dvc_data"']
+    url = gdrive://1G3bpMF46owL-_Z1mnEtmrJ_61nWQlRfO
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = C:\Dev-IA\DetectionPannes\keys\CleDVCJason.json

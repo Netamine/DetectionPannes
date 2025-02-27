@@ -1,0 +1,55 @@
+tags:
+  - Prédiction
+summary: Analyse un fichier CSV et détecte les anomalies
+description: |
+  **🔍 Description :**  
+  Cet endpoint permet d'envoyer un fichier CSV contenant les mesures de capteurs.  
+  Le système détectera les anomalies en comparant les valeurs aux modèles de référence.
+
+  **📌 Format du fichier CSV attendu :**  
+  - **Doit contenir les colonnes suivantes :**  
+      - `timestamp` (str, format "YYYY-MM-DD HH:MM:SS")  
+      - `TP2`, `TP3`, `H1`, `DV_pressure`, `Reservoirs`, `Oil_temperature`, `Motor_current`, `COMP`, `DV_eletric`,  
+        `Towers`, `MPG`, `LPS`, `Pressure_switch`, `Oil_level`, `Caudal_impulses` (tous en `float`)  
+  - **Doit contenir au moins 180 lignes de données**  
+  - **Format accepté :** `.csv`  
+
+  **🛠️ Exemple de requête :**  
+  ```bash
+  curl -X POST -F "file=@mon_fichier.csv" http://127.0.0.1:5000/predict_csv
+
+parameters:
+  - name: x-api-key
+    in: header
+    type: string
+    required: true
+    description: "Votre clé API pour authentifier la requête."
+  - name: file
+    in: formData
+    type: file
+    required: true
+    description: "Le fichier CSV contenant les données à analyser."
+
+responses:
+  200:
+    description: "Fichier CSV avec les valeurs imputées."
+    content:
+      text/csv:
+        schema:
+          type: string
+          format: binary
+
+  400:
+    description: "Erreur : fichier manquant ou vide."
+    content:
+      application/json:
+        example:
+          error: "Le fichier CSV est vide."
+
+  500:
+    description: "Erreur interne du serveur."
+    content:
+      application/json:
+        example:
+          error: "Une erreur interne est survenue."
+

@@ -1,0 +1,28 @@
+# Ignorer les caches et fichiers temporaires
+*.tmp
+*.log
+*.swp
+
+# Ignorer les fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorer les fichiers de configuration IDE et du projet
+.idea/
+.vscode/
+
+# Ignorer les fichiers spécifiques aux tests et à l'outillage
+.pytest_cache/
+htmlcov/
+
+# Ignorer les données brutes non pertinentes
+data/raw/unwanted_data.csv
+data/processed/temp_files/
+
+# Ignorer les checkpoints de notebooks
+notebooks/**/.ipynb_checkpoints/
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db

@@ -1,0 +1,39 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5000:5000"
+      - "8501:8501"
+    env_file:
+      - ./keys/config.env  # Charge les variables d'environnement
+    environment:
+      - API_KEY=${API_KEY:?ERREUR - Variable API_KEY non définie}
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - ./keys:/app/keys
+    depends_on:
+      - monitoring
+    networks:
+      - detectionpannes-net
+
+  monitoring:
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+      - "3000:3000"
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/grafana:/grafana/data
+      - ./monitoring/prometheus.yml:/prometheus/prometheus.yml
+      - ./monitoring/grafana.ini:/grafana/conf/grafana.ini
+    networks:
+      - detectionpannes-net
+
+networks:
+  detectionpannes-net:
+    driver: bridge

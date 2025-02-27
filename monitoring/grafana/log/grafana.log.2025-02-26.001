@@ -1,0 +1,980 @@
+logger=cleanup t=2025-02-24T00:03:57.385778289Z level=info msg="Completed cleanup jobs" duration=55.052517ms
+logger=grafana.update.checker t=2025-02-24T00:03:57.412594697Z level=info msg="Update check succeeded" duration=23.117945ms
+logger=plugins.update.checker t=2025-02-24T00:03:57.485829808Z level=info msg="Update check succeeded" duration=63.048085ms
+logger=cleanup t=2025-02-24T00:13:57.361698565Z level=info msg="Completed cleanup jobs" duration=75.319268ms
+logger=grafana.update.checker t=2025-02-24T00:13:57.369136305Z level=info msg="Update check succeeded" duration=24.015644ms
+logger=plugins.update.checker t=2025-02-24T00:13:57.442024397Z level=info msg="Update check succeeded" duration=62.711053ms
+logger=licensing t=2025-02-24T00:23:57.25564495Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T00:23:57.256923445Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=grafana.update.checker t=2025-02-24T00:23:57.322468525Z level=info msg="Update check succeeded" duration=21.76942ms
+logger=cleanup t=2025-02-24T00:23:57.325179827Z level=info msg="Completed cleanup jobs" duration=82.945474ms
+logger=plugins.update.checker t=2025-02-24T00:23:57.397391302Z level=info msg="Update check succeeded" duration=62.833078ms
+logger=cleanup t=2025-02-24T00:33:57.277428658Z level=info msg="Completed cleanup jobs" duration=80.216672ms
+logger=grafana.update.checker t=2025-02-24T00:33:57.372541739Z level=info msg="Update check succeeded" duration=116.270056ms
+logger=plugins.update.checker t=2025-02-24T00:33:57.41997607Z level=info msg="Update check succeeded" duration=130.663328ms
+logger=cleanup t=2025-02-24T00:43:57.216252071Z level=info msg="Completed cleanup jobs" duration=64.668884ms
+logger=grafana.update.checker t=2025-02-24T00:43:57.240351903Z level=info msg="Update check succeeded" duration=30.285528ms
+logger=plugins.update.checker t=2025-02-24T00:43:57.307180061Z level=info msg="Update check succeeded" duration=62.705627ms
+logger=grafana.update.checker t=2025-02-24T00:53:57.185574735Z level=info msg="Update check succeeded" duration=19.919401ms
+logger=cleanup t=2025-02-24T00:53:57.192078158Z level=info msg="Completed cleanup jobs" duration=85.305557ms
+logger=plugins.update.checker t=2025-02-24T00:53:57.270150634Z level=info msg="Update check succeeded" duration=71.499547ms
+logger=cleanup t=2025-02-24T01:03:57.125404349Z level=info msg="Completed cleanup jobs" duration=63.203437ms
+logger=grafana.update.checker t=2025-02-24T01:03:57.148705459Z level=info msg="Update check succeeded" duration=26.872272ms
+logger=plugins.update.checker t=2025-02-24T01:03:57.222677787Z level=info msg="Update check succeeded" duration=67.498452ms
+logger=cleanup t=2025-02-24T01:13:57.10438519Z level=info msg="Completed cleanup jobs" duration=90.901723ms
+logger=grafana.update.checker t=2025-02-24T01:13:57.105233864Z level=info msg="Update check succeeded" duration=32.849463ms
+logger=plugins.update.checker t=2025-02-24T01:13:57.168326963Z level=info msg="Update check succeeded" duration=62.925984ms
+logger=licensing t=2025-02-24T01:23:56.975693542Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T01:23:56.976694328Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T01:23:57.015594377Z level=info msg="Completed cleanup jobs" duration=53.676021ms
+logger=grafana.update.checker t=2025-02-24T01:23:57.049343883Z level=info msg="Update check succeeded" duration=28.068016ms
+logger=plugins.update.checker t=2025-02-24T01:23:57.12295092Z level=info msg="Update check succeeded" duration=68.65551ms
+logger=cleanup t=2025-02-24T01:33:56.97448003Z level=info msg="Completed cleanup jobs" duration=61.7853ms
+logger=grafana.update.checker t=2025-02-24T01:33:56.998634124Z level=info msg="Update check succeeded" duration=27.475068ms
+logger=plugins.update.checker t=2025-02-24T01:33:57.067593016Z level=info msg="Update check succeeded" duration=62.907993ms
+logger=cleanup t=2025-02-24T01:43:56.929131664Z level=info msg="Completed cleanup jobs" duration=66.546227ms
+logger=grafana.update.checker t=2025-02-24T01:43:56.948413537Z level=info msg="Update check succeeded" duration=26.73358ms
+logger=plugins.update.checker t=2025-02-24T01:43:57.018509553Z level=info msg="Update check succeeded" duration=63.007639ms
+logger=grafana.update.checker t=2025-02-24T01:53:56.894144379Z level=info msg="Update check succeeded" duration=20.982021ms
+logger=cleanup t=2025-02-24T01:53:56.89830052Z level=info msg="Completed cleanup jobs" duration=83.948988ms
+logger=plugins.update.checker t=2025-02-24T01:53:56.975858183Z level=info msg="Update check succeeded" duration=68.526323ms
+logger=cleanup t=2025-02-24T02:03:56.831367498Z level=info msg="Completed cleanup jobs" duration=65.430486ms
+logger=grafana.update.checker t=2025-02-24T02:03:56.843553901Z level=info msg="Update check succeeded" duration=18.82295ms
+logger=plugins.update.checker t=2025-02-24T02:03:56.928888626Z level=info msg="Update check succeeded" duration=70.164976ms
+logger=cleanup t=2025-02-24T02:13:56.793531215Z level=info msg="Completed cleanup jobs" duration=74.567586ms
+logger=grafana.update.checker t=2025-02-24T02:13:56.800242135Z level=info msg="Update check succeeded" duration=21.625378ms
+logger=plugins.update.checker t=2025-02-24T02:13:56.879725303Z level=info msg="Update check succeeded" duration=68.470513ms
+logger=licensing t=2025-02-24T02:23:56.687060153Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T02:23:56.688207347Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=grafana.update.checker t=2025-02-24T02:23:56.75362677Z level=info msg="Update check succeeded" duration=21.340837ms
+logger=cleanup t=2025-02-24T02:23:56.760775052Z level=info msg="Completed cleanup jobs" duration=87.706437ms
+logger=plugins.update.checker t=2025-02-24T02:23:56.826837228Z level=info msg="Update check succeeded" duration=61.229182ms
+logger=cleanup t=2025-02-24T02:33:56.697046329Z level=info msg="Completed cleanup jobs" duration=68.697459ms
+logger=grafana.update.checker t=2025-02-24T02:33:56.714666078Z level=info msg="Update check succeeded" duration=27.507806ms
+logger=plugins.update.checker t=2025-02-24T02:33:56.78326553Z level=info msg="Update check succeeded" duration=62.324271ms
+logger=cleanup t=2025-02-24T02:43:56.650424053Z level=info msg="Completed cleanup jobs" duration=66.992603ms
+logger=grafana.update.checker t=2025-02-24T02:43:56.671178641Z level=info msg="Update check succeeded" duration=28.745661ms
+logger=plugins.update.checker t=2025-02-24T02:43:56.746863467Z level=info msg="Update check succeeded" duration=71.293411ms
+logger=grafana.update.checker t=2025-02-24T02:53:56.622152668Z level=info msg="Update check succeeded" duration=25.050255ms
+logger=cleanup t=2025-02-24T02:53:56.624392451Z level=info msg="Completed cleanup jobs" duration=85.842043ms
+logger=plugins.update.checker t=2025-02-24T02:53:56.689229671Z level=info msg="Update check succeeded" duration=58.089966ms
+logger=cleanup t=2025-02-24T03:03:56.562132597Z level=info msg="Completed cleanup jobs" duration=68.395204ms
+logger=grafana.update.checker t=2025-02-24T03:03:56.571669908Z level=info msg="Update check succeeded" duration=19.804378ms
+logger=plugins.update.checker t=2025-02-24T03:03:56.649327703Z level=info msg="Update check succeeded" duration=63.437334ms
+logger=grafana.update.checker t=2025-02-24T03:13:56.528452578Z level=info msg="Update check succeeded" duration=20.899967ms
+logger=cleanup t=2025-02-24T03:13:56.536258463Z level=info msg="Completed cleanup jobs" duration=87.830386ms
+logger=plugins.update.checker t=2025-02-24T03:13:56.606884258Z level=info msg="Update check succeeded" duration=65.262093ms
+logger=licensing t=2025-02-24T03:23:56.416937832Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T03:23:56.418143722Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=grafana.update.checker t=2025-02-24T03:23:56.483690413Z level=info msg="Update check succeeded" duration=20.607538ms
+logger=cleanup t=2025-02-24T03:23:56.507374781Z level=info msg="Completed cleanup jobs" duration=103.495024ms
+logger=plugins.update.checker t=2025-02-24T03:23:56.554499297Z level=info msg="Update check succeeded" duration=57.765911ms
+logger=cleanup t=2025-02-24T03:33:56.445666334Z level=info msg="Completed cleanup jobs" duration=86.646825ms
+logger=grafana.update.checker t=2025-02-24T03:33:56.445699637Z level=info msg="Update check succeeded" duration=27.533137ms
+logger=plugins.update.checker t=2025-02-24T03:33:56.51325628Z level=info msg="Update check succeeded" duration=61.535576ms
+logger=cleanup t=2025-02-24T03:43:56.382408923Z level=info msg="Completed cleanup jobs" duration=68.000969ms
+logger=grafana.update.checker t=2025-02-24T03:43:56.403024659Z level=info msg="Update check succeeded" duration=28.961959ms
+logger=plugins.update.checker t=2025-02-24T03:43:56.4760197Z level=info msg="Update check succeeded" duration=68.837031ms
+logger=cleanup t=2025-02-24T03:53:56.349022003Z level=info msg="Completed cleanup jobs" duration=78.583597ms
+logger=grafana.update.checker t=2025-02-24T03:53:56.351451185Z level=info msg="Update check succeeded" duration=22.304374ms
+logger=plugins.update.checker t=2025-02-24T03:53:56.431660804Z level=info msg="Update check succeeded" duration=68.969675ms
+logger=cleanup t=2025-02-24T04:03:56.280010622Z level=info msg="Completed cleanup jobs" duration=55.245295ms
+logger=grafana.update.checker t=2025-02-24T04:03:56.302521431Z level=info msg="Update check succeeded" duration=19.196858ms
+logger=plugins.update.checker t=2025-02-24T04:03:56.381239509Z level=info msg="Update check succeeded" duration=64.520999ms
+logger=grafana.update.checker t=2025-02-24T04:13:56.25917519Z level=info msg="Update check succeeded" duration=20.237058ms
+logger=cleanup t=2025-02-24T04:13:56.265604385Z level=info msg="Completed cleanup jobs" duration=85.99772ms
+logger=plugins.update.checker t=2025-02-24T04:13:56.335771987Z level=info msg="Update check succeeded" duration=63.548892ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T04:18:27.441330225Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=28 duration=28.546431ms size=0 referer= handler=/api/live/ws
+logger=licensing t=2025-02-24T04:23:56.149712594Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T04:23:56.150441043Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T04:23:56.272546815Z level=info msg="Completed cleanup jobs" duration=135.444476ms
+logger=grafana.update.checker t=2025-02-24T04:23:56.281182501Z level=info msg="Update check succeeded" duration=85.75641ms
+logger=plugins.update.checker t=2025-02-24T04:23:56.375850214Z level=info msg="Update check succeeded" duration=146.634935ms
+logger=settings t=2025-02-24T05:27:46.220900127Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T05:27:46.222810946Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T05:27:46.223100864Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T05:27:46.223439285Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T05:27:46.223720502Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T05:27:46.225797531Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T05:27:46.226528676Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T05:27:46.22723742Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T05:27:46.227498236Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T05:27:46.227765552Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T05:27:46.228019668Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T05:27:46.228724612Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T05:27:46.352216959Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T05:27:46.370239075Z level=info msg="migrations completed" performed=0 skipped=575 duration=880.855µs
+logger=licensing t=2025-02-24T05:27:46.378462184Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T05:27:46.388298194Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T05:27:46.564827525Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T05:27:46.565503267Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T05:27:46.59574664Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T05:27:46.607893992Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T05:27:48.93758426Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T05:27:48.943955455Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T05:27:48.944867811Z level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2025-02-24T05:27:48.945949278Z level=info msg="storage starting"
+logger=modules t=2025-02-24T05:27:48.952325373Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-24T05:27:48.959476216Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-24T05:27:48.971021131Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-24T05:27:48.971401255Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-24T05:27:49.01282332Z level=info msg="State cache has been initialized" states=0 duration=53.343503ms
+logger=ngalert.multiorg.alertmanager t=2025-02-24T05:27:49.013577466Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-24T05:27:49.020299383Z level=info msg=starting first_tick=2025-02-24T05:27:50Z
+logger=http.server t=2025-02-24T05:27:49.032553842Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-24T05:27:49.199489878Z level=info msg="Update check succeeded" duration=253.478696ms
+logger=plugins.update.checker t=2025-02-24T05:27:49.240708526Z level=info msg="Update check succeeded" duration=288.682372ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T05:28:49.851323833Z level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=172.18.0.1 time_ms=102 duration=102.735069ms size=32 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T05:28:50.237096748Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=15 duration=15.833581ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-24T05:37:48.991078383Z level=info msg="Completed cleanup jobs" duration=28.507411ms
+logger=grafana.update.checker t=2025-02-24T05:37:49.193063215Z level=info msg="Update check succeeded" duration=29.316262ms
+logger=plugins.update.checker t=2025-02-24T05:37:49.266551684Z level=info msg="Update check succeeded" duration=61.345798ms
+logger=cleanup t=2025-02-24T05:47:48.964543487Z level=info msg="Completed cleanup jobs" duration=39.925864ms
+logger=grafana.update.checker t=2025-02-24T05:47:49.146307356Z level=info msg="Update check succeeded" duration=21.900206ms
+logger=plugins.update.checker t=2025-02-24T05:47:49.230285847Z level=info msg="Update check succeeded" duration=63.674288ms
+logger=cleanup t=2025-02-24T05:57:48.906674627Z level=info msg="Completed cleanup jobs" duration=22.789833ms
+logger=grafana.update.checker t=2025-02-24T05:57:49.105611307Z level=info msg="Update check succeeded" duration=20.845902ms
+logger=plugins.update.checker t=2025-02-24T05:57:49.217421927Z level=info msg="Update check succeeded" duration=91.629463ms
+logger=cleanup t=2025-02-24T06:07:48.878806645Z level=info msg="Completed cleanup jobs" duration=35.171904ms
+logger=grafana.update.checker t=2025-02-24T06:07:49.070273365Z level=info msg="Update check succeeded" duration=27.497714ms
+logger=plugins.update.checker t=2025-02-24T06:07:49.152378377Z level=info msg="Update check succeeded" duration=68.117037ms
+logger=cleanup t=2025-02-24T06:17:48.824244829Z level=info msg="Completed cleanup jobs" duration=24.484177ms
+logger=grafana.update.checker t=2025-02-24T06:17:49.018681942Z level=info msg="Update check succeeded" duration=18.826767ms
+logger=plugins.update.checker t=2025-02-24T06:17:49.113845549Z level=info msg="Update check succeeded" duration=73.0192ms
+logger=licensing t=2025-02-24T06:27:48.734988705Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T06:27:48.735705061Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T06:27:48.783681346Z level=info msg="Completed cleanup jobs" duration=27.333156ms
+logger=grafana.update.checker t=2025-02-24T06:27:48.975320564Z level=info msg="Update check succeeded" duration=18.489859ms
+logger=plugins.update.checker t=2025-02-24T06:27:49.06401216Z level=info msg="Update check succeeded" duration=65.379958ms
+logger=cleanup t=2025-02-24T06:37:48.740441198Z level=info msg="Completed cleanup jobs" duration=27.149072ms
+logger=grafana.update.checker t=2025-02-24T06:37:48.948886205Z level=info msg="Update check succeeded" duration=34.999671ms
+logger=plugins.update.checker t=2025-02-24T06:37:49.020306055Z level=info msg="Update check succeeded" duration=65.451894ms
+logger=cleanup t=2025-02-24T06:47:48.693720089Z level=info msg="Completed cleanup jobs" duration=24.376567ms
+logger=grafana.update.checker t=2025-02-24T06:47:48.919517151Z level=info msg="Update check succeeded" duration=49.191164ms
+logger=plugins.update.checker t=2025-02-24T06:47:48.982326202Z level=info msg="Update check succeeded" duration=71.362271ms
+logger=cleanup t=2025-02-24T06:57:48.650694867Z level=info msg="Completed cleanup jobs" duration=24.562953ms
+logger=grafana.update.checker t=2025-02-24T06:57:48.84507104Z level=info msg="Update check succeeded" duration=18.505021ms
+logger=plugins.update.checker t=2025-02-24T06:57:49.145625991Z level=info msg="Update check succeeded" duration=276.86776ms
+logger=cleanup t=2025-02-24T07:07:48.615617166Z level=info msg="Completed cleanup jobs" duration=31.592346ms
+logger=grafana.update.checker t=2025-02-24T07:07:48.813011652Z level=info msg="Update check succeeded" duration=28.832133ms
+logger=plugins.update.checker t=2025-02-24T07:07:48.899542552Z level=info msg="Update check succeeded" duration=74.294753ms
+logger=cleanup t=2025-02-24T07:17:48.570712815Z level=info msg="Completed cleanup jobs" duration=30.27738ms
+logger=grafana.update.checker t=2025-02-24T07:17:48.769973465Z level=info msg="Update check succeeded" duration=28.911182ms
+logger=plugins.update.checker t=2025-02-24T07:17:48.867071357Z level=info msg="Update check succeeded" duration=84.818208ms
+logger=licensing t=2025-02-24T07:27:48.473812909Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T07:27:48.474848786Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T07:27:48.531590601Z level=info msg="Completed cleanup jobs" duration=35.334425ms
+logger=grafana.update.checker t=2025-02-24T07:27:48.716632247Z level=info msg="Update check succeeded" duration=20.543826ms
+logger=plugins.update.checker t=2025-02-24T07:27:48.80510472Z level=info msg="Update check succeeded" duration=67.420908ms
+logger=cleanup t=2025-02-24T07:37:48.480463567Z level=info msg="Completed cleanup jobs" duration=28.433053ms
+logger=grafana.update.checker t=2025-02-24T07:37:48.687565653Z level=info msg="Update check succeeded" duration=34.312499ms
+logger=plugins.update.checker t=2025-02-24T07:37:48.75630236Z level=info msg="Update check succeeded" duration=61.565563ms
+logger=cleanup t=2025-02-24T07:47:48.437524497Z level=info msg="Completed cleanup jobs" duration=28.193577ms
+logger=grafana.update.checker t=2025-02-24T07:47:48.636497357Z level=info msg="Update check succeeded" duration=26.910483ms
+logger=plugins.update.checker t=2025-02-24T07:47:48.724441637Z level=info msg="Update check succeeded" duration=73.928747ms
+logger=cleanup t=2025-02-24T07:57:48.386192082Z level=info msg="Completed cleanup jobs" duration=20.74516ms
+logger=grafana.update.checker t=2025-02-24T07:57:48.589093639Z level=info msg="Update check succeeded" duration=22.519094ms
+logger=plugins.update.checker t=2025-02-24T07:57:48.673026551Z level=info msg="Update check succeeded" duration=65.904755ms
+logger=cleanup t=2025-02-24T08:07:48.353727437Z level=info msg="Completed cleanup jobs" duration=32.104419ms
+logger=grafana.update.checker t=2025-02-24T08:07:48.55045626Z level=info msg="Update check succeeded" duration=28.697262ms
+logger=plugins.update.checker t=2025-02-24T08:07:48.632197018Z level=info msg="Update check succeeded" duration=69.623546ms
+logger=cleanup t=2025-02-24T08:17:48.303831073Z level=info msg="Completed cleanup jobs" duration=27.746956ms
+logger=grafana.update.checker t=2025-02-24T08:17:48.503888501Z level=info msg="Update check succeeded" duration=27.430933ms
+logger=plugins.update.checker t=2025-02-24T08:17:48.581876382Z level=info msg="Update check succeeded" duration=64.081449ms
+logger=licensing t=2025-02-24T08:27:48.210086069Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T08:27:48.211279259Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T08:27:48.26163904Z level=info msg="Completed cleanup jobs" duration=29.850141ms
+logger=grafana.update.checker t=2025-02-24T08:27:48.46444727Z level=info msg="Update check succeeded" duration=31.460563ms
+logger=plugins.update.checker t=2025-02-24T08:27:48.538464529Z level=info msg="Update check succeeded" duration=64.947377ms
+logger=cleanup t=2025-02-24T08:37:48.213019188Z level=info msg="Completed cleanup jobs" duration=24.94708ms
+logger=grafana.update.checker t=2025-02-24T08:37:48.424024794Z level=info msg="Update check succeeded" duration=36.256133ms
+logger=plugins.update.checker t=2025-02-24T08:37:48.499080152Z level=info msg="Update check succeeded" duration=69.897569ms
+logger=cleanup t=2025-02-24T08:47:48.166684513Z level=info msg="Completed cleanup jobs" duration=24.973182ms
+logger=grafana.update.checker t=2025-02-24T08:47:48.369450999Z level=info msg="Update check succeeded" duration=26.5224ms
+logger=plugins.update.checker t=2025-02-24T08:47:48.455735003Z level=info msg="Update check succeeded" duration=72.28635ms
+logger=cleanup t=2025-02-24T08:57:48.137023495Z level=info msg="Completed cleanup jobs" duration=39.173315ms
+logger=grafana.update.checker t=2025-02-24T08:57:48.319319456Z level=info msg="Update check succeeded" duration=21.121734ms
+logger=plugins.update.checker t=2025-02-24T08:57:48.414209644Z level=info msg="Update check succeeded" duration=74.631425ms
+logger=cleanup t=2025-02-24T09:07:48.077394326Z level=info msg="Completed cleanup jobs" duration=25.046486ms
+logger=grafana.update.checker t=2025-02-24T09:07:48.27060587Z level=info msg="Update check succeeded" duration=18.593999ms
+logger=plugins.update.checker t=2025-02-24T09:07:48.355452957Z level=info msg="Update check succeeded" duration=61.732447ms
+logger=cleanup t=2025-02-24T09:17:48.059485074Z level=info msg="Completed cleanup jobs" duration=47.491055ms
+logger=grafana.update.checker t=2025-02-24T09:17:48.23976193Z level=info msg="Update check succeeded" duration=28.514554ms
+logger=plugins.update.checker t=2025-02-24T09:17:48.324078409Z level=info msg="Update check succeeded" duration=70.803353ms
+logger=licensing t=2025-02-24T09:27:47.943759469Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T09:27:47.944722538Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T09:27:48.034368998Z level=info msg="Completed cleanup jobs" duration=65.186597ms
+logger=grafana.update.checker t=2025-02-24T09:27:48.193754382Z level=info msg="Update check succeeded" duration=23.906823ms
+logger=plugins.update.checker t=2025-02-24T09:27:48.296802307Z level=info msg="Update check succeeded" duration=84.940121ms
+logger=cleanup t=2025-02-24T09:37:47.953246228Z level=info msg="Completed cleanup jobs" duration=25.940784ms
+logger=grafana.update.checker t=2025-02-24T09:37:48.163711412Z level=info msg="Update check succeeded" duration=35.714694ms
+logger=plugins.update.checker t=2025-02-24T09:37:48.239700231Z level=info msg="Update check succeeded" duration=69.831471ms
+logger=cleanup t=2025-02-24T09:47:47.904294812Z level=info msg="Completed cleanup jobs" duration=25.426291ms
+logger=grafana.update.checker t=2025-02-24T09:47:48.10385281Z level=info msg="Update check succeeded" duration=24.60172ms
+logger=plugins.update.checker t=2025-02-24T09:47:48.187022177Z level=info msg="Update check succeeded" duration=65.979586ms
+logger=cleanup t=2025-02-24T09:57:47.861560094Z level=info msg="Completed cleanup jobs" duration=31.791647ms
+logger=grafana.update.checker t=2025-02-24T09:57:48.057066599Z level=info msg="Update check succeeded" duration=26.8009ms
+logger=plugins.update.checker t=2025-02-24T09:57:48.160917997Z level=info msg="Update check succeeded" duration=89.642526ms
+logger=cleanup t=2025-02-24T10:07:47.806207127Z level=info msg="Completed cleanup jobs" duration=25.379432ms
+logger=grafana.update.checker t=2025-02-24T10:07:48.009171278Z level=info msg="Update check succeeded" duration=27.279984ms
+logger=plugins.update.checker t=2025-02-24T10:07:48.090901321Z level=info msg="Update check succeeded" duration=67.519006ms
+logger=cleanup t=2025-02-24T10:17:47.763849463Z level=info msg="Completed cleanup jobs" duration=29.179784ms
+logger=grafana.update.checker t=2025-02-24T10:17:47.965588758Z level=info msg="Update check succeeded" duration=30.751407ms
+logger=plugins.update.checker t=2025-02-24T10:17:48.049413221Z level=info msg="Update check succeeded" duration=73.772276ms
+logger=licensing t=2025-02-24T10:27:47.66509851Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T10:27:47.666123791Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T10:27:47.733863365Z level=info msg="Completed cleanup jobs" duration=46.777311ms
+logger=grafana.update.checker t=2025-02-24T10:27:47.907406333Z level=info msg="Update check succeeded" duration=19.363636ms
+logger=plugins.update.checker t=2025-02-24T10:27:48.005388006Z level=info msg="Update check succeeded" duration=76.312154ms
+logger=cleanup t=2025-02-24T10:37:47.663411529Z level=info msg="Completed cleanup jobs" duration=23.547962ms
+logger=grafana.update.checker t=2025-02-24T10:37:47.88169119Z level=info msg="Update check succeeded" duration=41.60959ms
+logger=plugins.update.checker t=2025-02-24T10:37:47.945075002Z level=info msg="Update check succeeded" duration=63.659534ms
+logger=cleanup t=2025-02-24T10:47:47.62980326Z level=info msg="Completed cleanup jobs" duration=37.297339ms
+logger=grafana.update.checker t=2025-02-24T10:47:47.821349808Z level=info msg="Update check succeeded" duration=28.541055ms
+logger=plugins.update.checker t=2025-02-24T10:47:47.898601924Z level=info msg="Update check succeeded" duration=64.000129ms
+logger=cleanup t=2025-02-24T10:57:47.574969495Z level=info msg="Completed cleanup jobs" duration=28.181884ms
+logger=grafana.update.checker t=2025-02-24T10:57:47.777444292Z level=info msg="Update check succeeded" duration=30.659577ms
+logger=plugins.update.checker t=2025-02-24T10:57:47.869033993Z level=info msg="Update check succeeded" duration=80.308526ms
+logger=cleanup t=2025-02-24T11:07:47.525525601Z level=info msg="Completed cleanup jobs" duration=24.445379ms
+logger=grafana.update.checker t=2025-02-24T11:07:47.730926386Z level=info msg="Update check succeeded" duration=29.748386ms
+logger=plugins.update.checker t=2025-02-24T11:07:47.804203117Z level=info msg="Update check succeeded" duration=61.815051ms
+logger=cleanup t=2025-02-24T11:17:47.483547177Z level=info msg="Completed cleanup jobs" duration=28.023074ms
+logger=grafana.update.checker t=2025-02-24T11:17:47.685475817Z level=info msg="Update check succeeded" duration=29.768203ms
+logger=plugins.update.checker t=2025-02-24T11:17:47.780597755Z level=info msg="Update check succeeded" duration=82.993541ms
+logger=licensing t=2025-02-24T11:27:47.388664191Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T11:27:47.38974447Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T11:27:47.438260231Z level=info msg="Completed cleanup jobs" duration=26.831969ms
+logger=grafana.update.checker t=2025-02-24T11:27:47.633581864Z level=info msg="Update check succeeded" duration=21.261961ms
+logger=plugins.update.checker t=2025-02-24T11:27:47.724206514Z level=info msg="Update check succeeded" duration=70.44387ms
+logger=cleanup t=2025-02-24T11:37:47.390651505Z level=info msg="Completed cleanup jobs" duration=21.781949ms
+logger=grafana.update.checker t=2025-02-24T11:37:47.614793744Z level=info msg="Update check succeeded" duration=46.166283ms
+logger=plugins.update.checker t=2025-02-24T11:37:47.673998754Z level=info msg="Update check succeeded" duration=63.750534ms
+logger=cleanup t=2025-02-24T11:47:47.455462758Z level=info msg="Completed cleanup jobs" duration=130.656318ms
+logger=grafana.update.checker t=2025-02-24T11:47:47.551163075Z level=info msg="Update check succeeded" duration=26.175147ms
+logger=plugins.update.checker t=2025-02-24T11:47:47.638006634Z level=info msg="Update check succeeded" duration=70.845369ms
+logger=cleanup t=2025-02-24T11:57:47.312268522Z level=info msg="Completed cleanup jobs" duration=33.268037ms
+logger=grafana.update.checker t=2025-02-24T11:57:47.504176013Z level=info msg="Update check succeeded" duration=25.051961ms
+logger=plugins.update.checker t=2025-02-24T11:57:47.5866645Z level=info msg="Update check succeeded" duration=66.431566ms
+logger=cleanup t=2025-02-24T12:07:47.267124473Z level=info msg="Completed cleanup jobs" duration=31.578774ms
+logger=grafana.update.checker t=2025-02-24T12:07:47.462769382Z level=info msg="Update check succeeded" duration=26.994929ms
+logger=plugins.update.checker t=2025-02-24T12:07:47.569029571Z level=info msg="Update check succeeded" duration=92.231534ms
+logger=cleanup t=2025-02-24T12:17:47.217921781Z level=info msg="Completed cleanup jobs" duration=27.026921ms
+logger=grafana.update.checker t=2025-02-24T12:17:47.425915302Z level=info msg="Update check succeeded" duration=35.072853ms
+logger=plugins.update.checker t=2025-02-24T12:17:47.503745809Z level=info msg="Update check succeeded" duration=70.905664ms
+logger=licensing t=2025-02-24T12:27:47.124110965Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T12:27:47.125067538Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T12:27:47.188957058Z level=info msg="Completed cleanup jobs" duration=42.770526ms
+logger=grafana.update.checker t=2025-02-24T12:27:47.365783498Z level=info msg="Update check succeeded" duration=19.047037ms
+logger=plugins.update.checker t=2025-02-24T12:27:47.463333157Z level=info msg="Update check succeeded" duration=75.213975ms
+logger=cleanup t=2025-02-24T12:37:47.125242757Z level=info msg="Completed cleanup jobs" duration=24.328122ms
+logger=grafana.update.checker t=2025-02-24T12:37:47.337605467Z level=info msg="Update check succeeded" duration=35.819784ms
+logger=plugins.update.checker t=2025-02-24T12:37:47.409515454Z level=info msg="Update check succeeded" duration=66.846508ms
+logger=cleanup t=2025-02-24T12:47:47.099543755Z level=info msg="Completed cleanup jobs" duration=44.018479ms
+logger=grafana.update.checker t=2025-02-24T12:47:47.281952071Z level=info msg="Update check succeeded" duration=26.95003ms
+logger=plugins.update.checker t=2025-02-24T12:47:47.367660845Z level=info msg="Update check succeeded" duration=70.534074ms
+logger=cleanup t=2025-02-24T12:57:47.050330464Z level=info msg="Completed cleanup jobs" duration=41.548118ms
+logger=grafana.update.checker t=2025-02-24T12:57:47.228745683Z level=info msg="Update check succeeded" duration=19.840137ms
+logger=plugins.update.checker t=2025-02-24T12:57:47.318083503Z level=info msg="Update check succeeded" duration=68.203483ms
+logger=cleanup t=2025-02-24T13:07:46.994713354Z level=info msg="Completed cleanup jobs" duration=31.470639ms
+logger=grafana.update.checker t=2025-02-24T13:07:47.19041572Z level=info msg="Update check succeeded" duration=27.080799ms
+logger=plugins.update.checker t=2025-02-24T13:07:47.275703829Z level=info msg="Update check succeeded" duration=71.033405ms
+logger=cleanup t=2025-02-24T13:17:46.943486344Z level=info msg="Completed cleanup jobs" duration=26.783389ms
+logger=grafana.update.checker t=2025-02-24T13:17:47.145816354Z level=info msg="Update check succeeded" duration=29.112211ms
+logger=plugins.update.checker t=2025-02-24T13:17:47.231618165Z level=info msg="Update check succeeded" duration=72.751375ms
+logger=licensing t=2025-02-24T13:27:46.845608455Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T13:27:46.846620231Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T13:27:46.937688169Z level=info msg="Completed cleanup jobs" duration=66.259275ms
+logger=grafana.update.checker t=2025-02-24T13:27:47.101297852Z level=info msg="Update check succeeded" duration=29.061782ms
+logger=plugins.update.checker t=2025-02-24T13:27:47.200259282Z level=info msg="Update check succeeded" duration=86.628304ms
+logger=cleanup t=2025-02-24T13:37:46.853417973Z level=info msg="Completed cleanup jobs" duration=26.612399ms
+logger=grafana.update.checker t=2025-02-24T13:37:47.067837814Z level=info msg="Update check succeeded" duration=39.982805ms
+logger=plugins.update.checker t=2025-02-24T13:37:47.138179684Z level=info msg="Update check succeeded" duration=69.514189ms
+logger=cleanup t=2025-02-24T13:47:46.818465148Z level=info msg="Completed cleanup jobs" duration=36.595158ms
+logger=grafana.update.checker t=2025-02-24T13:47:47.010198098Z level=info msg="Update check succeeded" duration=28.547352ms
+logger=plugins.update.checker t=2025-02-24T13:47:47.096406496Z level=info msg="Update check succeeded" duration=73.258121ms
+logger=cleanup t=2025-02-24T13:57:46.778877765Z level=info msg="Completed cleanup jobs" duration=42.397777ms
+logger=grafana.update.checker t=2025-02-24T13:57:46.958333913Z level=info msg="Update check succeeded" duration=20.934969ms
+logger=plugins.update.checker t=2025-02-24T13:57:47.048494769Z level=info msg="Update check succeeded" duration=69.92664ms
+logger=cleanup t=2025-02-24T14:07:46.723826291Z level=info msg="Completed cleanup jobs" duration=30.187101ms
+logger=grafana.update.checker t=2025-02-24T14:07:46.920641838Z level=info msg="Update check succeeded" duration=26.786752ms
+logger=plugins.update.checker t=2025-02-24T14:07:47.010553292Z level=info msg="Update check succeeded" duration=74.716547ms
+logger=cleanup t=2025-02-24T14:17:46.689325455Z level=info msg="Completed cleanup jobs" duration=38.775521ms
+logger=grafana.update.checker t=2025-02-24T14:17:46.878384198Z level=info msg="Update check succeeded" duration=27.363961ms
+logger=plugins.update.checker t=2025-02-24T14:17:46.957663571Z level=info msg="Update check succeeded" duration=65.058701ms
+logger=licensing t=2025-02-24T14:27:46.623849994Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T14:27:46.624140815Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T14:27:46.640987443Z level=info msg="Completed cleanup jobs" duration=33.993078ms
+logger=grafana.update.checker t=2025-02-24T14:27:46.829163658Z level=info msg="Update check succeeded" duration=21.745485ms
+logger=plugins.update.checker t=2025-02-24T14:27:46.914729795Z level=info msg="Update check succeeded" duration=66.27823ms
+logger=cleanup t=2025-02-24T14:37:46.585852805Z level=info msg="Completed cleanup jobs" duration=23.152015ms
+logger=grafana.update.checker t=2025-02-24T14:37:46.791614847Z level=info msg="Update check succeeded" duration=29.190262ms
+logger=plugins.update.checker t=2025-02-24T14:37:46.865843888Z level=info msg="Update check succeeded" duration=61.050465ms
+logger=cleanup t=2025-02-24T14:47:46.544526818Z level=info msg="Completed cleanup jobs" duration=27.257039ms
+logger=grafana.update.checker t=2025-02-24T14:47:46.739270683Z level=info msg="Update check succeeded" duration=21.391699ms
+logger=plugins.update.checker t=2025-02-24T14:47:46.821987869Z level=info msg="Update check succeeded" duration=62.526077ms
+logger=cleanup t=2025-02-24T14:57:46.496625965Z level=info msg="Completed cleanup jobs" duration=22.591272ms
+logger=grafana.update.checker t=2025-02-24T14:57:46.701783542Z level=info msg="Update check succeeded" duration=27.204213ms
+logger=plugins.update.checker t=2025-02-24T14:57:46.783204765Z level=info msg="Update check succeeded" duration=67.354283ms
+logger=cleanup t=2025-02-24T15:07:46.461143863Z level=info msg="Completed cleanup jobs" duration=31.266879ms
+logger=grafana.update.checker t=2025-02-24T15:07:46.649891735Z level=info msg="Update check succeeded" duration=19.634719ms
+logger=plugins.update.checker t=2025-02-24T15:07:46.745095689Z level=info msg="Update check succeeded" duration=74.132316ms
+logger=cleanup t=2025-02-24T15:17:46.412065315Z level=info msg="Completed cleanup jobs" duration=27.173832ms
+logger=grafana.update.checker t=2025-02-24T15:17:46.613620082Z level=info msg="Update check succeeded" duration=27.491055ms
+logger=plugins.update.checker t=2025-02-24T15:17:46.700163452Z level=info msg="Update check succeeded" duration=73.43179ms
+logger=licensing t=2025-02-24T15:27:46.319222323Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2025-02-24T15:27:46.320027882Z level=warn msg="failed to load or validate token" err="license token file not found: /grafana/data/license.jwt"
+logger=cleanup t=2025-02-24T15:27:46.371177535Z level=info msg="Completed cleanup jobs" duration=30.361428ms
+logger=grafana.update.checker t=2025-02-24T15:27:46.562768792Z level=info msg="Update check succeeded" duration=21.759197ms
+logger=plugins.update.checker t=2025-02-24T15:27:46.660549366Z level=info msg="Update check succeeded" duration=78.322347ms
+logger=cleanup t=2025-02-24T15:37:46.332367786Z level=info msg="Completed cleanup jobs" duration=34.560503ms
+logger=grafana.update.checker t=2025-02-24T15:37:46.537676344Z level=info msg="Update check succeeded" duration=40.191226ms
+logger=plugins.update.checker t=2025-02-24T15:37:46.613851979Z level=info msg="Update check succeeded" duration=73.922266ms
+logger=cleanup t=2025-02-24T15:47:46.275574843Z level=info msg="Completed cleanup jobs" duration=21.59655ms
+logger=grafana.update.checker t=2025-02-24T15:47:46.485806233Z level=info msg="Update check succeeded" duration=31.641471ms
+logger=plugins.update.checker t=2025-02-24T15:47:46.568505469Z level=info msg="Update check succeeded" duration=72.495803ms
+logger=cleanup t=2025-02-24T15:57:46.241581324Z level=info msg="Completed cleanup jobs" duration=29.815957ms
+logger=grafana.update.checker t=2025-02-24T15:57:46.439965714Z level=info msg="Update check succeeded" duration=28.210146ms
+logger=plugins.update.checker t=2025-02-24T15:57:46.532718514Z level=info msg="Update check succeeded" duration=78.650528ms
+logger=cleanup t=2025-02-24T16:07:46.195377049Z level=info msg="Completed cleanup jobs" duration=24.089189ms
+logger=grafana.update.checker t=2025-02-24T16:07:46.40227065Z level=info msg="Update check succeeded" duration=30.346227ms
+logger=plugins.update.checker t=2025-02-24T16:07:46.476676066Z level=info msg="Update check succeeded" duration=63.122024ms
+logger=settings t=2025-02-24T16:38:29.915239093Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T16:38:29.916577475Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T16:38:29.916874293Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T16:38:29.917123909Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T16:38:29.917354023Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T16:38:29.917598138Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T16:38:29.917822051Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T16:38:29.918058466Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T16:38:29.91829328Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T16:38:29.918474892Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T16:38:29.918785611Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T16:38:29.919461652Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T16:38:29.999169148Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T16:38:30.012291754Z level=info msg="migrations completed" performed=0 skipped=575 duration=769.547µs
+logger=licensing t=2025-02-24T16:38:30.018649344Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T16:38:30.027502788Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T16:38:30.694015572Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T16:38:30.694834518Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T16:38:30.711552154Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T16:38:30.737333199Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T16:38:33.805176085Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T16:38:33.913795671Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T16:38:33.924565274Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-24T16:38:33.932274006Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-24T16:38:33.935977014Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-24T16:38:33.943556938Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-24T16:38:33.943907458Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-24T16:38:33.945710459Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-24T16:38:34.040658679Z level=info msg="State cache has been initialized" states=0 duration=104.678265ms
+logger=ngalert.multiorg.alertmanager t=2025-02-24T16:38:34.041271613Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-24T16:38:34.070269338Z level=info msg=starting first_tick=2025-02-24T16:38:40Z
+logger=http.server t=2025-02-24T16:38:34.216770947Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-24T16:38:35.208299702Z level=info msg="Update check succeeded" duration=1.271717254s
+logger=plugins.update.checker t=2025-02-24T16:38:35.244789646Z level=info msg="Update check succeeded" duration=1.308033589s
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T16:38:35.529843118Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=34 duration=34.846752ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T16:39:20.124152343Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=39 duration=39.942157ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-24T17:43:44.053036277Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T17:43:44.055128076Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T17:43:44.055416904Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T17:43:44.05568973Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T17:43:44.056058965Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T17:43:44.056432701Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T17:43:44.056790735Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T17:43:44.057095364Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T17:43:44.0574747Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T17:43:44.057844636Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T17:43:44.058235673Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T17:43:44.059102056Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T17:43:44.155691374Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T17:43:44.169522794Z level=info msg="migrations completed" performed=0 skipped=575 duration=798.976µs
+logger=licensing t=2025-02-24T17:43:44.1769208Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T17:43:44.183700647Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T17:43:44.566389871Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T17:43:44.567042633Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T17:43:44.590853306Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T17:43:44.611447471Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T17:43:46.710191975Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T17:43:46.7167438Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T17:43:46.717138138Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-24T17:43:46.719381052Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-24T17:43:46.72271277Z level=info msg="storage starting"
+logger=http.server t=2025-02-24T17:43:46.737734804Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-24T17:43:46.738080537Z level=info msg="Warming state cache for startup"
+logger=report t=2025-02-24T17:43:46.743570961Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=caching.service t=2025-02-24T17:43:46.744273528Z level=warn msg="Caching service is disabled"
+logger=ngalert.state.manager t=2025-02-24T17:43:46.808298938Z level=info msg="State cache has been initialized" states=0 duration=70.214001ms
+logger=ticker t=2025-02-24T17:43:46.808607368Z level=info msg=starting first_tick=2025-02-24T17:43:50Z
+logger=ngalert.multiorg.alertmanager t=2025-02-24T17:43:46.808669774Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-24T17:43:47.024313355Z level=info msg="Update check succeeded" duration=285.045004ms
+logger=plugins.update.checker t=2025-02-24T17:43:47.059410804Z level=info msg="Update check succeeded" duration=316.698426ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T17:43:50.824578063Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=26 duration=26.410264ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T17:44:48.676020033Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=25 duration=25.896694ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-24T17:53:46.729857311Z level=info msg="Completed cleanup jobs" duration=60.002037ms
+logger=grafana.update.checker t=2025-02-24T17:53:46.995599323Z level=info msg="Update check succeeded" duration=27.68417ms
+logger=plugins.update.checker t=2025-02-24T17:53:47.073036131Z level=info msg="Update check succeeded" duration=69.313036ms
+logger=settings t=2025-02-24T18:32:20.306912347Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T18:32:20.337403621Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T18:32:20.338445898Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T18:32:20.339608285Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T18:32:20.340887881Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T18:32:20.341752945Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T18:32:20.342334988Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T18:32:20.34329326Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T18:32:20.343794297Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T18:32:20.344745068Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T18:32:20.345674137Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T18:32:20.347768494Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T18:32:20.816621351Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T18:32:20.829280895Z level=info msg="migrations completed" performed=0 skipped=575 duration=638.247µs
+logger=licensing t=2025-02-24T18:32:20.83644693Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T18:32:20.901816304Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T18:32:21.762531979Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T18:32:21.763783872Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T18:32:21.812697919Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T18:32:21.867504206Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T18:32:24.184088431Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T18:32:24.192510459Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T18:32:24.192874287Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-24T18:32:24.193227413Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-24T18:32:24.19559779Z level=info msg="storage starting"
+logger=caching.service t=2025-02-24T18:32:24.195651594Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-24T18:32:24.19626774Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-24T18:32:24.211820699Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-24T18:32:24.228004806Z level=info msg="State cache has been initialized" states=0 duration=16.179807ms
+logger=ngalert.multiorg.alertmanager t=2025-02-24T18:32:24.229958852Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-24T18:32:24.232343029Z level=info msg=starting first_tick=2025-02-24T18:32:30Z
+logger=http.server t=2025-02-24T18:32:24.237082083Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-24T18:32:24.521969124Z level=info msg="Update check succeeded" duration=311.163301ms
+logger=plugins.update.checker t=2025-02-24T18:32:24.559983458Z level=info msg="Update check succeeded" duration=342.929869ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T18:32:24.868826586Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=66 duration=66.214237ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T18:32:38.162667979Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=137 duration=137.629108ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T18:32:42.289267692Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=7 duration=7.911889ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-24T20:27:37.982126344Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T20:27:37.983602346Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T20:27:37.983861564Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T20:27:37.984154084Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T20:27:37.984409602Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T20:27:37.984717823Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T20:27:37.984976441Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T20:27:37.985224558Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T20:27:37.98554428Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T20:27:37.985785597Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T20:27:37.986135121Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T20:27:37.986687359Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T20:27:38.12398354Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T20:27:38.137761592Z level=info msg="migrations completed" performed=0 skipped=575 duration=838.858µs
+logger=licensing t=2025-02-24T20:27:38.14570904Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T20:27:38.152015976Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T20:27:38.488558516Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T20:27:38.489228862Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T20:27:38.51902672Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T20:27:38.538986198Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T20:27:40.671263541Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T20:27:40.679676122Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T20:27:40.680163856Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-24T20:27:40.680849003Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-24T20:27:40.698286207Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-24T20:27:40.708054782Z level=info msg="storage starting"
+logger=caching.service t=2025-02-24T20:27:40.707707958Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-24T20:27:40.707766562Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-24T20:27:40.711149495Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-24T20:27:40.75350582Z level=info msg="State cache has been initialized" states=0 duration=55.18161ms
+logger=ngalert.multiorg.alertmanager t=2025-02-24T20:27:40.756628736Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-24T20:27:40.757212676Z level=info msg=starting first_tick=2025-02-24T20:27:50Z
+logger=grafana.update.checker t=2025-02-24T20:27:40.984359562Z level=info msg="Update check succeeded" duration=285.219095ms
+logger=plugins.update.checker t=2025-02-24T20:27:41.018132794Z level=info msg="Update check succeeded" duration=307.823956ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T20:29:01.97386774Z level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=172.18.0.1 time_ms=57 duration=57.319622ms size=32 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T20:29:02.262117757Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=6 duration=6.510088ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-24T20:37:38.009745661Z level=info msg="Completed cleanup jobs" duration=23.913896ms
+logger=grafana.update.checker t=2025-02-24T20:37:38.269849293Z level=info msg="Update check succeeded" duration=28.191316ms
+logger=plugins.update.checker t=2025-02-24T20:37:38.345607482Z level=info msg="Update check succeeded" duration=69.626928ms
+logger=settings t=2025-02-24T22:08:03.426848118Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-24T22:08:03.428479619Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-24T22:08:03.428793438Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-24T22:08:03.429030553Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-24T22:08:03.429230865Z level=info msg=Target target=[all]
+logger=settings t=2025-02-24T22:08:03.429508382Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-24T22:08:03.429745897Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-24T22:08:03.429997012Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-24T22:08:03.430236627Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-24T22:08:03.430422138Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-24T22:08:03.43061315Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-24T22:08:03.431305593Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-24T22:08:03.516407738Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-24T22:08:03.528543487Z level=info msg="migrations completed" performed=0 skipped=575 duration=821.25µs
+logger=licensing t=2025-02-24T22:08:03.535309904Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-24T22:08:03.540077797Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-24T22:08:03.670571641Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-24T22:08:03.67119728Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-24T22:08:03.687531286Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-24T22:08:03.69958853Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-24T22:08:05.766088122Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-24T22:08:05.782374526Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-24T22:08:05.782837555Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-24T22:08:05.784104933Z level=info msg="Warming state cache for startup"
+logger=http.server t=2025-02-24T22:08:05.793098187Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=modules t=2025-02-24T22:08:05.793110388Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-24T22:08:05.797617666Z level=info msg="storage starting"
+logger=caching.service t=2025-02-24T22:08:05.800847665Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-24T22:08:05.800862466Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-24T22:08:05.804838111Z level=info msg="State cache has been initialized" states=0 duration=20.732278ms
+logger=ngalert.multiorg.alertmanager t=2025-02-24T22:08:05.806054086Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-24T22:08:05.810770776Z level=info msg=starting first_tick=2025-02-24T22:08:10Z
+logger=grafana.update.checker t=2025-02-24T22:08:05.952650222Z level=info msg="Update check succeeded" duration=160.323582ms
+logger=plugins.update.checker t=2025-02-24T22:08:05.987472368Z level=info msg="Update check succeeded" duration=193.734842ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T22:08:56.056093817Z level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=172.18.0.1 time_ms=70 duration=70.851955ms size=32 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2025-02-24T22:08:56.500471758Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=9 duration=9.652107ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T00:07:49.147029106Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T00:07:49.149898469Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T00:07:49.150634411Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T00:07:49.150924327Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T00:07:49.151223944Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T00:07:49.151568564Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T00:07:49.151899182Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T00:07:49.152156797Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T00:07:49.152480515Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T00:07:49.152869037Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T00:07:49.153180255Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T00:07:49.153933498Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T00:07:49.279972959Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T00:07:49.296234383Z level=info msg="migrations completed" performed=0 skipped=575 duration=745.142µs
+logger=licensing t=2025-02-25T00:07:49.304756867Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T00:07:49.315587582Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T00:07:50.260459964Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T00:07:50.261471222Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T00:07:50.404706359Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T00:07:50.424383677Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T00:07:52.778097001Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T00:07:52.809473784Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T00:07:52.810324132Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T00:07:52.812553259Z level=warn msg="No modules registered..."
+logger=caching.service t=2025-02-25T00:07:52.815611132Z level=warn msg="Caching service is disabled"
+logger=grafanaStorageLogger t=2025-02-25T00:07:52.81275837Z level=info msg="storage starting"
+logger=report t=2025-02-25T00:07:52.819334344Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-25T00:07:52.820423306Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-25T00:07:52.843898339Z level=info msg="State cache has been initialized" states=0 duration=23.470033ms
+logger=ngalert.multiorg.alertmanager t=2025-02-25T00:07:52.852250914Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-25T00:07:52.852641936Z level=info msg=starting first_tick=2025-02-25T00:08:00Z
+logger=http.server t=2025-02-25T00:07:52.860852903Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=sqlstore.transactions t=2025-02-25T00:07:52.892858421Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=grafana.update.checker t=2025-02-25T00:07:53.589656709Z level=info msg="Update check succeeded" duration=774.616009ms
+logger=plugins.update.checker t=2025-02-25T00:07:53.622816993Z level=info msg="Update check succeeded" duration=799.1008ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T00:08:52.059979386Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=76 duration=76.524551ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T00:17:52.843486278Z level=info msg="Completed cleanup jobs" duration=44.751735ms
+logger=grafana.update.checker t=2025-02-25T00:17:53.571054147Z level=info msg="Update check succeeded" duration=27.235452ms
+logger=plugins.update.checker t=2025-02-25T00:17:53.65072614Z level=info msg="Update check succeeded" duration=74.611394ms
+logger=settings t=2025-02-25T01:13:28.2521997Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T01:13:28.254729036Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T01:13:28.255056654Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T01:13:28.255441674Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T01:13:28.255707089Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T01:13:28.256001604Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T01:13:28.256361024Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T01:13:28.256688141Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T01:13:28.256942055Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T01:13:28.257202769Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T01:13:28.257513786Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T01:13:28.258460537Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T01:13:28.384194899Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T01:13:28.405806661Z level=info msg="migrations completed" performed=0 skipped=575 duration=765.041µs
+logger=licensing t=2025-02-25T01:13:28.415587787Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T01:13:28.421552808Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T01:13:28.816904971Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T01:13:28.817706314Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T01:13:28.839244073Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T01:13:28.856447898Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T01:13:31.067902936Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T01:13:31.074628098Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T01:13:31.074996618Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T01:13:31.076995725Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-25T01:13:31.088008318Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-25T01:13:31.088679554Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-25T01:13:31.095729433Z level=warn msg="Caching service is disabled"
+logger=grafanaStorageLogger t=2025-02-25T01:13:31.090068328Z level=info msg="storage starting"
+logger=report t=2025-02-25T01:13:31.09994966Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-25T01:13:31.191999011Z level=info msg="State cache has been initialized" states=0 duration=103.314556ms
+logger=ngalert.multiorg.alertmanager t=2025-02-25T01:13:31.192474736Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-25T01:13:31.194919668Z level=info msg=starting first_tick=2025-02-25T01:13:40Z
+logger=grafana.update.checker t=2025-02-25T01:13:31.312681501Z level=info msg="Update check succeeded" duration=237.166956ms
+logger=plugins.update.checker t=2025-02-25T01:13:31.332232653Z level=info msg="Update check succeeded" duration=243.21688ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T01:13:37.123475028Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=32 duration=32.90708ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T03:05:57.669684872Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:05:57.671837596Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:05:57.672703045Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:05:57.673386985Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:05:57.673916715Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:05:57.674418344Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:05:57.674777164Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:05:57.67505568Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:05:57.675334696Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:05:57.675548109Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:05:57.675930131Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:05:57.677260807Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:05:57.779118356Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:05:57.793444979Z level=info msg="migrations completed" performed=0 skipped=575 duration=947.754µs
+logger=licensing t=2025-02-25T03:05:57.80147024Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:05:57.808624851Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:05:57.986027639Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:05:57.986787282Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:05:58.009659996Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:05:58.025941531Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:06:00.438659585Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:06:00.443017135Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:06:00.44343916Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T03:06:00.445222862Z level=info msg="Warming state cache for startup"
+logger=modules t=2025-02-25T03:06:00.456060984Z level=warn msg="No modules registered..."
+logger=report t=2025-02-25T03:06:00.459262868Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-25T03:06:00.465430823Z level=info msg="storage starting"
+logger=caching.service t=2025-02-25T03:06:00.472067804Z level=warn msg="Caching service is disabled"
+logger=http.server t=2025-02-25T03:06:00.486663842Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-25T03:06:00.532710686Z level=info msg="State cache has been initialized" states=0 duration=87.480824ms
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:06:00.533686842Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-25T03:06:00.535597052Z level=info msg=starting first_tick=2025-02-25T03:06:10Z
+logger=grafana.update.checker t=2025-02-25T03:06:00.662147019Z level=info msg="Update check succeeded" duration=206.058433ms
+logger=plugins.update.checker t=2025-02-25T03:06:00.699987992Z level=info msg="Update check succeeded" duration=237.86296ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:06:52.299774912Z level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=172.18.0.1 time_ms=99 duration=99.220297ms size=32 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:06:52.875760557Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=39 duration=39.534711ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T03:14:06.8235049Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:14:06.824109934Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:14:06.824346747Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:14:06.824712567Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:14:06.82494818Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:14:06.825149992Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:14:06.825972737Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:14:06.826602773Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:14:06.826941291Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:14:06.827258309Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:14:06.827583227Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:14:06.828318968Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:14:06.934204671Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:14:06.954015575Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.474482ms
+logger=licensing t=2025-02-25T03:14:06.96254135Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:14:06.967063102Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:14:07.118339835Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:14:07.119021373Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:14:07.130607319Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:14:07.151995911Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:14:09.60734743Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:14:09.608624401Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:14:09.608935819Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T03:14:09.609298239Z level=info msg="Warming state cache for startup"
+logger=modules t=2025-02-25T03:14:09.610505906Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-25T03:14:09.613653882Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=caching.service t=2025-02-25T03:14:09.622436771Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-25T03:14:09.622994902Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-25T03:14:09.625371035Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-25T03:14:09.640067554Z level=info msg="State cache has been initialized" states=0 duration=30.764515ms
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:14:09.640896Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-25T03:14:09.641203317Z level=info msg=starting first_tick=2025-02-25T03:14:10Z
+logger=grafana.update.checker t=2025-02-25T03:14:09.722471848Z level=info msg="Update check succeeded" duration=97.792451ms
+logger=plugins.update.checker t=2025-02-25T03:14:09.767953083Z level=info msg="Update check succeeded" duration=135.171935ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:14:17.124683431Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=35 duration=35.155387ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:15:08.565460544Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=69 duration=69.22058ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T03:19:27.263398644Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:19:27.264346798Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:19:27.264622613Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:19:27.264964032Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:19:27.265231447Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:19:27.265545965Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:19:27.265856282Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:19:27.2661746Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:19:27.266510519Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:19:27.266848538Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:19:27.267480274Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:19:27.268796047Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:19:27.331063044Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:19:27.346179392Z level=info msg="migrations completed" performed=0 skipped=575 duration=698.839µs
+logger=licensing t=2025-02-25T03:19:27.353729716Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:19:27.357578032Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:19:27.461043542Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:19:27.462019597Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:19:27.468029234Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:19:27.474578902Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:19:30.805866836Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:19:30.807052801Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:19:30.807354217Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T03:19:30.812946321Z level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2025-02-25T03:19:30.809199717Z level=info msg="storage starting"
+logger=http.server t=2025-02-25T03:19:30.81658892Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-25T03:19:30.816991141Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-25T03:19:30.822512842Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-25T03:19:30.823485195Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-25T03:19:30.855700348Z level=info msg="State cache has been initialized" states=0 duration=38.706407ms
+logger=ticker t=2025-02-25T03:19:30.856354084Z level=info msg=starting first_tick=2025-02-25T03:19:40Z
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:19:30.856611998Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-25T03:19:31.475984205Z level=info msg="Update check succeeded" duration=667.259714ms
+logger=plugins.update.checker t=2025-02-25T03:19:31.519748487Z level=info msg="Update check succeeded" duration=710.353759ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:19:47.139635687Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=32 duration=32.356772ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T03:29:30.833646311Z level=info msg="Completed cleanup jobs" duration=26.823476ms
+logger=grafana.update.checker t=2025-02-25T03:29:31.465843047Z level=info msg="Update check succeeded" duration=20.997536ms
+logger=plugins.update.checker t=2025-02-25T03:29:31.561530226Z level=info msg="Update check succeeded" duration=73.497579ms
+logger=settings t=2025-02-25T03:31:32.569766527Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:31:32.570316358Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:31:32.57054167Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:31:32.570759883Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:31:32.570959194Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:31:32.571193507Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:31:32.571419719Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:31:32.571641631Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:31:32.571918047Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:31:32.572123758Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:31:32.57234417Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:31:32.572927403Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:31:32.64747184Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:31:32.6737934Z level=info msg="migrations completed" performed=0 skipped=575 duration=3.409189ms
+logger=licensing t=2025-02-25T03:31:32.687053136Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:31:32.691927207Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:31:33.087240844Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:31:33.087985585Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:31:33.103871867Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:31:33.111832408Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:31:35.300217549Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:31:35.304761101Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:31:35.305161523Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T03:31:35.305706753Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-25T03:31:35.312076107Z level=info msg="State cache has been initialized" states=0 duration=6.363053ms
+logger=ticker t=2025-02-25T03:31:35.312867151Z level=info msg=starting first_tick=2025-02-25T03:31:40Z
+logger=modules t=2025-02-25T03:31:35.314108419Z level=warn msg="No modules registered..."
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:31:35.321923153Z level=info msg="starting MultiOrg Alertmanager"
+logger=caching.service t=2025-02-25T03:31:35.322843004Z level=warn msg="Caching service is disabled"
+logger=grafanaStorageLogger t=2025-02-25T03:31:35.323724653Z level=info msg="storage starting"
+logger=report t=2025-02-25T03:31:35.323813158Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-25T03:31:35.333903418Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-25T03:31:35.500435259Z level=info msg="Update check succeeded" duration=194.653102ms
+logger=plugins.update.checker t=2025-02-25T03:31:35.534096927Z level=info msg="Update check succeeded" duration=228.455178ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:31:36.122844199Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=28 duration=28.806799ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T03:35:26.063107876Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:35:26.063777113Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:35:26.064010026Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:35:26.064318242Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:35:26.064577357Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:35:26.06481487Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:35:26.065040782Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:35:26.065286695Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:35:26.065508908Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:35:26.06574562Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:35:26.065967133Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:35:26.066588567Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:35:26.122946547Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:35:26.13763005Z level=info msg="migrations completed" performed=0 skipped=575 duration=756.542µs
+logger=licensing t=2025-02-25T03:35:26.147558193Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:35:26.151519809Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:35:26.285564836Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:35:26.286224172Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:35:26.291638468Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:35:26.300073929Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:35:28.672085888Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:35:28.677028858Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:35:28.677356376Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T03:35:28.677810301Z level=info msg="Warming state cache for startup"
+logger=modules t=2025-02-25T03:35:28.679042168Z level=warn msg="No modules registered..."
+logger=http.server t=2025-02-25T03:35:28.680585852Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=report t=2025-02-25T03:35:28.680992175Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2025-02-25T03:35:28.681214687Z level=info msg="State cache has been initialized" states=0 duration=3.402086ms
+logger=ticker t=2025-02-25T03:35:28.681703614Z level=info msg=starting first_tick=2025-02-25T03:35:30Z
+logger=caching.service t=2025-02-25T03:35:28.686187659Z level=warn msg="Caching service is disabled"
+logger=grafanaStorageLogger t=2025-02-25T03:35:28.696097Z level=info msg="storage starting"
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:35:28.703210389Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-25T03:35:28.77750205Z level=info msg="Update check succeeded" duration=78.434788ms
+logger=plugins.update.checker t=2025-02-25T03:35:28.811560912Z level=info msg="Update check succeeded" duration=114.941782ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:35:40.106845423Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=12 duration=12.689787ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T03:45:28.740431178Z level=info msg="Completed cleanup jobs" duration=83.04392ms
+logger=grafana.update.checker t=2025-02-25T03:45:28.774323245Z level=info msg="Update check succeeded" duration=28.133433ms
+logger=plugins.update.checker t=2025-02-25T03:45:28.843808778Z level=info msg="Update check succeeded" duration=64.227628ms
+logger=settings t=2025-02-25T03:45:52.306900769Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T03:45:52.307543704Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T03:45:52.308254143Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T03:45:52.308732869Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T03:45:52.310739479Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T03:45:52.3111242Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T03:45:52.311353012Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T03:45:52.311528122Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T03:45:52.311715232Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T03:45:52.311948245Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T03:45:52.312182057Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T03:45:52.312846994Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T03:45:52.393108477Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T03:45:52.407325353Z level=info msg="migrations completed" performed=0 skipped=575 duration=730.44µs
+logger=licensing t=2025-02-25T03:45:52.415373193Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T03:45:52.419213202Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T03:45:52.533032218Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T03:45:52.533771358Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T03:45:52.539558174Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T03:45:52.548650171Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T03:45:55.653061202Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T03:45:55.781470014Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T03:45:55.866661867Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T03:45:55.884758555Z level=warn msg="No modules registered..."
+logger=caching.service t=2025-02-25T03:45:55.88650105Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-25T03:45:55.886574754Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2025-02-25T03:45:55.888289748Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-25T03:45:55.888393453Z level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2025-02-25T03:45:55.889883535Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-25T03:45:56.052124095Z level=info msg="State cache has been initialized" states=0 duration=163.724241ms
+logger=ticker t=2025-02-25T03:45:56.079231775Z level=info msg=starting first_tick=2025-02-25T03:46:00Z
+logger=ngalert.multiorg.alertmanager t=2025-02-25T03:45:56.079490489Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-25T03:45:56.117933088Z level=info msg="Update check succeeded" duration=229.370526ms
+logger=plugins.update.checker t=2025-02-25T03:45:56.148591863Z level=info msg="Update check succeeded" duration=259.553074ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T03:45:56.242356483Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=134 duration=134.327135ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T03:55:56.006279571Z level=info msg="Completed cleanup jobs" duration=69.394432ms
+logger=grafana.update.checker t=2025-02-25T03:55:56.10804887Z level=info msg="Update check succeeded" duration=21.878097ms
+logger=plugins.update.checker t=2025-02-25T03:55:56.186286167Z level=info msg="Update check succeeded" duration=71.148943ms
+logger=settings t=2025-02-25T04:00:41.152492883Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T04:00:41.15308372Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T04:00:41.153342336Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T04:00:41.153535548Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T04:00:41.153735961Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T04:00:41.153939974Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T04:00:41.154142486Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T04:00:41.154320198Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T04:00:41.154575314Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T04:00:41.154760125Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T04:00:41.155080145Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T04:00:41.155671883Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T04:00:41.234185614Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T04:00:41.25259177Z level=info msg="migrations completed" performed=0 skipped=575 duration=887.856µs
+logger=licensing t=2025-02-25T04:00:41.260689479Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T04:00:41.265527283Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T04:00:41.654938943Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T04:00:41.655637186Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T04:00:41.699169221Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T04:00:41.708378099Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T04:00:44.23321489Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T04:00:44.237008128Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T04:00:44.237304046Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T04:00:44.237752875Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-25T04:00:44.239228667Z level=info msg="Warming state cache for startup"
+logger=http.server t=2025-02-25T04:00:44.246897449Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=caching.service t=2025-02-25T04:00:44.250241459Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-25T04:00:44.250600882Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-25T04:00:44.252038572Z level=info msg="storage starting"
+logger=ngalert.state.manager t=2025-02-25T04:00:44.283130625Z level=info msg="State cache has been initialized" states=0 duration=43.896257ms
+logger=ticker t=2025-02-25T04:00:44.284086685Z level=info msg=starting first_tick=2025-02-25T04:00:50Z
+logger=ngalert.multiorg.alertmanager t=2025-02-25T04:00:44.284362002Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2025-02-25T04:00:44.420993684Z level=info msg="Update check succeeded" duration=176.200568ms
+logger=plugins.update.checker t=2025-02-25T04:00:44.4562602Z level=info msg="Update check succeeded" duration=210.481921ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T04:00:58.156777107Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=31 duration=31.729706ms size=0 referer= handler=/api/live/ws
+logger=settings t=2025-02-25T05:09:30.852715046Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T05:09:30.855413522Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T05:09:30.855900454Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T05:09:30.856428188Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T05:09:30.856702206Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T05:09:30.857015426Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T05:09:30.857307045Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T05:09:30.857600664Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T05:09:30.857890883Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T05:09:30.858322111Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T05:09:30.858686535Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T05:09:30.85937838Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T05:09:30.977345967Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T05:09:30.992793774Z level=info msg="migrations completed" performed=0 skipped=575 duration=1.953327ms
+logger=licensing t=2025-02-25T05:09:31.002293193Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T05:09:31.009973593Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T05:09:31.438954246Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T05:09:31.439577486Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T05:09:31.476984524Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T05:09:31.502491986Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T05:09:33.698440908Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T05:09:33.703724954Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T05:09:33.704102878Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T05:09:33.714765676Z level=info msg="Warming state cache for startup"
+logger=caching.service t=2025-02-25T05:09:33.721804537Z level=warn msg="Caching service is disabled"
+logger=modules t=2025-02-25T05:09:33.715062396Z level=warn msg="No modules registered..."
+logger=report t=2025-02-25T05:09:33.716153267Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=grafanaStorageLogger t=2025-02-25T05:09:33.722661693Z level=info msg="storage starting"
+logger=http.server t=2025-02-25T05:09:33.734525969Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-02-25T05:09:33.798551559Z level=info msg="State cache has been initialized" states=0 duration=83.781783ms
+logger=ngalert.multiorg.alertmanager t=2025-02-25T05:09:33.799575726Z level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2025-02-25T05:09:33.801262437Z level=info msg=starting first_tick=2025-02-25T05:09:40Z
+logger=grafana.update.checker t=2025-02-25T05:09:34.151837278Z level=info msg="Update check succeeded" duration=447.12346ms
+logger=plugins.update.checker t=2025-02-25T05:09:34.184882041Z level=info msg="Update check succeeded" duration=475.141494ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T05:09:51.472372497Z level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=172.18.0.1 time_ms=270 duration=270.749509ms size=32 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T05:09:53.834699309Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=6 duration=6.238608ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T05:19:33.735893918Z level=info msg="Completed cleanup jobs" duration=29.591399ms
+logger=grafana.update.checker t=2025-02-25T05:19:34.260103368Z level=info msg="Update check succeeded" duration=146.345495ms
+logger=plugins.update.checker t=2025-02-25T05:19:34.320970576Z level=info msg="Update check succeeded" duration=174.372193ms
+logger=settings t=2025-02-25T05:22:44.667140307Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T05:22:44.668064267Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T05:22:44.668557199Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T05:22:44.670406119Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T05:22:44.67087915Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T05:22:44.671357081Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T05:22:44.671759007Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T05:22:44.672066127Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T05:22:44.672385348Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T05:22:44.672741271Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T05:22:44.672937684Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T05:22:44.673671231Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T05:22:44.733963151Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T05:22:44.750022895Z level=info msg="migrations completed" performed=0 skipped=575 duration=747.449µs
+logger=licensing t=2025-02-25T05:22:44.763412866Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T05:22:44.768926424Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T05:22:45.104389033Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T05:22:45.10510658Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T05:22:45.121431641Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T05:22:45.132541864Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T05:22:47.830903879Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T05:22:47.834973439Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T05:22:47.835284559Z level=info msg="finished to provision alerting"
+logger=modules t=2025-02-25T05:22:47.845592017Z level=warn msg="No modules registered..."
+logger=caching.service t=2025-02-25T05:22:47.846146953Z level=warn msg="Caching service is disabled"
+logger=ngalert.state.manager t=2025-02-25T05:22:47.848548706Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2025-02-25T05:22:47.850852354Z level=info msg="State cache has been initialized" states=0 duration=2.298647ms
+logger=ticker t=2025-02-25T05:22:47.85142429Z level=info msg=starting first_tick=2025-02-25T05:22:50Z
+logger=report t=2025-02-25T05:22:47.850870155Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.multiorg.alertmanager t=2025-02-25T05:22:47.852133535Z level=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2025-02-25T05:22:47.853656533Z level=info msg="storage starting"
+logger=http.server t=2025-02-25T05:22:47.854590792Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2025-02-25T05:22:48.027214825Z level=info msg="Update check succeeded" duration=174.816473ms
+logger=plugins.update.checker t=2025-02-25T05:22:48.062877604Z level=info msg="Update check succeeded" duration=209.307977ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T05:22:49.137384677Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=30 duration=30.770667ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T05:32:47.885249145Z level=info msg="Completed cleanup jobs" duration=77.640516ms
+logger=grafana.update.checker t=2025-02-25T05:32:48.031248588Z level=info msg="Update check succeeded" duration=41.280313ms
+logger=plugins.update.checker t=2025-02-25T05:32:48.119346965Z level=info msg="Update check succeeded" duration=93.945648ms
+logger=cleanup t=2025-02-25T05:42:47.830037015Z level=info msg="Completed cleanup jobs" duration=60.011683ms
+logger=grafana.update.checker t=2025-02-25T05:42:47.982287314Z level=info msg="Update check succeeded" duration=31.032156ms
+logger=plugins.update.checker t=2025-02-25T05:42:48.048954817Z level=info msg="Update check succeeded" duration=61.432073ms
+logger=context userId=1 orgId=1 uname=admin t=2025-02-25T05:51:11.480460092Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=37 duration=37.704798ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2025-02-25T05:52:47.848591471Z level=info msg="Completed cleanup jobs" duration=117.413054ms
+logger=grafana.update.checker t=2025-02-25T05:52:47.932367333Z level=info msg="Update check succeeded" duration=19.373163ms
+logger=plugins.update.checker t=2025-02-25T05:52:48.008304883Z level=info msg="Update check succeeded" duration=59.719893ms
+logger=cleanup t=2025-02-25T06:02:47.740243314Z level=info msg="Completed cleanup jobs" duration=49.945842ms
+logger=grafana.update.checker t=2025-02-25T06:02:47.895457401Z level=info msg="Update check succeeded" duration=22.836028ms
+logger=plugins.update.checker t=2025-02-25T06:02:47.976424019Z level=info msg="Update check succeeded" duration=67.927745ms
+logger=settings t=2025-02-25T23:50:59.377384Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
+logger=settings t=2025-02-25T23:50:59.3874896Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2025-02-25T23:50:59.3879207Z level=info msg="Config loaded from" file=/grafana/conf/defaults.ini
+logger=settings t=2025-02-25T23:50:59.3889646Z level=info msg="Config loaded from" file=/grafana/conf/grafana.ini
+logger=settings t=2025-02-25T23:50:59.3893513Z level=info msg=Target target=[all]
+logger=settings t=2025-02-25T23:50:59.3896141Z level=info msg="Path Home" path=/grafana
+logger=settings t=2025-02-25T23:50:59.3900041Z level=info msg="Path Data" path=/grafana/data
+logger=settings t=2025-02-25T23:50:59.390295Z level=info msg="Path Logs" path=/grafana/data/log
+logger=settings t=2025-02-25T23:50:59.3905673Z level=info msg="Path Plugins" path=/grafana/data/plugins
+logger=settings t=2025-02-25T23:50:59.3908222Z level=info msg="Path Provisioning" path=/grafana/conf/provisioning
+logger=settings t=2025-02-25T23:50:59.3911054Z level=info msg="App mode production"
+logger=sqlstore t=2025-02-25T23:50:59.3917359Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-02-25T23:50:59.550964Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-02-25T23:50:59.575081Z level=info msg="migrations completed" performed=0 skipped=575 duration=807.9µs
+logger=licensing t=2025-02-25T23:50:59.595729Z level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=secrets t=2025-02-25T23:50:59.6027935Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2025-02-25T23:51:00.6186691Z level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2025-02-25T23:51:00.6194101Z level=warn msg="Skipping finding plugins as directory does not exist" path=/grafana/data/plugins
+logger=query_data t=2025-02-25T23:51:00.6572931Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-02-25T23:51:00.6703392Z level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2025-02-25T23:51:03.7549947Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2025-02-25T23:51:03.7628307Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-02-25T23:51:03.76318Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2025-02-25T23:51:03.7637271Z level=info msg="Warming state cache for startup"
+logger=modules t=2025-02-25T23:51:03.7643326Z level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2025-02-25T23:51:03.7726049Z level=info msg="State cache has been initialized" states=0 duration=8.8756ms
+logger=caching.service t=2025-02-25T23:51:03.7768228Z level=warn msg="Caching service is disabled"
+logger=report t=2025-02-25T23:51:03.7771065Z level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ticker t=2025-02-25T23:51:03.779884Z level=info msg=starting first_tick=2025-02-25T23:51:10Z
+logger=grafanaStorageLogger t=2025-02-25T23:51:03.7706137Z level=info msg="storage starting"
+logger=ngalert.multiorg.alertmanager t=2025-02-25T23:51:03.7799436Z level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2025-02-25T23:51:03.7946336Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=sqlstore.transactions t=2025-02-25T23:51:03.8329071Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=sqlstore.transactions t=2025-02-25T23:51:03.8524201Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=1 code="database is locked"
+logger=grafana.update.checker t=2025-02-25T23:51:04.0690589Z level=info msg="Update check succeeded" duration=305.4096ms
+logger=plugins.update.checker t=2025-02-25T23:51:04.1027531Z level=info msg="Update check succeeded" duration=334.3335ms

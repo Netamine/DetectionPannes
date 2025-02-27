@@ -1,0 +1,17 @@
+# Ignorer le cache DVC local
+cache/
+/config.local
+
+# Ignorer les fichiers temporaires de DVC
+tmp/
+lock
+state
+plots/
+index
+rwlock
+rwlock.lock
+
+# Empêcher le suivi des fichiers temporaires de gestion de cache
+.tmp
+/tmp
+/cache
