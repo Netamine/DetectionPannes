@@ -54,9 +54,14 @@ jobs:
           # Installer Docker via le script officiel
           curl -fsSL https://get.docker.com | sh
 
-          # Vérifier l'installation
+          # Installer Docker Compose séparément
+          sudo apt-get update
+          sudo apt-get install -y docker-compose-plugin
+
+          # Vérifier les installations
           docker --version
           docker compose version  # Vérifier que docker compose fonctionne
+      
       
 
       - name: Définir API_KEY dans l'environnement
