@@ -33,7 +33,23 @@ services:
       - ./monitoring/grafana.ini:/grafana/conf/grafana.ini
     networks:
       - detectionpannes-net
+      -
+# Ajout du service MLflow
+  mlflow:
+    image: ghcr.io/mlflow/mlflow
+    container_name: mlflow
+    restart: always
+    ports:
+      - "5001:5000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    command:
+      mlflow server --backend-store-uri file:/mlruns --host 0.0.0.0 --port 5000
+    volumes:
+      - ./mlruns:/mlruns  # 🔹 Monte un volume local pour garder les expériences
 
+volumes:
+  mlruns:  # 🔹 Définit un volume nommé pour la persistance
 networks:
   detectionpannes-net:
     driver: bridge
